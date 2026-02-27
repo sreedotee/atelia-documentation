@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import DM Sans from fontsource (local) */
 @import '@fontsource/dm-sans/400.css';
 @import '@fontsource/dm-sans/400-italic.css';
 @import '@fontsource/dm-sans/500.css';
 @import '@fontsource/dm-sans/600.css';
 
-/* Clash Display - will load from CDN on production, fallback to system fonts */
 @font-face {
   font-family: 'Clash Display';
   src: local('Georgia');
@@ -18,130 +16,82 @@
 }
 
 :root {
-  --background: #FAF9FA;
-  --foreground: #1D1A1C;
-  --font-clash: 'Clash Display', 'Georgia', serif;
-  --font-dm-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  --color-plum: #3D2B4C;
-  --color-surface: #FAF9FA;
-  --color-text-primary: #1D1A1C;
-  --color-text-secondary: #5C5759;
-  --color-text-tertiary: #7D767A;
-  --color-gray-200: #E8E5E6;
-  --color-error: #DC2626;
-}
-
-.dark {
-  --background: #1a1520;
-  --foreground: #FAF9FA;
+  --black: #000000;
+  --white: #ffffff;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-900: #171717;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-dm-sans);
+  background: var(--white);
+  color: var(--gray-900);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Apply DM Sans */
-* {
-  font-family: var(--font-dm-sans);
+.font-clash,
+h1,
+h2,
+h3 {
+  font-family: 'Clash Display', Georgia, serif;
 }
 
-/* Clash Display for headings */
-.font-clash, h1, h2, h3 {
-  font-family: var(--font-clash);
+.nav-item {
+  display: block;
+  margin-left: -12px;
+  border-left: 2px solid transparent;
+  padding: 8px 0 8px 12px;
+  font-size: 13px;
+  color: var(--gray-500);
+  transition: color 0.2s ease;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .font-clash {
-    font-family: var(--font-clash) !important;
-  }
-
-  .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  .container-width {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+.nav-item.active {
+  border-left-color: var(--black);
+  color: var(--black);
+  font-weight: 500;
 }
 
-/* Sticky note styles */
-.sticky-note {
-  background: linear-gradient(135deg, #FFF9C4, #FFF176);
-  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid #F9E79F;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  min-height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.nav-item:hover {
+  color: var(--black);
 }
 
-.sticky-note:hover {
-  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.15);
-  z-index: 10;
+.progress-indicator {
+  background: var(--gray-200);
 }
 
-/* Whiteboard background */
-.whiteboard-bg {
-  background-color: #f8f8f8;
-  background-image:
-    linear-gradient(#e0e0e0 1px, transparent 1px),
-    linear-gradient(90deg, #e0e0e0 1px, transparent 1px);
-  background-size: 20px 20px;
+.progress-fill {
+  background: var(--black);
+  transition: height 0.05s linear;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+.section-label {
+  margin-bottom: 40px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--gray-400);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
+.section-title {
+  margin-bottom: 32px;
+  font-size: 40px;
+  line-height: 1.2;
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--color-gray-200);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-tertiary);
-}
-
-/* Dark mode overrides */
-.dark .whiteboard-bg {
-  background-color: #2a2030;
-  background-image:
-    linear-gradient(#3d3450 1px, transparent 1px),
-    linear-gradient(90deg, #3d3450 1px, transparent 1px);
-}
-
-.dark .sticky-note {
-  background: linear-gradient(135deg, #4a4000, #5a5000);
-  border-color: #6a6000;
-}
-
-.dark .sticky-note span {
-  color: #FFF9C4;
+.body-text {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--gray-600);
 }
