@@ -4,6 +4,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { decisions, decisionsByMode } from "@/data/decisions";
 import DecisionModal from "./DecisionModal";
+import SectionHeader from "./SectionHeader";
+import { stickyRotations } from "@/styles/animations";
 
 interface DesignWhiteboardProps {
   mode: "mode1" | "mode2" | "mode3" | "system";
@@ -20,16 +22,10 @@ const modeDecisionIds: Record<string, string[]> = {
   system: decisionsByMode.system,
 };
 
-const modeLabels: Record<string, string> = {
-  mode1: "MODE 1: BEFORE (Collecting)",
-  mode2: "MODE 2: DURING (Creating)",
-  mode3: "MODE 3: AFTER (Reviewing)",
-  system: "SYSTEM-LEVEL",
-};
-
 export default function DesignWhiteboard({
   mode,
   sectionNumber,
+  title,
   subtitle,
   description,
 }: DesignWhiteboardProps) {
@@ -42,137 +38,93 @@ export default function DesignWhiteboard({
   const closeModal = () => setOpenDecisionId(null);
 
   const prevDecision = () => {
-    if (currentIndex > 0) setOpenDecisionId(decisionIds[currentIndex - 1]);
-    else setOpenDecisionId(decisionIds[decisionIds.length - 1]);
+    if (currentIndex > 0) {
+      setOpenDecisionId(decisionIds[currentIndex - 1]);
+    } else {
+      setOpenDecisionId(decisionIds[decisionIds.length - 1]);
+    }
   };
 
   const nextDecision = () => {
-    if (currentIndex < decisionIds.length - 1) setOpenDecisionId(decisionIds[currentIndex + 1]);
-    else setOpenDecisionId(decisionIds[0]);
+    if (currentIndex < decisionIds.length - 1) {
+      setOpenDecisionId(decisionIds[currentIndex + 1]);
+    } else {
+      setOpenDecisionId(decisionIds[0]);
+    }
   };
 
+  const cols = mode === "system" ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3";
+
   return (
-    <section
-      style={{ padding: "80px 80px", background: "#FFFFFF" }}
-      id={`decisions-${mode}`}
-    >
-      {/* Group label */}
-      <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-        style={{
-          fontSize: 11,
-          color: "#A3A3A3",
-          letterSpacing: "1px",
-          textTransform: "uppercase",
-          fontWeight: 500,
-          marginBottom: 12,
-        }}
-      >
-        {sectionNumber} — {modeLabels[mode]}
-      </motion.p>
+    <section className="py-20 bg-[#FAF9FA] dark:bg-[#1a1520]" id={`decisions-${mode}`}>
+      <div className="max-w-[1200px] mx-auto px-6">
+        <SectionHeader number={sectionNumber} title={title} subtitle={subtitle} />
 
-      {subtitle && (
-        <motion.h3
-          initial={{ opacity: 0, y: 16 }}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.05 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="font-clash"
-          style={{
-            fontSize: 24,
-            fontWeight: 500,
-            color: "#000",
-            marginBottom: 12,
-          }}
+          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl"
         >
-          {subtitle}
-        </motion.h3>
-      )}
+          {description}
+        </motion.p>
 
-      <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        viewport={{ once: true }}
-        style={{
-          fontSize: 15,
-          color: "#737373",
-          lineHeight: 1.7,
-          maxWidth: 600,
-          marginBottom: 40,
-        }}
-      >
-        {description}
-      </motion.p>
+        {/* Whiteboard */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="whiteboard-bg rounded-2xl p-10 dark:border dark:border-[#3D2B4C]/30"
+        >
+          {/* Header */}
+          <div className="flex items-center gap-3 mb-8">
+            <span className="text-2xl">🎨</span>
+            <div>
+              <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white">
+                Design Decisions
+              </h3>
+              <p className="text-sm text-[#7D767A] dark:text-gray-500">
+                Click any sticky note to explore the decision rationale
+              </p>
+            </div>
+          </div>
 
-      {/* Decision cards grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: mode === "system" ? "repeat(4, 1fr)" : "repeat(3, 1fr)",
-          gap: 16,
-          maxWidth: 900,
-        }}
-      >
-        {decisionIds.map((id, i) => {
-          const decision = decisions[id];
-          if (!decision) return null;
+          {/* Sticky notes grid */}
+          <div className={`grid ${cols} gap-4`}>
+            {decisionIds.map((id, i) => {
+              const decision = decisions[id];
+              if (!decision) return null;
 
-          return (
-            <motion.button
-              key={id}
-              onClick={() => openModal(id)}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.04, duration: 0.4 }}
-              viewport={{ once: true }}
-              style={{
-                textAlign: "left",
-                background: "none",
-                border: "none",
-                padding: 0,
-                cursor: "pointer",
-              }}
-            >
-              <div
-                style={{
-                  background: "#FFFFFF",
-                  border: "1px solid #E5E5E5",
-                  padding: "24px 20px",
-                  minHeight: 130,
-                  display: "flex",
-                  flexDirection: "column",
-                  transition: "border-color 0.2s, box-shadow 0.2s, transform 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                  const el = e.currentTarget;
-                  el.style.borderColor = "#000";
-                  el.style.transform = "translateY(-2px)";
-                  el.style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)";
-                }}
-                onMouseLeave={(e) => {
-                  const el = e.currentTarget;
-                  el.style.borderColor = "#E5E5E5";
-                  el.style.transform = "translateY(0)";
-                  el.style.boxShadow = "none";
-                }}
-              >
-                <p style={{ fontSize: 11, color: "#A3A3A3", marginBottom: 14 }}>
-                  {String(i + 1).padStart(2, "0")}
-                </p>
-                <p style={{ fontSize: 14, fontWeight: 500, color: "#000", lineHeight: 1.3, flex: 1 }}>
-                  {decision.title}
-                </p>
-                <p style={{ fontSize: 11, color: "#A3A3A3", marginTop: 10 }}>
-                  {decision.category}
-                </p>
-              </div>
-            </motion.button>
-          );
-        })}
+              const rotation = stickyRotations[i % stickyRotations.length];
+
+              return (
+                <motion.button
+                  key={id}
+                  onClick={() => openModal(id)}
+                  className="sticky-note"
+                  style={{ transform: `rotate(${rotation}deg)` }}
+                  whileHover={{
+                    rotate: 0,
+                    scale: 1.05,
+                    zIndex: 10,
+                    boxShadow: "4px 8px 16px rgba(0,0,0,0.15)",
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05, duration: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <span className="text-[#1D1A1C] font-semibold text-sm leading-snug">
+                    {decision.title}
+                  </span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
 
       {/* Decision Modal */}
