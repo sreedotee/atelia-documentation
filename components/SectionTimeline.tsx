@@ -33,10 +33,11 @@ const SECTIONS: Section[] = [
   { id: "information-architecture",label: "Info Architecture",       number: "20" },
   { id: "design-system",           label: "Design System",           number: "21" },
   { id: "validation",              label: "Validation & Testing",    number: "22" },
-  { id: "constraints",             label: "Constraints",             number: "23" },
-  { id: "reflection",              label: "Reflection",              number: "24" },
-  { id: "video",                   label: "Video Walkthrough",       number: "25" },
-  { id: "prototype",               label: "Prototype",               number: "26" },
+  { id: "monetization",            label: "Business Model",          number: "23" },
+  { id: "constraints",             label: "Constraints",             number: "24" },
+  { id: "reflection",              label: "Reflection",              number: "25" },
+  { id: "video",                   label: "Video Walkthrough",       number: "26" },
+  { id: "prototype",               label: "Prototype",               number: "27" },
 ];
 
 // Dot sizes: main 13px, nested 9px
