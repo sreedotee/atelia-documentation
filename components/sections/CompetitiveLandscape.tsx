@@ -35,18 +35,21 @@ const approaches = [
 ];
 
 const tableData = [
-  { app: "ASOS See My Fit", tryon: true, save: true, organize: false, multiStore: false },
-  { app: "Stylebook", tryon: false, save: "manual", organize: true, multiStore: false },
-  { app: "Pinterest", tryon: false, save: true, organize: "boards", multiStore: true },
-  { app: "Combyne", tryon: "limited", save: true, organize: "basic", multiStore: true },
-  { app: "Zara AR", tryon: true, save: false, organize: false, multiStore: false },
+  { app: "ASOS See My Fit", tryon: "✓", save: "✓", organize: "—", multiStore: "—", downloads: "10M+", rating: "3.2★" },
+  { app: "Stylebook",        tryon: "—", save: "✓", organize: "✓", multiStore: "—", downloads: "500K+", rating: "4.6★" },
+  { app: "Combyne",          tryon: "2D only", save: "✓", organize: "Basic", multiStore: "✓", downloads: "5M+", rating: "4.1★" },
+  { app: "Drest",            tryon: "✓", save: "✓", organize: "✓", multiStore: "Designer only", downloads: "1M+", rating: "4.3★" },
+  { app: "Pinterest",        tryon: "—", save: "✓", organize: "✓", multiStore: "✓", downloads: "500M+", rating: "4.5★" },
 ];
 
-function CellValue({ value }: { value: boolean | string }) {
-  if (value === true) return <span className="text-green-600 dark:text-green-400 font-medium">✓ Yes</span>;
-  if (value === false) return <span className="text-red-500 dark:text-red-400">✗ No</span>;
-  return <span className="text-amber-600 dark:text-amber-400 font-medium">◑ {value}</span>;
-}
+const featureScores = [
+  { app: "ASOS", score: 2 },
+  { app: "Stylebook", score: 2 },
+  { app: "Combyne", score: 3 },
+  { app: "Drest", score: 3 },
+  { app: "Pinterest", score: 2 },
+  { app: "Atelia", score: 4, highlight: true },
+];
 
 export default function CompetitiveLandscape() {
   return (
@@ -55,8 +58,8 @@ export default function CompetitiveLandscape() {
         <SectionHeader number="04" title="Competitive Landscape" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
-          I analyzed 5 existing virtual try-on apps and found three distinct approaches, each
-          serving different user needs.
+          I analyzed 5 existing virtual try-on and fashion organization apps to identify market
+          gaps and opportunities.
         </motion.p>
 
         {/* Approaches */}
@@ -127,7 +130,7 @@ export default function CompetitiveLandscape() {
           </div>
         </motion.div>
 
-        {/* Comparison Table */}
+        {/* Enhanced Comparison Table */}
         <SectionHeader number="04b" title="Feature Comparison" />
 
         <motion.div
@@ -135,46 +138,100 @@ export default function CompetitiveLandscape() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="overflow-x-auto"
+          className="overflow-x-auto mb-4"
         >
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-[#3D2B4C] text-white">
-                <th className="text-left p-4 rounded-tl-xl font-clash font-semibold">App</th>
-                <th className="p-4 font-clash font-semibold">Try-On</th>
-                <th className="p-4 font-clash font-semibold">Save Items</th>
-                <th className="p-4 font-clash font-semibold">Organize</th>
-                <th className="p-4 rounded-tr-xl font-clash font-semibold">Multi-Store</th>
+              <tr className="border-b border-[#1D1A1C] dark:border-white">
+                <th className="text-left py-4 pr-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase">
+                  App
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Try-On
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Save
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Organize
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Multi-Store
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Downloads
+                </th>
+                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] dark:text-gray-500 uppercase text-center">
+                  Rating
+                </th>
               </tr>
             </thead>
             <tbody>
-              {tableData.map((row, i) => (
-                <tr
-                  key={row.app}
-                  className={`border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30 ${i % 2 === 0 ? "bg-white dark:bg-[#1e1530]" : "bg-[#FAF9FA] dark:bg-[#2a1e36]"}`}
-                >
-                  <td className="p-4 font-medium text-[#1D1A1C] dark:text-white">{row.app}</td>
-                  <td className="p-4 text-center"><CellValue value={row.tryon} /></td>
-                  <td className="p-4 text-center"><CellValue value={row.save} /></td>
-                  <td className="p-4 text-center"><CellValue value={row.organize} /></td>
-                  <td className="p-4 text-center"><CellValue value={row.multiStore} /></td>
+              {tableData.map((row) => (
+                <tr key={row.app} className="border-b border-[#E5E5E5] dark:border-[#3D2B4C]/30">
+                  <td className="py-5 pr-3 text-[15px] text-[#1D1A1C] dark:text-white">{row.app}</td>
+                  <td className={`py-5 px-3 text-center text-sm ${row.tryon === "—" ? "text-[#D4D4D4] dark:text-gray-600" : "text-[#1D1A1C] dark:text-gray-200"}`}>{row.tryon}</td>
+                  <td className={`py-5 px-3 text-center text-sm ${row.save === "—" ? "text-[#D4D4D4] dark:text-gray-600" : "text-[#1D1A1C] dark:text-gray-200"}`}>{row.save}</td>
+                  <td className={`py-5 px-3 text-center text-sm ${row.organize === "—" ? "text-[#D4D4D4] dark:text-gray-600" : "text-[#1D1A1C] dark:text-gray-200"}`}>{row.organize}</td>
+                  <td className={`py-5 px-3 text-center text-sm ${row.multiStore === "—" ? "text-[#D4D4D4] dark:text-gray-600" : "text-[#737373] dark:text-gray-400"}`}>{row.multiStore}</td>
+                  <td className="py-5 px-3 text-center text-sm text-[#737373] dark:text-gray-400">{row.downloads}</td>
+                  <td className="py-5 px-3 text-center text-sm text-[#737373] dark:text-gray-400">{row.rating}</td>
                 </tr>
               ))}
               {/* Atelia highlighted row */}
-              <tr className="bg-[#3D2B4C]/5 dark:bg-purple-900/20 border-2 border-[#3D2B4C] dark:border-purple-500/50">
-                <td className="p-4 font-bold text-[#3D2B4C] dark:text-purple-300 rounded-bl-xl">
-                  ⭐ Atelia
-                </td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold rounded-br-xl">✓ Yes</td>
+              <tr className="border-t border-b border-[#1D1A1C] dark:border-white bg-[#FAFAFA] dark:bg-[#2a1e36]">
+                <td className="py-5 pr-3 font-medium text-[#1D1A1C] dark:text-white">Atelia</td>
+                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C] dark:text-white">✓</td>
+                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C] dark:text-white">✓</td>
+                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C] dark:text-white">✓</td>
+                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C] dark:text-white">✓</td>
+                <td className="py-5 px-3 text-center text-sm text-[#737373] dark:text-gray-400">—</td>
+                <td className="py-5 px-3 text-center text-sm text-[#737373] dark:text-gray-400">—</td>
               </tr>
             </tbody>
           </table>
-          <p className="text-center text-sm text-[#7D767A] dark:text-gray-500 mt-3">
-            Atelia is the only solution combining all four capabilities
+          <p className="text-center text-sm text-[#A3A3A3] dark:text-gray-600 mt-4 italic">
+            Atelia is the only solution combining all four core capabilities
           </p>
+        </motion.div>
+
+        {/* Bar Chart Placeholder */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-12"
+        >
+          <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            Feature Coverage Comparison
+          </h3>
+
+          {/* Inline bar chart built with divs */}
+          <div className="bg-[#FAFAFA] dark:bg-[#2a1e36] border border-[#E5E5E5] dark:border-[#3D2B4C]/30 p-8">
+            <div className="space-y-4">
+              {featureScores.map((item) => (
+                <div key={item.app} className="flex items-center gap-4">
+                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-semibold text-[#3D2B4C] dark:text-purple-300" : "text-[#737373] dark:text-gray-400"}`}>
+                    {item.app}
+                  </span>
+                  <div className="flex-1 bg-[#E5E5E5] dark:bg-[#1a1520] h-8 rounded-sm overflow-hidden">
+                    <div
+                      className={`h-full rounded-sm flex items-center px-3 transition-all ${item.highlight ? "bg-[#3D2B4C] dark:bg-purple-600" : "bg-[#D4D4D4] dark:bg-gray-600"}`}
+                      style={{ width: `${(item.score / 4) * 100}%` }}
+                    >
+                      <span className={`text-xs font-medium ${item.highlight ? "text-white" : "text-[#737373] dark:text-gray-300"}`}>
+                        {item.score}/4
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-[#A3A3A3] dark:text-gray-600 mt-6 text-center">
+              Feature score based on: Try-On · Save · Organize · Multi-Store support
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
