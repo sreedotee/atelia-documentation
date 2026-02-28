@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Overview from "@/components/sections/Overview";
 import BriefChallenge from "@/components/sections/BriefChallenge";
 import ResearchApproach from "@/components/sections/ResearchApproach";
+import MarketContext from "@/components/sections/MarketContext";
 import CompetitiveLandscape from "@/components/sections/CompetitiveLandscape";
 import StrategicOpportunity from "@/components/sections/StrategicOpportunity";
 import UserResearch from "@/components/sections/UserResearch";
@@ -112,6 +113,7 @@ export default function Home() {
       <Overview />
       <BriefChallenge />
       <ResearchApproach />
+      <MarketContext />
       <CompetitiveLandscape />
       <StrategicOpportunity />
       <UserResearch />
