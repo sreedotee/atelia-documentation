@@ -16,6 +16,7 @@ import ModeDesigns from "@/components/sections/ModeDesigns";
 import InformationArchitecture from "@/components/sections/InformationArchitecture";
 import DesignSystem from "@/components/sections/DesignSystem";
 import Validation from "@/components/sections/Validation";
+import Monetization from "@/components/sections/Monetization";
 import Constraints from "@/components/sections/Constraints";
 import Reflection from "@/components/sections/Reflection";
 import VideoAndPrototype from "@/components/sections/VideoAndPrototype";
@@ -196,6 +197,7 @@ export default function Home() {
       <InformationArchitecture />
       <DesignSystem />
       <Validation />
+      <Monetization />
       <Constraints />
       <Reflection />
       <VideoAndPrototype />
