@@ -117,65 +117,68 @@ export default function Home() {
       <ThreeModes />
       <DesignLanguage />
 
-      {/* Mode 1: BEFORE */}
-      <ModeDesigns
-        id="mode1-designs"
-        sectionNumber="12"
-        modeTitle="Mode 1: BEFORE"
-        subtitle="Collecting & Organizing"
-        intro="The BEFORE mode focuses on quick saving and flexible organization. Users can paste links from any store and organize items by occasion."
-        screens={mode1Screens}
-        flowSteps={["See item online", "Copy link", "Open Atelia", "Paste link", "Preview", "Save to collection"]}
-      />
+      {/* Mode 1: BEFORE — grouped */}
+      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+        <ModeDesigns
+          id="mode1-designs"
+          sectionNumber="12"
+          modeTitle="Mode 1: BEFORE"
+          subtitle="Collecting & Organizing"
+          intro="The BEFORE mode focuses on quick saving and flexible organization. Users can paste links from any store and organize items by occasion."
+          screens={mode1Screens}
+          flowSteps={["See item online", "Copy link", "Open Atelia", "Paste link", "Preview", "Save to collection"]}
+        />
+        <DesignWhiteboard
+          mode="mode1"
+          sectionNumber="13"
+          title="Design Decisions"
+          subtitle="Mode 1: BEFORE"
+          description="6 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+        />
+      </div>
 
-      <DesignWhiteboard
-        mode="mode1"
-        sectionNumber="13"
-        title="Design Decisions"
-        subtitle="Mode 1: BEFORE"
-        description="6 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
-      />
+      {/* Mode 2: DURING — grouped */}
+      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+        <ModeDesigns
+          id="mode2-designs"
+          sectionNumber="14"
+          modeTitle="Mode 2: DURING"
+          subtitle="Creating & Experimenting"
+          intro="The DURING mode is about playful experimentation. Users mix items from their collection to generate AI outfit visualizations."
+          screens={mode2Screens}
+          feature={{
+            icon: "✨",
+            title: "On-Demand Model Setup",
+            text: "Model creation happens when user first tries Try-On, not forced during signup. Reduces onboarding friction while maintaining feature quality.",
+          }}
+        />
+        <DesignWhiteboard
+          mode="mode2"
+          sectionNumber="15"
+          title="Design Decisions"
+          subtitle="Mode 2: DURING"
+          description="7 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+        />
+      </div>
 
-      {/* Mode 2: DURING */}
-      <ModeDesigns
-        id="mode2-designs"
-        sectionNumber="14"
-        modeTitle="Mode 2: DURING"
-        subtitle="Creating & Experimenting"
-        intro="The DURING mode is about playful experimentation. Users mix items from their collection to generate AI outfit visualizations."
-        screens={mode2Screens}
-        feature={{
-          icon: "✨",
-          title: "On-Demand Model Setup",
-          text: "Model creation happens when user first tries Try-On, not forced during signup. Reduces onboarding friction while maintaining feature quality.",
-        }}
-      />
-
-      <DesignWhiteboard
-        mode="mode2"
-        sectionNumber="15"
-        title="Design Decisions"
-        subtitle="Mode 2: DURING"
-        description="7 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
-      />
-
-      {/* Mode 3: AFTER */}
-      <ModeDesigns
-        id="mode3-designs"
-        sectionNumber="16"
-        modeTitle="Mode 3: AFTER"
-        subtitle="Reviewing & Deciding"
-        intro='The AFTER mode helps users review results, save favorites, and make purchase decisions. Like a recipe, outfits show their "ingredients."'
-        screens={mode3Screens}
-      />
-
-      <DesignWhiteboard
-        mode="mode3"
-        sectionNumber="17"
-        title="Design Decisions"
-        subtitle="Mode 3: AFTER"
-        description="6 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
-      />
+      {/* Mode 3: AFTER — grouped */}
+      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+        <ModeDesigns
+          id="mode3-designs"
+          sectionNumber="16"
+          modeTitle="Mode 3: AFTER"
+          subtitle="Reviewing & Deciding"
+          intro='The AFTER mode helps users review results, save favorites, and make purchase decisions. Like a recipe, outfits show their "ingredients."'
+          screens={mode3Screens}
+        />
+        <DesignWhiteboard
+          mode="mode3"
+          sectionNumber="17"
+          title="Design Decisions"
+          subtitle="Mode 3: AFTER"
+          description="6 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+        />
+      </div>
 
       {/* System-level decisions */}
       <DesignWhiteboard
