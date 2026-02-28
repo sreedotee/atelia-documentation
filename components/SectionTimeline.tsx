@@ -21,6 +21,8 @@ const SECTIONS: Section[] = [
   { id: "jobs",                    label: "Jobs-to-be-Done",         number: "08" },
   { id: "framework",               label: "Three Modes",             number: "09" },
   { id: "language",                label: "Design Language",         number: "10" },
+  { id: "problem-evolution",       label: "Problem Evolution",       number: "—" },
+  { id: "iterations",              label: "Iterations",              number: "—" },
   { id: "mode1-designs",           label: "Mode 1: BEFORE",         number: "11", nested: true },
   { id: "decisions-mode1",         label: "Decisions · Mode 1",     number: "12", nested: true },
   { id: "mode2-designs",           label: "Mode 2: DURING",         number: "13", nested: true },

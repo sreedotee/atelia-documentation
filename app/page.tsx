@@ -9,6 +9,8 @@ import CardSorting from "@/components/sections/CardSorting";
 import JobsToBeDone from "@/components/sections/JobsToBeDone";
 import ThreeModes from "@/components/sections/ThreeModes";
 import DesignLanguage from "@/components/sections/DesignLanguage";
+import ProblemEvolution from "@/components/sections/ProblemEvolution";
+import Iterations from "@/components/sections/Iterations";
 import DesignWhiteboard from "@/components/DesignWhiteboard";
 import ModeDesigns from "@/components/sections/ModeDesigns";
 import InformationArchitecture from "@/components/sections/InformationArchitecture";
@@ -116,6 +118,8 @@ export default function Home() {
       <JobsToBeDone />
       <ThreeModes />
       <DesignLanguage />
+      <ProblemEvolution />
+      <Iterations />
 
       {/* Mode 1: BEFORE — grouped */}
       <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
@@ -133,7 +137,7 @@ export default function Home() {
           sectionNumber="13"
           title="Design Decisions"
           subtitle="Mode 1: BEFORE"
-          description="6 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+          description="9 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
         />
       </div>
 
@@ -157,7 +161,7 @@ export default function Home() {
           sectionNumber="15"
           title="Design Decisions"
           subtitle="Mode 2: DURING"
-          description="7 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+          description="8 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
         />
       </div>
 
@@ -176,7 +180,7 @@ export default function Home() {
           sectionNumber="17"
           title="Design Decisions"
           subtitle="Mode 3: AFTER"
-          description="6 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+          description="8 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
         />
       </div>
 
@@ -186,7 +190,7 @@ export default function Home() {
         sectionNumber="18"
         title="System-Level Decisions"
         subtitle="Cross-Cutting Choices"
-        description="8 decisions that shaped the entire app's structure, visual language, and strategic positioning. These choices defined the system as a whole."
+        description="9 decisions that shaped the entire app's structure, visual language, and strategic positioning. These choices defined the system as a whole."
       />
 
       <InformationArchitecture />
