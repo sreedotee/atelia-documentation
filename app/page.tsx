@@ -19,6 +19,7 @@ import Constraints from "@/components/sections/Constraints";
 import Reflection from "@/components/sections/Reflection";
 import VideoAndPrototype from "@/components/sections/VideoAndPrototype";
 import Footer from "@/components/Footer";
+import SectionTimeline from "@/components/SectionTimeline";
 
 export default function Home() {
   const mode1Screens = [
@@ -104,6 +105,7 @@ export default function Home() {
 
   return (
     <main className="bg-[#FAF9FA] dark:bg-[#1a1520] min-h-screen">
+      <SectionTimeline />
       <Navigation />
       <Hero />
       <Overview />
