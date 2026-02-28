@@ -6,33 +6,42 @@ interface SectionHeaderProps {
   number: string;
   title: string;
   subtitle?: string;
-  centered?: boolean;
 }
 
-export default function SectionHeader({
-  number,
-  title,
-  subtitle,
-  centered = false,
-}: SectionHeaderProps) {
+export default function SectionHeader({ number, title, subtitle }: SectionHeaderProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      viewport={{ once: true, margin: "-100px" }}
-      className={`mb-12 ${centered ? "text-center" : ""}`}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, margin: "-80px" }}
     >
-      <span className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase block mb-3">
-        {number}
-      </span>
-      <h2 className="font-clash text-4xl md:text-5xl font-semibold text-[#1D1A1C] dark:text-white leading-tight">
-        {title}
-      </h2>
+      {/* Section label */}
+      <p
+        style={{
+          fontSize: 11,
+          letterSpacing: "1.5px",
+          color: "#A3A3A3",
+          fontWeight: 500,
+          textTransform: "uppercase",
+          marginBottom: 24,
+        }}
+      >
+        {number} — {title}
+      </p>
       {subtitle && (
-        <p className="mt-2 font-clash text-2xl text-[#5C5759] dark:text-gray-400">
+        <h2
+          className="font-clash"
+          style={{
+            fontSize: "clamp(28px, 4vw, 40px)",
+            fontWeight: 500,
+            lineHeight: 1.2,
+            color: "#000",
+            marginBottom: 24,
+          }}
+        >
           {subtitle}
-        </p>
+        </h2>
       )}
     </motion.div>
   );

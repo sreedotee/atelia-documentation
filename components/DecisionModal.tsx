@@ -39,27 +39,11 @@ export default function DecisionModal({
   }, [handleKeyDown]);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
   if (!decision) return null;
-
-  const categoryColors: Record<string, string> = {
-    "Navigation & IA": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-    "Interaction Patterns": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-    "Visual Design": "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
-    "Product Decisions": "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
-    "Product Strategy": "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
-  };
-
-  const catColor = categoryColors[decision.category] || "bg-gray-100 text-gray-700";
 
   return (
     <AnimatePresence>
@@ -68,21 +52,36 @@ export default function DecisionModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-8"
           onClick={(e) => e.target === e.currentTarget && onClose()}
-          style={{ background: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)" }}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "32px",
+            background: "rgba(0,0,0,0.5)",
+          }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            initial={{ opacity: 0, scale: 0.97, y: 16 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-white dark:bg-[#1e1530] rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
+            exit={{ opacity: 0, scale: 0.97, y: 16 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            style={{
+              background: "#FFFFFF",
+              width: "100%",
+              maxWidth: 720,
+              maxHeight: "90vh",
+              overflowY: "auto",
+              position: "relative",
+            }}
           >
-            {/* Progress bar */}
-            <div className="h-1 bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 rounded-t-2xl">
+            {/* Progress bar top */}
+            <div style={{ height: 2, background: "#E5E5E5" }}>
               <motion.div
-                className="h-1 bg-[#3D2B4C] rounded-t-2xl"
+                style={{ height: 2, background: "#000" }}
                 initial={{ width: 0 }}
                 animate={{ width: `${((currentIndex + 1) / total) * 100}%` }}
                 transition={{ duration: 0.3 }}
@@ -90,106 +89,153 @@ export default function DecisionModal({
             </div>
 
             {/* Header */}
-            <div className="sticky top-0 bg-white dark:bg-[#1e1530] px-8 pt-6 pb-4 border-b border-[#E8E5E6] dark:border-[#3D2B4C]/50 flex items-center justify-between z-10">
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={onPrev}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] dark:border-[#3D2B4C] flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
-                  aria-label="Previous decision"
-                >
-                  ←
-                </button>
-                <button
-                  onClick={onNext}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] dark:border-[#3D2B4C] flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
-                  aria-label="Next decision"
-                >
-                  →
-                </button>
-                <span className="text-xs text-[#7D767A] dark:text-gray-500 ml-2">
-                  {currentIndex + 1} of {total}
-                </span>
-              </div>
-
+            <div
+              style={{
+                position: "sticky",
+                top: 0,
+                background: "#FFFFFF",
+                padding: "32px 48px 24px",
+                borderBottom: "1px solid #E5E5E5",
+                zIndex: 10,
+              }}
+            >
               <button
                 onClick={onClose}
-                className="w-8 h-8 rounded-full bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white transition-all text-lg"
+                style={{
+                  position: "absolute",
+                  top: 24,
+                  right: 24,
+                  width: 32,
+                  height: 32,
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: 18,
+                  color: "#737373",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
                 aria-label="Close"
               >
                 ✕
               </button>
+
+              <p
+                style={{
+                  fontSize: 11,
+                  color: "#A3A3A3",
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  marginBottom: 16,
+                }}
+              >
+                DECISION {currentIndex + 1} OF {total}
+              </p>
+
+              <h3
+                className="font-clash"
+                style={{
+                  fontSize: 28,
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  color: "#000",
+                  marginBottom: 8,
+                  paddingRight: 40,
+                }}
+              >
+                {decision.title}
+              </h3>
+
+              <p style={{ fontSize: 12, color: "#737373" }}>{decision.category}</p>
             </div>
 
-            {/* Content */}
-            <div className="px-8 py-6 space-y-6">
-              {/* Title + Category */}
-              <div>
-                <span className={`inline-block text-xs font-medium px-3 py-1 rounded-full mb-3 ${catColor}`}>
-                  {decision.category}
-                </span>
-                <h3 className="font-clash text-2xl md:text-3xl font-semibold text-[#1D1A1C] dark:text-white">
-                  {decision.title}
-                </h3>
-              </div>
-
-              <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/50" />
-
+            {/* Body */}
+            <div style={{ padding: "40px 48px", display: "flex", flexDirection: "column", gap: 36 }}>
               {/* Context */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-2">
-                  Context
+                <p
+                  style={{
+                    fontSize: 11,
+                    color: "#A3A3A3",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    marginBottom: 14,
+                    fontWeight: 500,
+                  }}
+                >
+                  CONTEXT
                 </p>
-                <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">
+                <p style={{ fontSize: 16, lineHeight: 1.8, color: "#525252" }}>
                   {decision.context}
                 </p>
               </div>
 
+              <div style={{ height: 1, background: "#E5E5E5" }} />
+
               {/* Options */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-3">
-                  Options Considered
+                <p
+                  style={{
+                    fontSize: 11,
+                    color: "#A3A3A3",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    marginBottom: 16,
+                    fontWeight: 500,
+                  }}
+                >
+                  OPTIONS CONSIDERED
                 </p>
-                <div className="space-y-3">
+                <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
                   {decision.options.map((option) => (
                     <div
                       key={option.id}
-                      className={`rounded-xl p-4 flex items-start gap-4 transition-all ${
-                        option.chosen
-                          ? "bg-[#3D2B4C] text-white"
-                          : "bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/50"
-                      }`}
+                      style={{
+                        border: option.chosen ? "2px solid #000" : "1px solid #E5E5E5",
+                        background: option.chosen ? "#FAFAFA" : "#FFFFFF",
+                        padding: "16px 20px",
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: 16,
+                      }}
                     >
-                      <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center font-clash font-semibold text-sm shrink-0 ${
-                          option.chosen
-                            ? "bg-white/20 text-white"
-                            : "bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 text-[#5C5759] dark:text-gray-400"
-                        }`}
+                      <span
+                        style={{
+                          fontSize: 11,
+                          color: option.chosen ? "#000" : "#A3A3A3",
+                          fontWeight: 500,
+                          flexShrink: 0,
+                          marginTop: 2,
+                          letterSpacing: "0.5px",
+                        }}
                       >
                         {option.letter}
-                      </div>
-                      <div className="flex-1">
-                        <p className={`font-medium ${option.chosen ? "text-white" : "text-[#1D1A1C] dark:text-white"}`}>
+                      </span>
+                      <div style={{ flex: 1 }}>
+                        <p
+                          style={{
+                            fontSize: 15,
+                            color: "#000",
+                            fontWeight: option.chosen ? 500 : 400,
+                          }}
+                        >
                           {option.text}
+                          {option.chosen && (
+                            <span style={{ marginLeft: 8, fontSize: 13, color: "#737373" }}>✓</span>
+                          )}
                         </p>
                         {(option.pros || option.cons) && (
-                          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                          <div style={{ marginTop: 8, display: "flex", gap: 16, flexWrap: "wrap" }}>
                             {option.pros && (
-                              <span className={`text-xs ${option.chosen ? "text-green-200" : "text-green-600 dark:text-green-400"}`}>
-                                ✓ {option.pros}
-                              </span>
+                              <span style={{ fontSize: 12, color: "#525252" }}>+ {option.pros}</span>
                             )}
                             {option.cons && (
-                              <span className={`text-xs ${option.chosen ? "text-red-200" : "text-red-500 dark:text-red-400"}`}>
-                                ✗ {option.cons}
-                              </span>
+                              <span style={{ fontSize: 12, color: "#A3A3A3" }}>− {option.cons}</span>
                             )}
                           </div>
                         )}
                       </div>
-                      {option.chosen && (
-                        <span className="text-green-300 text-lg shrink-0">✓</span>
-                      )}
                     </div>
                   ))}
                 </div>
@@ -197,44 +243,68 @@ export default function DecisionModal({
 
               {/* Rationale */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-2">
-                  Rationale
+                <p
+                  style={{
+                    fontSize: 11,
+                    color: "#A3A3A3",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    marginBottom: 14,
+                    fontWeight: 500,
+                  }}
+                >
+                  RATIONALE
                 </p>
-                <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">
+                <p style={{ fontSize: 16, lineHeight: 1.8, color: "#525252" }}>
                   {decision.rationale}
                 </p>
               </div>
 
               {/* Impact */}
-              <div className="bg-[#3D2B4C]/5 dark:bg-[#3D2B4C]/20 rounded-xl p-5 border-l-4 border-[#3D2B4C]">
-                <p className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase mb-2">
-                  Impact
+              <div style={{ borderLeft: "2px solid #000", paddingLeft: 24 }}>
+                <p
+                  style={{
+                    fontSize: 11,
+                    color: "#000",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    marginBottom: 14,
+                    fontWeight: 500,
+                  }}
+                >
+                  IMPACT
                 </p>
-                <p className="text-[#1D1A1C] dark:text-gray-200 leading-relaxed font-medium">
+                <p style={{ fontSize: 16, lineHeight: 1.8, color: "#171717", fontWeight: 500 }}>
                   {decision.impact}
                 </p>
               </div>
             </div>
 
             {/* Footer */}
-            <div className="px-8 py-4 border-t border-[#E8E5E6] dark:border-[#3D2B4C]/50 flex items-center justify-between">
-              <div className="flex gap-3">
+            <div
+              style={{
+                padding: "20px 48px",
+                borderTop: "1px solid #E5E5E5",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <div style={{ display: "flex", gap: 24 }}>
                 <button
                   onClick={onPrev}
-                  className="text-sm text-[#5C5759] dark:text-gray-400 hover:text-[#3D2B4C] dark:hover:text-purple-300 transition-colors flex items-center gap-1"
+                  style={{ fontSize: 13, color: "#737373", background: "none", border: "none", cursor: "pointer" }}
                 >
                   ← Previous
                 </button>
                 <button
                   onClick={onNext}
-                  className="text-sm text-[#5C5759] dark:text-gray-400 hover:text-[#3D2B4C] dark:hover:text-purple-300 transition-colors flex items-center gap-1"
+                  style={{ fontSize: 13, color: "#737373", background: "none", border: "none", cursor: "pointer" }}
                 >
                   Next →
                 </button>
               </div>
-              <p className="text-xs text-[#7D767A] dark:text-gray-500">
-                Use ← → keys to navigate
-              </p>
+              <p style={{ fontSize: 11, color: "#A3A3A3" }}>Use ← → keys to navigate</p>
             </div>
           </motion.div>
         </motion.div>
