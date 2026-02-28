@@ -1,4 +1,3 @@
-import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Overview from "@/components/sections/Overview";
 import BriefChallenge from "@/components/sections/BriefChallenge";
@@ -104,9 +103,8 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-[#FAF9FA] dark:bg-[#1a1520] min-h-screen">
+    <main className="bg-[#FAF9FA] dark:bg-[#1a1520] min-h-screen lg:ml-[220px]">
       <SectionTimeline />
-      <Navigation />
       <Hero />
       <Overview />
       <BriefChallenge />
