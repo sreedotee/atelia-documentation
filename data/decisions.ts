@@ -1071,19 +1071,269 @@ export const decisions: Record<string, Decision> = {
     impact:
       "Onboarding: Name → Email → Password. 3 screens instead of 6. No measurements, no sizing info. AI model created from 2-3 full-body photos when first using Try-On. Prototype testing showed 100% onboarding completion vs. 60% for the full-data version.",
   },
+
+  // NEW MODE 1 DECISIONS
+  "paste-link-microinteractions": {
+    id: "paste-link-microinteractions",
+    title: "Paste Link Micro-interactions",
+    category: "Interaction Patterns",
+    context: "After user pastes link and preview loads, what happens to the UI elements?",
+    mode: "mode1",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Keep URL visible in input field",
+        pros: "User can see what they pasted",
+        cons: "Visual noise after confirmation",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Clear URL, show preview only",
+        pros: "Clean UI, preview is all that's needed",
+        cons: "Can't verify URL after clearing",
+        chosen: true,
+      },
+      {
+        id: "c",
+        letter: "C",
+        text: "Collapse entire input section",
+        pros: "Maximum space for preview",
+        cons: "Loses undo affordance entirely",
+        chosen: false,
+      },
+    ],
+    rationale:
+      "After preview loads, user has already confirmed it's the correct item by looking at the image. Leaving the URL visible is visual noise and takes up space. Clearing it keeps the UI clean while preview shows all necessary info (image, title, price, store).\n\nAdded detail: X button appears on preview to allow immediate undo if wrong link was pasted. Undo is contextual—appears right where action was taken.",
+    impact:
+      "These micro-decisions reduce friction in the save flow. URL disappears automatically, X button provides safety net. User never thinks about cleanup.",
+    screensUrl: "#mode1-designs",
+  },
+
+  "item-detail-actions": {
+    id: "item-detail-actions",
+    title: "Item Detail Actions",
+    category: "Interaction Patterns",
+    context: "When user taps a saved item, what actions should be available?",
+    mode: "mode1",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Move/reorganize to collections",
+        chosen: true,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Add to try-on canvas",
+        chosen: true,
+      },
+      {
+        id: "c",
+        letter: "C",
+        text: "Share to other person",
+        chosen: true,
+      },
+    ],
+    rationale:
+      "All three actions are valid user needs, but prioritization matters.\n\nPrimary action: 'Add to Try-On'—this is why users saved the item. Secondary: Collection management—users refine organization over time. Tertiary: Share—nice-to-have but not core workflow.\n\nEarly mockups showed unclear visual hierarchy between these actions. Final design uses button sizing and placement to communicate priority.",
+    impact:
+      "Item detail screen supports multiple user intents without overwhelming. Clear hierarchy guides users to most common action (try-on) while other options remain accessible.",
+    screensUrl: "#mode1-designs",
+  },
+
+  "camera-upload-scope": {
+    id: "camera-upload-scope",
+    title: "Camera Upload Scope",
+    category: "Product Decisions",
+    context: "When user uploads item via camera, what data should we collect?",
+    mode: "mode1",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Full form: name, price, store, size, etc.",
+        pros: "Complete data for future features",
+        cons: "High friction for existing wardrobe items",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Minimal: photo, name, category only",
+        pros: "Fast, matches camera upload use case",
+        cons: "Less metadata for search/filtering",
+        chosen: true,
+      },
+      {
+        id: "c",
+        letter: "C",
+        text: "Auto-detect everything with AI",
+        pros: "Zero user effort",
+        cons: "Unreliable, frustrating when wrong",
+        chosen: false,
+      },
+    ],
+    rationale:
+      "Key insight: 'The only reason pricing, website, size, cost are visible is to help make purchase decisions. When user uploads from camera they already purchased and don't need those fields.'\n\nCamera upload is for items already owned—paste-link is for items being considered. Different input methods = different data requirements.\n\nFinal approach: Required: Photo, name/title, category. Optional: Everything else.",
+    impact:
+      "Reduced friction for camera upload. Users can quickly add items from their existing wardrobe without form fatigue. Onboarding flow stays fast and purposeful.",
+    screensUrl: "#mode1-designs",
+  },
+
+  // NEW MODE 2 DECISIONS
+  "canvas-clean-space": {
+    id: "canvas-clean-space",
+    title: "Canvas Shows Outfit Only",
+    category: "Interaction Patterns",
+    context: "Should the try-on canvas show selected items as chips while user is selecting?",
+    mode: "mode2",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Show chips of selected items on canvas",
+        pros: "User sees what's selected at a glance",
+        cons: "Takes up canvas space, redundant with grid",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Canvas shows only generated outfit, nothing else",
+        pros: "Keeps canvas clean for the magic moment",
+        cons: "Selected state only in grid",
+        chosen: true,
+      },
+    ],
+    rationale:
+      "Early version showed selected items as chips at top of canvas during selection.\n\nProblems: Canvas space already limited on mobile (25% of screen). Chips consumed valuable vertical space. Redundant—items already visible in grid below with selected state. Visual noise distracted from generated outfit.\n\nFrom notes: 'Outfit generation should push down everything elegantly and generated outfit must be shown'—keeping canvas clean makes this moment impactful.",
+    impact:
+      "Clean canvas creates focus. When outfit generates, it has full attention. All selection state communicated through item grid checkmarks. No competing visual elements.",
+    screensUrl: "#mode2-designs",
+  },
+
+  // NEW MODE 3 DECISIONS
+  "outfit-detail-recipe": {
+    id: "outfit-detail-recipe",
+    title: "Outfit Detail as Recipe",
+    category: "Visual Design",
+    context: "How should generated outfits be structured and displayed?",
+    mode: "mode3",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Just show outfit image",
+        pros: "Clean, visual-first",
+        cons: "No path to purchase individual items",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Recipe structure: outfit image + items used",
+        pros: "Transparent composition, clear purchase path",
+        cons: "Requires scrolling on small screens",
+        chosen: true,
+      },
+      {
+        id: "c",
+        letter: "C",
+        text: "Separate tabs for outfit vs items",
+        pros: "Clean separation",
+        cons: "Hides item-outfit relationship",
+        chosen: false,
+      },
+    ],
+    rationale:
+      "Metaphor: Outfit = dish, Items = ingredients.\n\nStructure: 1. Hero: Generated outfit image. 2. Actions: Save, share, regenerate. 3. Items Used: List of items with prices (the 'ingredients'). 4. Total Price: Sum of all items.\n\nFrom notes: 'Recipe where details about composite items are necessary to be shown at one glance.' Design refinement: 'You need clearer visual separation between hero → actions → items'—final design added section dividers.",
+    impact:
+      "Recipe metaphor makes outfits understandable. Users see what went into it, can save individual items or entire outfit, and understand total cost before buying.",
+    screensUrl: "#mode3-designs",
+  },
+
+  "meh-outfits-history": {
+    id: "meh-outfits-history",
+    title: '"Meh" Outfits Stay in History',
+    category: "Product Decisions",
+    context: "What happens to generated outfits that user doesn't love?",
+    mode: "mode3",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Delete unsaved outfits immediately",
+        pros: "History stays clean",
+        cons: "No safety net for changed minds",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Keep all generated outfits in history",
+        pros: "Complete record, no permanent decisions",
+        cons: "History can fill up over time",
+        chosen: true,
+      },
+    ],
+    rationale:
+      "Initial hypothesis: 'For meh or nay outfits, users don't want them in wardrobe lying around.'\n\nResearch finding: Users wanted to see ALL generated outfits in history, not just saved ones. Reasons: 'Sometimes I change my mind.' 'I want to show my friend what looked bad.' Reference for future generations.\n\nDecision: History shows everything (saved + unsaved). Unsaved outfits stay in history but aren't in Collections. Clear visual distinction between saved/unsaved.",
+    impact:
+      "History became comprehensive record of all try-on sessions. Users can revisit any outfit, even ones they initially rejected. Reduces pressure to 'save or lose it.'",
+    screensUrl: "#mode3-designs",
+  },
+
+  // NEW SYSTEM DECISION
+  "items-outfits-relationship": {
+    id: "items-outfits-relationship",
+    title: "Items vs Outfits: References, Not Containers",
+    category: "Product Strategy",
+    context: "When user saves outfit to collection, should items be automatically added too?",
+    mode: "system",
+    options: [
+      {
+        id: "a",
+        letter: "A",
+        text: "Auto-add items when saving outfit",
+        pros: "All related content in one place",
+        cons: "Creates duplicate chaos, broken mental model",
+        chosen: false,
+      },
+      {
+        id: "b",
+        letter: "B",
+        text: "Outfit references items, no auto-add",
+        pros: "Predictable, no hidden side-effects",
+        cons: "Slightly more abstract data model",
+        chosen: true,
+      },
+    ],
+    rationale:
+      "Critical mental model distinction:\n\nItem = atomic, reusable, source-linked object. Outfit = composition (recipe) that REFERENCES items, but does NOT own them. An outfit is NOT a container.\n\nExample: Item A in 'Sree Birthday' collection. Item B in 'Holiday' collection. Generate outfit using A + B. Save outfit → 'Sree Birthday'. Correct: Outfit saved to collection. Outfit stores references to items. INCORRECT: Items A and B are NOT duplicated/moved/re-added.\n\nThis is how recipes, playlists, Figma components, and Notion databases work. Saving an outfit NEVER changes item membership.",
+    impact:
+      "System stays sane. Predictable behavior—no hidden side-effects or cascade rules. Users control item membership explicitly. Outfits reference items; they do not contain them.",
+  },
 };
 
 export const decisionsByMode = {
   mode1: [
     "collections-structure",
     "paste-link",
+    "paste-link-microinteractions",
     "save-flow",
     "bottom-sheets",
     "recently-added",
     "card-sizing",
+    "item-detail-actions",
+    "camera-upload-scope",
   ],
   mode2: [
     "canvas-split",
+    "canvas-clean-space",
     "category-picker",
     "fashion-logic",
     "regenerate-flow",
@@ -1095,12 +1345,15 @@ export const decisionsByMode = {
     "history-list-grid",
     "timeline-layout",
     "outfit-detail",
+    "outfit-detail-recipe",
     "items-used",
     "saved-unsaved",
+    "meh-outfits-history",
     "item-detail-outfits",
   ],
   system: [
     "three-modes-framework",
+    "items-outfits-relationship",
     "language-definition",
     "typography-pairing",
     "color-evolution",
