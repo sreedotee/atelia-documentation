@@ -47,7 +47,7 @@ export default function UserResearch() {
   return (
     <section id="user-research" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="07" title="User Research Findings" />
+        <SectionHeader number="06" title="User Research Findings" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-16 max-w-2xl">
           I interviewed 5 online shoppers (ages 22–34, shop 2+ times/month) to understand their

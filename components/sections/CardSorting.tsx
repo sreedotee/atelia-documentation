@@ -20,7 +20,7 @@ export default function CardSorting() {
   return (
     <section id="card-sorting" className="py-28 bg-white dark:bg-[#1e1530]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="08" title="Card Sorting Results" />
+        <SectionHeader number="07" title="Card Sorting Results" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
           To validate the "organize by occasion" finding, I conducted a photo sorting task with

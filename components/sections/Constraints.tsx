@@ -41,7 +41,7 @@ export default function Constraints() {
   return (
     <section id="constraints" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="19" title="Constraints & Considerations" />
+        <SectionHeader number="23" title="Constraints & Considerations" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
           Every design decision was made within real constraints and considerations that shaped the

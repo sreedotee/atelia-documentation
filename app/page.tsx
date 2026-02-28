@@ -125,7 +125,7 @@ export default function Home() {
       <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
         <ModeDesigns
           id="mode1-designs"
-          sectionNumber="12"
+          sectionNumber="13"
           modeTitle="Mode 1: BEFORE"
           subtitle="Collecting & Organizing"
           intro="The BEFORE mode focuses on quick saving and flexible organization. Users can paste links from any store and organize items by occasion."
@@ -134,7 +134,7 @@ export default function Home() {
         />
         <DesignWhiteboard
           mode="mode1"
-          sectionNumber="13"
+          sectionNumber="14"
           title="Design Decisions"
           subtitle="Mode 1: BEFORE"
           description="9 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
@@ -145,7 +145,7 @@ export default function Home() {
       <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
         <ModeDesigns
           id="mode2-designs"
-          sectionNumber="14"
+          sectionNumber="15"
           modeTitle="Mode 2: DURING"
           subtitle="Creating & Experimenting"
           intro="The DURING mode is about playful experimentation. Users mix items from their collection to generate AI outfit visualizations."
@@ -158,7 +158,7 @@ export default function Home() {
         />
         <DesignWhiteboard
           mode="mode2"
-          sectionNumber="15"
+          sectionNumber="16"
           title="Design Decisions"
           subtitle="Mode 2: DURING"
           description="8 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
@@ -169,7 +169,7 @@ export default function Home() {
       <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
         <ModeDesigns
           id="mode3-designs"
-          sectionNumber="16"
+          sectionNumber="17"
           modeTitle="Mode 3: AFTER"
           subtitle="Reviewing & Deciding"
           intro='The AFTER mode helps users review results, save favorites, and make purchase decisions. Like a recipe, outfits show their "ingredients."'
@@ -177,7 +177,7 @@ export default function Home() {
         />
         <DesignWhiteboard
           mode="mode3"
-          sectionNumber="17"
+          sectionNumber="18"
           title="Design Decisions"
           subtitle="Mode 3: AFTER"
           description="8 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
@@ -187,7 +187,7 @@ export default function Home() {
       {/* System-level decisions */}
       <DesignWhiteboard
         mode="system"
-        sectionNumber="18"
+        sectionNumber="19"
         title="System-Level Decisions"
         subtitle="Cross-Cutting Choices"
         description="9 decisions that shaped the entire app's structure, visual language, and strategic positioning. These choices defined the system as a whole."

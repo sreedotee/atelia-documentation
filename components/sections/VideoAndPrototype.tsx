@@ -24,7 +24,7 @@ export default function VideoAndPrototype() {
       {/* Video Section */}
       <section id="video" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <SectionHeader number="21" title="Video Walkthrough" />
+          <SectionHeader number="25" title="Video Walkthrough" />
 
           <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
             Watch a 3-minute walkthrough of the complete user experience.
@@ -92,7 +92,7 @@ export default function VideoAndPrototype() {
       {/* Prototype Section */}
       <section id="prototype" className="py-28 bg-white dark:bg-[#1e1530]">
         <div className="max-w-[1200px] mx-auto px-6">
-          <SectionHeader number="22" title="Interactive Prototype" />
+          <SectionHeader number="26" title="Interactive Prototype" />
 
           <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
             Try the interactive prototype yourself. Click through the main flows.
