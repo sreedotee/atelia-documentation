@@ -8,14 +8,6 @@
 @import '@fontsource/dm-sans/500.css';
 @import '@fontsource/dm-sans/600.css';
 
-/* Clash Display - will load from CDN on production, fallback to system fonts */
-@font-face {
-  font-family: 'Clash Display';
-  src: local('Georgia');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
 
 :root {
   --background: #FAF9FA;
