@@ -38,7 +38,21 @@ const SECTIONS: Section[] = [
 
 export default function SectionTimeline() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isDark, setIsDark] = useState(false);
 
+  // Track dark mode — watch for class changes on <html>
+  useEffect(() => {
+    const html = document.documentElement;
+    setIsDark(html.classList.contains("dark"));
+
+    const observer = new MutationObserver(() => {
+      setIsDark(html.classList.contains("dark"));
+    });
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Track active section via scroll
   useEffect(() => {
     const update = () => {
       const threshold = window.innerHeight * 0.4;
@@ -60,6 +74,12 @@ export default function SectionTimeline() {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
+  // Theme-aware colors
+  const accentColor = isDark ? "#a78bfa" : "#3D2B4C";
+  const trackColor = isDark ? "#3D2B4C" : "#E0DCE0";
+  const connectorDone = accentColor;
+  const connectorPending = trackColor;
 
   return (
     <nav
@@ -106,8 +126,8 @@ export default function SectionTimeline() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.4, opacity: 0 }}
                     transition={{ duration: 0.18 }}
-                    className="rounded-full bg-[#3D2B4C] dark:bg-purple-400 flex items-center justify-center"
-                    style={{ width: dotSize, height: dotSize }}
+                    className="rounded-full flex items-center justify-center"
+                    style={{ width: dotSize, height: dotSize, backgroundColor: accentColor }}
                   >
                     <svg
                       width={Math.round(dotSize * 0.6)}
@@ -148,7 +168,7 @@ export default function SectionTimeline() {
                       cy={cy}
                       r={r}
                       fill="none"
-                      stroke="#E0DCE0"
+                      stroke={trackColor}
                       strokeWidth="1.5"
                     />
                     {/* Progress arc */}
@@ -157,7 +177,7 @@ export default function SectionTimeline() {
                       cy={cy}
                       r={r}
                       fill="none"
-                      stroke="#3D2B4C"
+                      stroke={accentColor}
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeDasharray={circumference}
@@ -175,8 +195,12 @@ export default function SectionTimeline() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="rounded-full border-[1.5px] border-[#CCC9CC] dark:border-[#3D2B4C]/50"
-                    style={{ width: dotSize, height: dotSize }}
+                    className="rounded-full"
+                    style={{
+                      width: dotSize,
+                      height: dotSize,
+                      border: `1.5px solid ${trackColor}`,
+                    }}
                   />
                 )}
               </AnimatePresence>
@@ -192,7 +216,7 @@ export default function SectionTimeline() {
               <motion.div
                 style={{ width: 2, height: connectorH }}
                 animate={{
-                  backgroundColor: isCompleted ? "#3D2B4C" : "#E0DCE0",
+                  backgroundColor: isCompleted ? connectorDone : connectorPending,
                 }}
                 transition={{ duration: 0.35 }}
               />
