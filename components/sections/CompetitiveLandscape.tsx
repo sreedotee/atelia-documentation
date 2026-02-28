@@ -43,18 +43,18 @@ const tableData = [
 ];
 
 function CellValue({ value }: { value: boolean | string }) {
-  if (value === true) return <span className="text-green-600 dark:text-green-400 font-medium">✓ Yes</span>;
-  if (value === false) return <span className="text-red-500 dark:text-red-400">✗ No</span>;
-  return <span className="text-amber-600 dark:text-amber-400 font-medium">◑ {value}</span>;
+  if (value === true) return <span className="text-green-600 font-medium">✓ Yes</span>;
+  if (value === false) return <span className="text-red-500">✗ No</span>;
+  return <span className="text-amber-600 font-medium">◑ {value}</span>;
 }
 
 export default function CompetitiveLandscape() {
   return (
-    <section id="competitive-landscape" className="py-28 bg-white dark:bg-[#1e1530]">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="04" title="Competitive Landscape" />
+    <section id="competitive-landscape" className="bg-white" style={{ padding: "160px 80px" }}>
+      <div style={{ maxWidth: 800 }}>
+        <SectionHeader number="03" title="Research" subtitle="Competitive Landscape" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#525252] leading-relaxed mb-12 max-w-2xl">
           I analyzed 5 existing virtual try-on apps and found three distinct approaches, each
           serving different user needs.
         </motion.p>
@@ -68,12 +68,12 @@ export default function CompetitiveLandscape() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 rounded-2xl p-7 hover:shadow-lg transition-shadow"
+              className="bg-[#FAFAFA] border border-[#E5E5E5] rounded-2xl p-7 hover:shadow-lg transition-shadow"
             >
-              <p className="font-clash text-6xl font-bold text-[#3D2B4C]/10 dark:text-purple-500/20 mb-2">
+              <p className="font-clash text-6xl font-bold text-black/10 mb-2">
                 {a.number}
               </p>
-              <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-5">
+              <h3 className="font-clash text-xl font-semibold text-[#171717] mb-5">
                 {a.title}
               </h3>
 
@@ -85,10 +85,10 @@ export default function CompetitiveLandscape() {
                   { label: "Gap", value: a.gap },
                 ].map((row) => (
                   <div key={row.label}>
-                    <p className="text-xs text-[#7D767A] dark:text-gray-500 uppercase tracking-wide mb-0.5">
+                    <p className="text-xs text-[#737373] uppercase tracking-wide mb-0.5">
                       {row.label}
                     </p>
-                    <p className="text-sm text-[#1D1A1C] dark:text-gray-200">{row.value}</p>
+                    <p className="text-sm text-[#171717]">{row.value}</p>
                   </div>
                 ))}
               </div>
@@ -97,7 +97,7 @@ export default function CompetitiveLandscape() {
                 {a.apps.map((app) => (
                   <span
                     key={app}
-                    className="text-xs px-2.5 py-1 rounded-full bg-[#3D2B4C]/10 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300"
+                    className="text-xs px-2.5 py-1 rounded-full bg-black/10 text-black"
                   >
                     {app}
                   </span>
@@ -113,14 +113,14 @@ export default function CompetitiveLandscape() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/40 rounded-2xl p-6 mb-16 flex items-start gap-4"
+          className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-16 flex items-start gap-4"
         >
           <span className="text-3xl">💡</span>
           <div>
-            <h4 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-2">
+            <h4 className="font-clash text-xl font-semibold text-[#171717] mb-2">
               The Gap
             </h4>
-            <p className="text-[#5C5759] dark:text-gray-300">
+            <p className="text-[#525252]">
               No app combines universal item saving (any store) + AI virtual try-on + flexible
               organization (by occasion).
             </p>
@@ -128,7 +128,7 @@ export default function CompetitiveLandscape() {
         </motion.div>
 
         {/* Comparison Table */}
-        <SectionHeader number="05" title="Feature Comparison" />
+        <SectionHeader number="04" title="Research" subtitle="Feature Comparison" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -139,7 +139,7 @@ export default function CompetitiveLandscape() {
         >
           <table className="w-full border-collapse">
             <thead>
-              <tr className="bg-[#3D2B4C] text-white">
+              <tr className="bg-[#000000] text-white">
                 <th className="text-left p-4 rounded-tl-xl font-clash font-semibold">App</th>
                 <th className="p-4 font-clash font-semibold">Try-On</th>
                 <th className="p-4 font-clash font-semibold">Save Items</th>
@@ -151,9 +151,9 @@ export default function CompetitiveLandscape() {
               {tableData.map((row, i) => (
                 <tr
                   key={row.app}
-                  className={`border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30 ${i % 2 === 0 ? "bg-white dark:bg-[#1e1530]" : "bg-[#FAF9FA] dark:bg-[#2a1e36]"}`}
+                  className={`border-b border-[#E5E5E5] ${i % 2 === 0 ? "bg-white" : "bg-[#FAFAFA]"}`}
                 >
-                  <td className="p-4 font-medium text-[#1D1A1C] dark:text-white">{row.app}</td>
+                  <td className="p-4 font-medium text-[#171717]">{row.app}</td>
                   <td className="p-4 text-center"><CellValue value={row.tryon} /></td>
                   <td className="p-4 text-center"><CellValue value={row.save} /></td>
                   <td className="p-4 text-center"><CellValue value={row.organize} /></td>
@@ -161,18 +161,18 @@ export default function CompetitiveLandscape() {
                 </tr>
               ))}
               {/* Atelia highlighted row */}
-              <tr className="bg-[#3D2B4C]/5 dark:bg-purple-900/20 border-2 border-[#3D2B4C] dark:border-purple-500/50">
-                <td className="p-4 font-bold text-[#3D2B4C] dark:text-purple-300 rounded-bl-xl">
+              <tr className="bg-black/5 border-2 border-black">
+                <td className="p-4 font-bold text-black rounded-bl-xl">
                   ⭐ Atelia
                 </td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold">✓ Yes</td>
-                <td className="p-4 text-center text-[#3D2B4C] dark:text-purple-300 font-bold rounded-br-xl">✓ Yes</td>
+                <td className="p-4 text-center text-black font-bold">✓ Yes</td>
+                <td className="p-4 text-center text-black font-bold">✓ Yes</td>
+                <td className="p-4 text-center text-black font-bold">✓ Yes</td>
+                <td className="p-4 text-center text-black font-bold rounded-br-xl">✓ Yes</td>
               </tr>
             </tbody>
           </table>
-          <p className="text-center text-sm text-[#7D767A] dark:text-gray-500 mt-3">
+          <p className="text-center text-sm text-[#737373] mt-3">
             Atelia is the only solution combining all four capabilities
           </p>
         </motion.div>
