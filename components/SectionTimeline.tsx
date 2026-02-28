@@ -173,7 +173,7 @@ export default function SectionTimeline() {
   const toggleDark = () => {
     const html = document.documentElement;
     const next = !isDark;
-    next ? html.classList.add("dark") : html.classList.remove("dark");
+    if (next) html.classList.add("dark"); else html.classList.remove("dark");
     localStorage.setItem("theme", next ? "dark" : "light");
     setIsDark(next);
   };
