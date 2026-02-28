@@ -128,7 +128,7 @@ export default function CompetitiveLandscape() {
         </motion.div>
 
         {/* Comparison Table */}
-        <SectionHeader number="05" title="Feature Comparison" />
+        <SectionHeader number="04b" title="Feature Comparison" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

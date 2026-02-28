@@ -38,7 +38,7 @@ export default function StrategicOpportunity() {
   return (
     <section id="opportunity" className="py-28 bg-white dark:bg-[#1e1530]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="06" title="Strategic Opportunity" />
+        <SectionHeader number="05" title="Strategic Opportunity" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
           Of the three approaches, the shopping context offered the strongest opportunity for
