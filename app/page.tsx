@@ -301,7 +301,7 @@ export default function Home() {
               ],
             ],
           ].map((item, idx) => (
-            <article key={item[1]} className="mb-24 border-b border-[#E5E5E5] pb-24 last:mb-0 last:border-none last:pb-0">
+            <article key={idx} className="mb-24 border-b border-[#E5E5E5] pb-24 last:mb-0 last:border-none last:pb-0">
               <p className="text-[11px] uppercase tracking-[1px] text-[#A3A3A3]">{item[0]}</p>
               <h3 className="mt-2 font-clash text-[32px] leading-[1.2]">{item[1]}</h3>
               <p className="mt-2 text-[13px] text-[#737373]">{item[2]}</p>
