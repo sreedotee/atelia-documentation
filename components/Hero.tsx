@@ -100,13 +100,13 @@ export default function Hero() {
             >
               <a
                 href="#overview"
-                className="px-6 py-3 bg-[#3D2B4C] text-white rounded-xl font-medium hover:bg-[#2a1e36] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="px-6 py-3 bg-[#3D2B4C] text-white font-medium hover:bg-[#2a1e36] transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Read Case Study ↓
               </a>
               <a
                 href="#video"
-                className="px-6 py-3 bg-white dark:bg-white/10 text-[#3D2B4C] dark:text-white border border-[#E8E5E6] dark:border-white/20 rounded-xl font-medium hover:border-[#3D2B4C] dark:hover:border-white/40 transition-all hover:-translate-y-0.5"
+                className="px-6 py-3 bg-white dark:bg-white/10 text-[#3D2B4C] dark:text-white border border-[#E8E5E6] dark:border-white/20 font-medium hover:border-[#3D2B4C] dark:hover:border-white/40 transition-all hover:-translate-y-0.5"
               >
                 Watch Walkthrough (3 min)
               </a>
