@@ -7,6 +7,7 @@ interface SectionHeaderProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
+  fontWeight?: string;
 }
 
 export default function SectionHeader({
@@ -14,6 +15,7 @@ export default function SectionHeader({
   title,
   subtitle,
   centered = false,
+  fontWeight = "font-semibold",
 }: SectionHeaderProps) {
   return (
     <motion.div
@@ -26,7 +28,7 @@ export default function SectionHeader({
       <span className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase block mb-3">
         {number}
       </span>
-      <h2 className="font-clash text-4xl md:text-5xl font-semibold text-[#1D1A1C] dark:text-white leading-tight">
+      <h2 className={`font-clash text-4xl md:text-5xl ${fontWeight} text-[#1D1A1C] dark:text-white leading-tight`}>
         {title}
       </h2>
       {subtitle && (
