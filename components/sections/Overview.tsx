@@ -2,19 +2,37 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
-import { fadeInUp, staggerContainer, staggerItem } from "@/styles/animations";
+import { fadeInUp } from "@/styles/animations";
+
+const outcomeItems = [
+  {
+    icon: "📱",
+    title: "Universal Saving",
+    desc: "Paste links from any store to build collections",
+  },
+  {
+    icon: "✨",
+    title: "AI Virtual Try-On",
+    desc: "See how items look on your body before buying",
+  },
+  {
+    icon: "🗂️",
+    title: "Occasion-Based Organization",
+    desc: "Collections for vacation, work, events—not item types",
+  },
+];
 
 export default function Overview() {
   return (
     <section id="overview" className="py-28 bg-white dark:bg-[#1e1530]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="01" title="Overview" />
+        <SectionHeader number="01" title="Overview" fontWeight="font-medium" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left */}
           <motion.div {...fadeInUp} className="space-y-8">
             <div>
-              <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-3">
+              <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
                 The Brief
               </h3>
               <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed italic border-l-4 border-[#3D2B4C]/30 pl-4">
@@ -23,7 +41,7 @@ export default function Overview() {
             </div>
 
             <div>
-              <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-3">
+              <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
                 The Challenge
               </h3>
               <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed">
@@ -33,7 +51,7 @@ export default function Overview() {
             </div>
 
             <div>
-              <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-3">
+              <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
                 My Approach
               </h3>
               <ul className="space-y-2">
@@ -60,47 +78,34 @@ export default function Overview() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="flex flex-col"
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
               The Outcome
             </h3>
-            <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed">
+            <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed mb-6">
               A shopping companion that helps users make confident purchase decisions across any
               retailer by combining:
             </p>
 
-            <div className="space-y-4">
-              {[
-                {
-                  icon: "📱",
-                  title: "Universal Saving",
-                  desc: "Paste links from any store to build collections",
-                },
-                {
-                  icon: "✨",
-                  title: "AI Virtual Try-On",
-                  desc: "See how items look on your body before buying",
-                },
-                {
-                  icon: "🗂️",
-                  title: "Occasion-Based Organization",
-                  desc: "Collections for vacation, work, events—not item types",
-                },
-              ].map((f) => (
+            <div className="mt-auto rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 overflow-hidden">
+              {outcomeItems.map((f, i) => (
                 <div
                   key={f.title}
-                  className="flex items-start gap-4 p-4 rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                  className={`flex items-start gap-4 px-5 py-4 ${
+                    i < outcomeItems.length - 1
+                      ? "border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                      : ""
+                  }`}
                 >
                   <span className="text-2xl">{f.icon}</span>
                   <div>
                     <p className="font-semibold text-[#1D1A1C] dark:text-white">{f.title}</p>
-                    <p className="text-[#5C5759] dark:text-gray-400 text-sm">{f.desc}</p>
+                    <p className="text-[#5C5759] dark:text-gray-400 text-sm mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
-
           </motion.div>
         </div>
       </div>
