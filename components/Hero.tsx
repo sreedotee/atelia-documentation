@@ -62,11 +62,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-sans text-base md:text-lg lg:text-[25px] text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-xl"
+              className="font-sans text-[17px] lg:text-[20px] text-[#7D767A] dark:text-gray-400 leading-relaxed mb-10 max-w-xl line-clamp-3"
             >
-              Atelia combines universal item saving with AI virtual try-on,
-              helping online shoppers visualize outfits from any store on their
-              body before buying.
+              Atelia combines universal item saving with AI virtual try-on, helping online shoppers visualize outfits from any store on their body before buying.
             </motion.p>
 
             <motion.div
@@ -85,7 +83,7 @@ export default function Hero() {
                   <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-1">
                     {stat.label}
                   </p>
-                  <p className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white">
+                  <p className="font-clash text-lg font-normal text-[#1D1A1C] dark:text-white">
                     {stat.value}
                   </p>
                 </div>
