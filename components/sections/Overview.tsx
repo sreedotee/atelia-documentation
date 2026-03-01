@@ -121,8 +121,8 @@ export default function Overview() {
                     <div className="w-12 h-12 flex-shrink-0 rounded-lg border-2 border-dashed border-[#3D2B4C]/25 dark:border-purple-400/25" />
                   )}
                   <div>
-                    <p className="font-medium text-[#1D1A1C] dark:text-white text-[1.75rem] leading-tight">{f.title}</p>
-                    <p className="text-[#5C5759] dark:text-gray-400 text-[1.75rem] leading-snug mt-1">{f.desc}</p>
+                    <p className="font-medium text-[#1D1A1C] dark:text-white text-[18px] leading-tight">{f.title}</p>
+                    <p className="text-[#5C5759] dark:text-gray-400 text-[18px] leading-snug mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}
