@@ -39,7 +39,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
           style={{ background: screen.bg }}
         >
           <span className="text-6xl">{screen.icon}</span>
-          <p className="font-clash text-lg font-semibold text-white text-center">{screen.title}</p>
+          <p className="font-clash text-lg font-medium text-white text-center">{screen.title}</p>
           <div className="space-y-2 w-full">
             {[1, 2, 3].map((i) => (
               <div key={i} className="h-2 rounded bg-white/20" style={{ width: `${70 + i * 10}%` }} />

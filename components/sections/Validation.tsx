@@ -89,7 +89,7 @@ function SUSGauge({ score }: { score: number }) {
           <p className="text-sm text-[#737373] dark:text-gray-400 mt-1">out of 100</p>
         </div>
         <div className="pb-2">
-          <span className={`font-clash text-2xl font-semibold ${grade.color}`}>
+          <span className={`font-clash text-2xl font-medium ${grade.color}`}>
             Grade A
           </span>
           <p className={`text-sm mt-0.5 ${grade.color}`}>{grade.label} usability</p>
@@ -263,7 +263,7 @@ export default function Validation() {
             {issues.map((issue) => (
               <div key={issue.title}>
                 <div className="mb-5">
-                  <span className="text-xs font-bold px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#1D1A1C] dark:text-gray-300 tracking-wider uppercase">
+                  <span className="text-xs font-medium px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#1D1A1C] dark:text-gray-300 tracking-wider uppercase">
                     {issue.priority}
                   </span>
                   <h4 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mt-4">
@@ -276,7 +276,7 @@ export default function Validation() {
                 </p>
 
                 <div className="bg-[#FAFAFA] dark:bg-[#2a1e36] border border-[#E5E5E5] dark:border-[#3D2B4C]/30 p-5 max-w-2xl">
-                  <p className="text-xs font-bold text-[#A3A3A3] dark:text-gray-600 uppercase tracking-wider mb-2">
+                  <p className="text-xs font-medium text-[#A3A3A3] dark:text-gray-600 uppercase tracking-wider mb-2">
                     Fix Implemented
                   </p>
                   <p className="text-[#1D1A1C] dark:text-gray-200 leading-relaxed text-sm">

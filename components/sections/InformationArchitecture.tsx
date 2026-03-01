@@ -57,7 +57,7 @@ export default function InformationArchitecture() {
 
           {/* Root */}
           <div className="flex justify-center mb-4">
-            <div className="px-8 py-3 bg-[#1D1A1C] dark:bg-[#3D2B4C] text-white rounded-xl font-clash font-bold text-lg">
+            <div className="px-8 py-3 bg-[#1D1A1C] dark:bg-[#3D2B4C] text-white rounded-xl font-clash font-medium text-lg">
               ATELIA
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function InformationArchitecture() {
             {["HOME\n(Mode 1: BEFORE)", "TRY ON\n(Mode 2: DURING)", "PROFILE\n(Mode 3: AFTER)"].map((tab) => (
               <div
                 key={tab}
-                className="px-4 py-3 bg-[#3D2B4C] text-white rounded-xl font-clash font-semibold text-sm text-center whitespace-pre-line"
+                className="px-4 py-3 bg-[#3D2B4C] text-white rounded-xl font-clash font-medium text-sm text-center whitespace-pre-line"
               >
                 {tab}
               </div>

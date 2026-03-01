@@ -31,7 +31,7 @@ function ImagePlaceholder({
 
 function BlockLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-3">
+    <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-3">
       {children}
     </p>
   );
@@ -40,7 +40,7 @@ function BlockLabel({ children }: { children: React.ReactNode }) {
 function InsightBox({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-[#3D2B4C]/5 dark:bg-[#3D2B4C]/20 rounded-xl p-5 border-l-4 border-[#3D2B4C] dark:border-purple-500 max-w-2xl">
-      <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
+      <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
         Key Insight
       </p>
       <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm">{children}</p>

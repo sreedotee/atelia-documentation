@@ -95,14 +95,14 @@ export default function DesignLanguage() {
             Information Hierarchy
           </h4>
           <div className="flex flex-col items-center gap-2">
-            <div className="px-6 py-2 bg-[#3D2B4C] text-white rounded-lg font-clash font-semibold">
+            <div className="px-6 py-2 bg-[#3D2B4C] text-white rounded-lg font-clash font-medium">
               Saved (Superset)
             </div>
             <div className="w-px h-6 bg-[#3D2B4C]/30 dark:bg-purple-500/30" />
             <div className="flex gap-4">
               {["Collection A", "Collection B", "Collection C"].map((c) => (
                 <div key={c} className="flex flex-col items-center gap-2">
-                  <div className="px-4 py-2 bg-[#3D2B4C]/20 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 rounded-lg text-sm font-semibold">
+                  <div className="px-4 py-2 bg-[#3D2B4C]/20 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 rounded-lg text-sm font-medium">
                     {c}
                   </div>
                   <div className="w-px h-4 bg-[#3D2B4C]/20 dark:bg-purple-500/20" />

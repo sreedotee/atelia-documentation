@@ -117,7 +117,7 @@ export default function ThreeModes() {
                 }`}
               >
                 <p
-                  className={`text-xs uppercase tracking-wide font-bold mb-1 ${
+                  className={`text-xs uppercase tracking-wide font-medium mb-1 ${
                     mode.highlight ? "text-purple-300" : "text-[#3D2B4C] dark:text-purple-400"
                   }`}
                 >

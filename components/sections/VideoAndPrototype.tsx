@@ -51,7 +51,7 @@ export default function VideoAndPrototype() {
                       <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                   </div>
-                  <p className="font-clash text-xl font-semibold">Video Walkthrough</p>
+                  <p className="font-clash text-xl font-medium">Video Walkthrough</p>
                   <p className="text-purple-300 text-sm mt-1">
                     Add your Loom/YouTube URL to embed here
                   </p>
@@ -112,7 +112,7 @@ export default function VideoAndPrototype() {
               >
                 <div className="text-center p-8">
                   <span className="text-5xl mb-4 block">🎨</span>
-                  <p className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-2">
+                  <p className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-2">
                     Figma Prototype
                   </p>
                   <p className="text-[#5C5759] dark:text-gray-400 text-sm max-w-xs">

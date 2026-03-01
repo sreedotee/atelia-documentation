@@ -51,7 +51,7 @@ export default function JobsToBeDone() {
               </span>
               <div className="pt-2">
                 <p className="text-[#5C5759] dark:text-gray-400 text-lg mb-1">{job.when}</p>
-                <p className="text-[#1D1A1C] dark:text-white text-lg font-semibold mb-1">{job.want}</p>
+                <p className="text-[#1D1A1C] dark:text-white text-lg font-medium mb-1">{job.want}</p>
                 <p className="text-[#5C5759] dark:text-gray-400 text-lg italic">{job.so}</p>
               </div>
             </motion.div>

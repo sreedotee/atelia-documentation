@@ -61,7 +61,7 @@ export default function CardSorting() {
               ))}
             </div>
 
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/40 rounded-xl px-4 py-3 text-sm font-semibold text-red-600 dark:text-red-400">
+            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700/40 rounded-xl px-4 py-3 text-sm font-medium text-red-600 dark:text-red-400">
               0/5 participants organized this way
             </div>
           </motion.div>
@@ -99,7 +99,7 @@ export default function CardSorting() {
               ))}
             </div>
 
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700/40 rounded-xl px-4 py-3 text-sm font-semibold text-green-600 dark:text-green-400">
+            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700/40 rounded-xl px-4 py-3 text-sm font-medium text-green-600 dark:text-green-400">
               4/5 participants organized this way
             </div>
           </motion.div>

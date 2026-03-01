@@ -142,7 +142,7 @@ export default function Constraints() {
             className={ci < categories.length - 1 ? "mb-16" : "mb-0"}
           >
             {/* Category label */}
-            <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-widest mb-8">
+            <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-widest mb-8">
               {cat.label}
             </p>
 
@@ -158,7 +158,7 @@ export default function Constraints() {
                   }`}
                 >
                   <p className="text-[#1D1A1C] dark:text-gray-200 leading-relaxed mb-1">
-                    <span className="font-semibold">{item.title}</span>{" "}
+                    <span className="font-medium">{item.title}</span>{" "}
                     {item.body}
                   </p>
                   <p className="text-sm text-[#7D767A] dark:text-gray-500 leading-relaxed mt-2">
@@ -183,7 +183,7 @@ export default function Constraints() {
           viewport={{ once: true }}
           className="mt-16 bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 max-w-2xl"
         >
-          <p className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-3">
+          <p className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-3">
             Why Constraints Matter
           </p>
           <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">

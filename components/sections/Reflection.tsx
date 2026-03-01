@@ -160,7 +160,7 @@ export default function Reflection() {
                 viewport={{ once: true }}
                 className="bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 rounded-xl p-6"
               >
-                <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wide mb-2">
+                <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wide mb-2">
                   {ns.phase}
                 </p>
                 <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">

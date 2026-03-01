@@ -166,7 +166,7 @@ export default function Monetization() {
               </ul>
             </div>
             <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="text-xs font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
+              <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
                 Why Credits?
               </p>
               <ul className="space-y-2">
@@ -247,7 +247,7 @@ export default function Monetization() {
                 }`}
               >
                 <p
-                  className={`font-clash text-lg font-semibold mb-2 ${
+                  className={`font-clash text-lg font-medium mb-2 ${
                     tier.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
                   }`}
                 >
@@ -303,7 +303,7 @@ export default function Monetization() {
 
           {/* Pricing rationale */}
           <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 max-w-2xl">
-            <p className="text-xs font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-3">
+            <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-3">
               Pricing Rationale
             </p>
             <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">
@@ -338,7 +338,7 @@ export default function Monetization() {
                     : ""
                 }`}
               >
-                <p className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-2">
+                <p className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
                   {stream.title}
                 </p>
                 <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed mb-2">

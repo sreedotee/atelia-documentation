@@ -212,7 +212,7 @@ export default function CompetitiveLandscape() {
             <div className="space-y-4">
               {featureScores.map((item) => (
                 <div key={item.app} className="flex items-center gap-4">
-                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-semibold text-[#3D2B4C] dark:text-purple-300" : "text-[#737373] dark:text-gray-400"}`}>
+                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-medium text-[#3D2B4C] dark:text-purple-300" : "text-[#737373] dark:text-gray-400"}`}>
                     {item.app}
                   </span>
                   <div className="flex-1 bg-[#E5E5E5] dark:bg-[#1a1520] h-8 rounded-sm overflow-hidden">
