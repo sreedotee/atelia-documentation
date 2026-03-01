@@ -44,7 +44,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="font-clash text-7xl md:text-8xl font-semibold text-[#1D1A1C] dark:text-white leading-[1.05] mb-4"
+              className="font-clash text-[72px] md:text-[120px] lg:text-[200px] font-medium text-[#1D1A1C] dark:text-white leading-[1.05] mb-4"
             >
               Atelia
             </motion.h1>
@@ -53,7 +53,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-clash text-2xl md:text-3xl text-[#3D2B4C] dark:text-purple-300 leading-snug mb-6"
+              className="font-clash font-light text-lg md:text-xl lg:text-[25px] text-[#3D2B4C] dark:text-purple-300 leading-snug mb-6"
             >
               AI Virtual Try-On for Confident Shopping
             </motion.p>
@@ -62,7 +62,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-xl"
+              className="font-sans text-base md:text-lg lg:text-[25px] text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-xl"
             >
               Atelia combines universal item saving with AI virtual try-on,
               helping online shoppers visualize outfits from any store on their
