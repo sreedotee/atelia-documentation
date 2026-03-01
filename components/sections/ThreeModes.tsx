@@ -76,7 +76,7 @@ export default function ThreeModes() {
                 {mode.number}
               </p>
               <h3
-                className={`font-clash text-2xl font-bold mb-1 ${
+                className={`font-clash text-2xl font-medium mb-1 ${
                   mode.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
                 }`}
               >

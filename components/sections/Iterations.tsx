@@ -110,7 +110,7 @@ function VersionHeader({
       <p className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase mb-2">
         {version}
       </p>
-      <h3 className="font-clash text-3xl font-semibold text-[#1D1A1C] dark:text-white leading-tight mb-1">
+      <h3 className="font-clash text-3xl font-medium text-[#1D1A1C] dark:text-white leading-tight mb-1">
         {title}
       </h3>
       <p className="text-sm text-[#7D767A] dark:text-gray-500">{date}</p>

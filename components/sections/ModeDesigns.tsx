@@ -49,7 +49,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
       </div>
 
       <div>
-        <h4 className="font-clash text-base font-semibold text-[#1D1A1C] dark:text-white mb-1">
+        <h4 className="font-clash text-base font-medium text-[#1D1A1C] dark:text-white mb-1">
           {screen.title}
         </h4>
         <p className="text-sm text-[#5C5759] dark:text-gray-400 leading-relaxed">{screen.caption}</p>
@@ -93,7 +93,7 @@ export default function ModeDesigns({
           >
             <span className="text-2xl">{feature.icon}</span>
             <div>
-              <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-2">
+              <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
                 {feature.title}
               </h4>
               <p className="text-[#5C5759] dark:text-gray-300">{feature.text}</p>
@@ -109,7 +109,7 @@ export default function ModeDesigns({
             viewport={{ once: true }}
             className="bg-[#FAF9FA] dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
           >
-            <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-4">
+            <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
               User Flow
             </h4>
             <div className="flex flex-wrap items-center gap-2">

@@ -165,7 +165,7 @@ export default function Validation() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-8">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
             Task Completion Rates
           </h3>
 
@@ -208,7 +208,7 @@ export default function Validation() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             System Usability Scale
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-xl">
@@ -227,7 +227,7 @@ export default function Validation() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
             What Was Validated
           </h3>
           <div className="bg-[#FAFAFA] dark:bg-[#2a1e36] border border-[#E5E5E5] dark:border-[#3D2B4C]/30 p-6">
@@ -255,7 +255,7 @@ export default function Validation() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-8">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
             Issues Found &amp; Resolved
           </h3>
 
@@ -266,7 +266,7 @@ export default function Validation() {
                   <span className="text-xs font-bold px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#1D1A1C] dark:text-gray-300 tracking-wider uppercase">
                     {issue.priority}
                   </span>
-                  <h4 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mt-4">
+                  <h4 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mt-4">
                     {issue.title}
                   </h4>
                 </div>
@@ -297,7 +297,7 @@ export default function Validation() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
             What Participants Said
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

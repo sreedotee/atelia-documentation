@@ -4,19 +4,21 @@ import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
 
+// To add your own icons: place image/SVG files in /public/icons/ and set iconSrc below.
+// Leave iconSrc as "" to show a placeholder slot at the same 32×32 dimensions.
 const outcomeItems = [
   {
-    icon: "📱",
+    iconSrc: "", // e.g. "/icons/universal-saving.svg"
     title: "Universal Saving",
     desc: "Paste links from any store to build collections",
   },
   {
-    icon: "✨",
+    iconSrc: "", // e.g. "/icons/virtual-try-on.svg"
     title: "AI Virtual Try-On",
     desc: "See how items look on your body before buying",
   },
   {
-    icon: "🗂️",
+    iconSrc: "", // e.g. "/icons/occasion-based.svg"
     title: "Occasion-Based Organization",
     desc: "Collections for vacation, work, events—not item types",
   },
@@ -102,7 +104,16 @@ export default function Overview() {
             <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col justify-around px-5 py-4">
               {outcomeItems.map((f) => (
                 <div key={f.title} className="flex items-center gap-4">
-                  <span className="text-2xl flex-shrink-0">{f.icon}</span>
+                  {/* Icon slot — 32×32. Set iconSrc in the data array above to use your own image */}
+                  {f.iconSrc ? (
+                    <img
+                      src={f.iconSrc}
+                      alt={f.title}
+                      className="w-8 h-8 object-contain flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-8 h-8 flex-shrink-0 rounded-lg border-2 border-dashed border-[#3D2B4C]/25 dark:border-purple-400/25" />
+                  )}
                   <div>
                     <p className="font-semibold text-[#1D1A1C] dark:text-white text-sm">{f.title}</p>
                     <p className="text-[#5C5759] dark:text-gray-400 text-sm mt-0.5">{f.desc}</p>

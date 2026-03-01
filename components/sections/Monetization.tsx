@@ -138,7 +138,7 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Credit-Based Freemium Model
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-4 max-w-2xl">
@@ -211,7 +211,7 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Pricing Tiers
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
@@ -324,7 +324,7 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Additional Revenue Streams
           </h3>
 
@@ -361,7 +361,7 @@ export default function Monetization() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Assumptions to Validate
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">

@@ -44,7 +44,7 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Colors
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -79,7 +79,7 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Typography
             </h3>
 
@@ -133,7 +133,7 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Layout & Spacing (8pt Grid)
             </h3>
 

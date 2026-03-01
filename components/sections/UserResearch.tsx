@@ -154,7 +154,7 @@ export default function UserResearch() {
                 <span className="text-xs font-bold px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#737373] dark:text-gray-400 tracking-wider uppercase">
                   {f.badge}
                 </span>
-                <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white">
+                <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white">
                   {f.title}
                 </h3>
               </div>

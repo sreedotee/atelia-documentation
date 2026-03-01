@@ -71,7 +71,7 @@ export default function VideoAndPrototype() {
               viewport={{ once: true }}
               className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
             >
-              <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-5">
+              <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-5">
                 Chapters
               </h4>
               <div className="space-y-4">
@@ -132,7 +132,7 @@ export default function VideoAndPrototype() {
               className="space-y-6"
             >
               <div className="bg-[#FAF9FA] dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-4">
+                <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
                   Try these flows:
                 </h4>
                 <div className="space-y-4">
