@@ -76,7 +76,7 @@ export default function CompetitiveLandscape() {
               <p className="font-clash text-6xl font-bold text-[#3D2B4C]/10 dark:text-purple-500/20 mb-2">
                 {a.number}
               </p>
-              <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-5">
+              <h3 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-5">
                 {a.title}
               </h3>
 
@@ -120,7 +120,7 @@ export default function CompetitiveLandscape() {
         >
           <span className="text-3xl">💡</span>
           <div>
-            <h4 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-2">
+            <h4 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-2">
               The Gap
             </h4>
             <p className="text-[#5C5759] dark:text-gray-300">
@@ -203,7 +203,7 @@ export default function CompetitiveLandscape() {
           viewport={{ once: true }}
           className="mt-12"
         >
-          <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+          <h3 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-6">
             Feature Coverage Comparison
           </h3>
 
@@ -212,7 +212,7 @@ export default function CompetitiveLandscape() {
             <div className="space-y-4">
               {featureScores.map((item) => (
                 <div key={item.app} className="flex items-center gap-4">
-                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-semibold text-[#3D2B4C] dark:text-purple-300" : "text-[#737373] dark:text-gray-400"}`}>
+                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-medium text-[#3D2B4C] dark:text-purple-300" : "text-[#737373] dark:text-gray-400"}`}>
                     {item.app}
                   </span>
                   <div className="flex-1 bg-[#E5E5E5] dark:bg-[#1a1520] h-8 rounded-sm overflow-hidden">

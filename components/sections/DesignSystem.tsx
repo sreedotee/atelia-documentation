@@ -44,7 +44,7 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Colors
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -55,7 +55,7 @@ export default function DesignSystem() {
                     style={{ background: c.hex }}
                   />
                   <div className="p-3 bg-white dark:bg-[#2a1e36]">
-                    <p className="font-semibold text-sm text-[#1D1A1C] dark:text-white">{c.name}</p>
+                    <p className="font-medium text-sm text-[#1D1A1C] dark:text-white">{c.name}</p>
                     <p className="text-xs text-[#7D767A] dark:text-gray-500 font-mono">{c.hex}</p>
                     <p className="text-xs text-[#7D767A] dark:text-gray-500 mt-0.5">{c.usage}</p>
                   </div>
@@ -64,7 +64,7 @@ export default function DesignSystem() {
             </div>
 
             <div className="mt-6 bg-white dark:bg-[#2a1e36] rounded-xl p-5 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="font-semibold text-[#1D1A1C] dark:text-white mb-2">Color Evolution</p>
+              <p className="font-medium text-[#1D1A1C] dark:text-white mb-2">Color Evolution</p>
               <p className="text-[#5C5759] dark:text-gray-300 text-sm leading-relaxed">
                 Evolved from purple (commonly associated with AI) to plum for a more approachable,
                 consumer-friendly, playful feeling while maintaining sophistication.
@@ -79,7 +79,7 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Typography
             </h3>
 
@@ -133,13 +133,13 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
               Layout & Spacing (8pt Grid)
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-[#2a1e36] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="text-sm font-semibold text-[#1D1A1C] dark:text-white mb-4">Spacing Scale</p>
+                <p className="text-sm font-medium text-[#1D1A1C] dark:text-white mb-4">Spacing Scale</p>
                 <div className="flex items-end gap-3">
                   {spacing.map((s) => (
                     <div key={s} className="flex flex-col items-center gap-2">
@@ -154,7 +154,7 @@ export default function DesignSystem() {
               </div>
 
               <div className="bg-white dark:bg-[#2a1e36] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="text-sm font-semibold text-[#1D1A1C] dark:text-white mb-4">Border Radius</p>
+                <p className="text-sm font-medium text-[#1D1A1C] dark:text-white mb-4">Border Radius</p>
                 <div className="flex items-center gap-4">
                   {radii.map((r) => (
                     <div key={r} className="flex flex-col items-center gap-2">

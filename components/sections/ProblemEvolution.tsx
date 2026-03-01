@@ -78,7 +78,7 @@ export default function ProblemEvolution() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             The Input Problem
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
@@ -99,7 +99,7 @@ export default function ProblemEvolution() {
           </p>
 
           <div className="bg-[#3D2B4C]/5 dark:bg-[#3D2B4C]/20 rounded-xl p-5 border-l-4 border-[#3D2B4C] dark:border-purple-500 max-w-2xl">
-            <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
+            <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
               Breakthrough
             </p>
             <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm">
@@ -120,7 +120,7 @@ export default function ProblemEvolution() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Shopping Platform vs Universal Tool
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
@@ -143,7 +143,7 @@ export default function ProblemEvolution() {
           {/* Two-column comparison */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mb-12">
             <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="text-xs font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
+              <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
                 What Seemed Appealing
               </p>
               <ul className="space-y-2">
@@ -159,7 +159,7 @@ export default function ProblemEvolution() {
               </ul>
             </div>
             <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="text-xs font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
+              <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
                 Why It Failed
               </p>
               <ul className="space-y-2">
@@ -181,7 +181,7 @@ export default function ProblemEvolution() {
             <p className="text-[10px] font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-[0.1em] mb-3">
               The Pivot
             </p>
-            <p className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white leading-snug mb-3">
+            <p className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white leading-snug mb-3">
               Instead of being a retailer WITH try-on, be a try-on tool that works with ANY
               retailer.
             </p>
@@ -201,7 +201,7 @@ export default function ProblemEvolution() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Questions That Needed Answers
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">

@@ -15,7 +15,7 @@ export default function SectionHeader({
   title,
   subtitle,
   centered = false,
-  fontWeight = "font-semibold",
+  fontWeight = "font-medium",
 }: SectionHeaderProps) {
   return (
     <motion.div

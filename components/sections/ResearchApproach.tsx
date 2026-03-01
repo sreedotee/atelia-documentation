@@ -54,7 +54,7 @@ export default function ResearchApproach() {
               className="rounded-2xl border border-white/20 p-6 bg-white/5 hover:bg-white/10 transition-colors"
             >
               <span className="text-3xl mb-4 block">{m.icon}</span>
-              <h3 className="font-clash text-xl font-semibold text-white mb-3">{m.title}</h3>
+              <h3 className="font-clash text-xl font-medium text-white mb-3">{m.title}</h3>
               <p className="text-purple-200 text-sm leading-relaxed mb-5">{m.desc}</p>
               <ul className="space-y-1.5">
                 {m.stats.map((s) => (

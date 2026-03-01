@@ -4,19 +4,21 @@ import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
 
+// To add your own icons: place image/SVG files in /public/icons/ and set iconSrc below.
+// Leave iconSrc as "" to show a placeholder slot at the same 48×48 dimensions.
 const outcomeItems = [
   {
-    icon: "📱",
+    iconSrc: "", // e.g. "/icons/universal-saving.svg"
     title: "Universal Saving",
     desc: "Paste links from any store to build collections",
   },
   {
-    icon: "✨",
+    iconSrc: "", // e.g. "/icons/virtual-try-on.svg"
     title: "AI Virtual Try-On",
     desc: "See how items look on your body before buying",
   },
   {
-    icon: "🗂️",
+    iconSrc: "", // e.g. "/icons/occasion-based.svg"
     title: "Occasion-Based Organization",
     desc: "Collections for vacation, work, events—not item types",
   },
@@ -28,11 +30,16 @@ export default function Overview() {
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="01" title="Overview" fontWeight="font-medium" />
 
-        {/* 2×2 grid: row 1 = Brief | Outcome header, row 2 = Challenge+Approach | Box */}
+        {/*
+          DOM order → mobile: Brief → Challenge+Approach → Outcome header → Box
+          Desktop (lg): explicit col/row placement gives the 2×2 grid:
+            col1-row1: Brief        | col2-row1: Outcome header
+            col1-row2: Challenge+Approach | col2-row2: Box
+        */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
 
-          {/* Row 1, Left: The Brief */}
-          <motion.div {...fadeInUp}>
+          {/* Brief — desktop: col 1, row 1 */}
+          <motion.div {...fadeInUp} className="lg:col-start-1 lg:row-start-1">
             <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
               The Brief
             </h3>
@@ -41,24 +48,8 @@ export default function Overview() {
             </p>
           </motion.div>
 
-          {/* Row 1, Right: The Outcome heading + description */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
-              The Outcome
-            </h3>
-            <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed">
-              A shopping companion that helps users make confident purchase decisions across any
-              retailer by combining:
-            </p>
-          </motion.div>
-
-          {/* Row 2, Left: The Challenge + My Approach */}
-          <motion.div {...fadeInUp} className="space-y-8">
+          {/* Challenge + Approach — desktop: col 1, row 2 */}
+          <motion.div {...fadeInUp} className="space-y-8 lg:col-start-1 lg:row-start-2">
             <div>
               <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
                 The Challenge
@@ -91,21 +82,47 @@ export default function Overview() {
             </div>
           </motion.div>
 
-          {/* Row 2, Right: Combined box — top aligns with The Challenge, bottom with "Design for that context" */}
+          {/* Outcome heading + description — desktop: col 2, row 1 */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="h-full"
+            className="lg:col-start-2 lg:row-start-1"
           >
-            <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col justify-around px-5 py-4">
+            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
+              The Outcome
+            </h3>
+            <p className="text-[#5C5759] dark:text-gray-300 text-lg leading-relaxed">
+              A shopping companion that helps users make confident purchase decisions across any
+              retailer by combining:
+            </p>
+          </motion.div>
+
+          {/* Combined box — desktop: col 2, row 2. Top aligns with The Challenge, bottom with "Design for that context" */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="h-full lg:col-start-2 lg:row-start-2"
+          >
+            <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col justify-around px-6 py-6">
               {outcomeItems.map((f) => (
-                <div key={f.title} className="flex items-center gap-4">
-                  <span className="text-2xl flex-shrink-0">{f.icon}</span>
+                <div key={f.title} className="flex items-center gap-5">
+                  {/* Icon slot — 48×48. Set iconSrc in the data array above to use your own image */}
+                  {f.iconSrc ? (
+                    <img
+                      src={f.iconSrc}
+                      alt={f.title}
+                      className="w-12 h-12 object-contain flex-shrink-0"
+                    />
+                  ) : (
+                    <div className="w-12 h-12 flex-shrink-0 rounded-lg border-2 border-dashed border-[#3D2B4C]/25 dark:border-purple-400/25" />
+                  )}
                   <div>
-                    <p className="font-semibold text-[#1D1A1C] dark:text-white text-sm">{f.title}</p>
-                    <p className="text-[#5C5759] dark:text-gray-400 text-sm mt-0.5">{f.desc}</p>
+                    <p className="font-medium text-[#1D1A1C] dark:text-white text-[1.75rem] leading-tight">{f.title}</p>
+                    <p className="text-[#5C5759] dark:text-gray-400 text-[1.75rem] leading-snug mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}

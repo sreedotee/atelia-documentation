@@ -51,13 +51,13 @@ export default function InformationArchitecture() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 mb-8 overflow-x-auto"
         >
-          <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-8 text-center">
+          <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-8 text-center">
             App Structure
           </h4>
 
           {/* Root */}
           <div className="flex justify-center mb-4">
-            <div className="px-8 py-3 bg-[#1D1A1C] dark:bg-[#3D2B4C] text-white rounded-xl font-clash font-bold text-lg">
+            <div className="px-8 py-3 bg-[#1D1A1C] dark:bg-[#3D2B4C] text-white rounded-xl font-clash font-medium text-lg">
               ATELIA
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function InformationArchitecture() {
             {["HOME\n(Mode 1: BEFORE)", "TRY ON\n(Mode 2: DURING)", "PROFILE\n(Mode 3: AFTER)"].map((tab) => (
               <div
                 key={tab}
-                className="px-4 py-3 bg-[#3D2B4C] text-white rounded-xl font-clash font-semibold text-sm text-center whitespace-pre-line"
+                className="px-4 py-3 bg-[#3D2B4C] text-white rounded-xl font-clash font-medium text-sm text-center whitespace-pre-line"
               >
                 {tab}
               </div>
@@ -134,7 +134,7 @@ export default function InformationArchitecture() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
         >
-          <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-4">
+          <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
             Key Principles
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

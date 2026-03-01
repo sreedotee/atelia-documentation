@@ -151,10 +151,10 @@ export default function UserResearch() {
             >
               {/* Badge + Title */}
               <div className="flex items-center gap-4 mb-6 flex-wrap">
-                <span className="text-xs font-bold px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#737373] dark:text-gray-400 tracking-wider uppercase">
+                <span className="text-xs font-medium px-3 py-1.5 bg-[#F5F5F5] dark:bg-[#2a1e36] text-[#737373] dark:text-gray-400 tracking-wider uppercase">
                   {f.badge}
                 </span>
-                <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white">
+                <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white">
                   {f.title}
                 </h3>
               </div>
@@ -174,7 +174,7 @@ export default function UserResearch() {
 
                   {/* Insight box */}
                   <div className="bg-white dark:bg-[#2a1e36] p-5 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 mt-4">
-                    <p className="text-xs font-bold text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
+                    <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
                       {f.insightLabel}
                     </p>
                     <p className="text-[#1D1A1C] dark:text-white leading-relaxed text-sm">{f.insight}</p>

@@ -51,7 +51,7 @@ export default function VideoAndPrototype() {
                       <polygon points="5 3 19 12 5 21 5 3" />
                     </svg>
                   </div>
-                  <p className="font-clash text-xl font-semibold">Video Walkthrough</p>
+                  <p className="font-clash text-xl font-medium">Video Walkthrough</p>
                   <p className="text-purple-300 text-sm mt-1">
                     Add your Loom/YouTube URL to embed here
                   </p>
@@ -71,7 +71,7 @@ export default function VideoAndPrototype() {
               viewport={{ once: true }}
               className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
             >
-              <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-5">
+              <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-5">
                 Chapters
               </h4>
               <div className="space-y-4">
@@ -112,7 +112,7 @@ export default function VideoAndPrototype() {
               >
                 <div className="text-center p-8">
                   <span className="text-5xl mb-4 block">🎨</span>
-                  <p className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-2">
+                  <p className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-2">
                     Figma Prototype
                   </p>
                   <p className="text-[#5C5759] dark:text-gray-400 text-sm max-w-xs">
@@ -132,7 +132,7 @@ export default function VideoAndPrototype() {
               className="space-y-6"
             >
               <div className="bg-[#FAF9FA] dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <h4 className="font-clash text-lg font-semibold text-[#1D1A1C] dark:text-white mb-4">
+                <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
                   Try these flows:
                 </h4>
                 <div className="space-y-4">

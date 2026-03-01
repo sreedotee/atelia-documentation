@@ -64,7 +64,7 @@ export default function DesignLanguage() {
               viewport={{ once: true }}
               className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 hover:shadow-md transition-shadow"
             >
-              <h3 className="font-clash text-2xl font-semibold text-[#3D2B4C] dark:text-purple-300 mb-2">
+              <h3 className="font-clash text-2xl font-medium text-[#3D2B4C] dark:text-purple-300 mb-2">
                 {t.term}
               </h3>
               <p className="text-[#1D1A1C] dark:text-white mb-5 font-medium">{t.def}</p>
@@ -91,18 +91,18 @@ export default function DesignLanguage() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
         >
-          <h4 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white mb-6 text-center">
+          <h4 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-6 text-center">
             Information Hierarchy
           </h4>
           <div className="flex flex-col items-center gap-2">
-            <div className="px-6 py-2 bg-[#3D2B4C] text-white rounded-lg font-clash font-semibold">
+            <div className="px-6 py-2 bg-[#3D2B4C] text-white rounded-lg font-clash font-medium">
               Saved (Superset)
             </div>
             <div className="w-px h-6 bg-[#3D2B4C]/30 dark:bg-purple-500/30" />
             <div className="flex gap-4">
               {["Collection A", "Collection B", "Collection C"].map((c) => (
                 <div key={c} className="flex flex-col items-center gap-2">
-                  <div className="px-4 py-2 bg-[#3D2B4C]/20 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 rounded-lg text-sm font-semibold">
+                  <div className="px-4 py-2 bg-[#3D2B4C]/20 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 rounded-lg text-sm font-medium">
                     {c}
                   </div>
                   <div className="w-px h-4 bg-[#3D2B4C]/20 dark:bg-purple-500/20" />

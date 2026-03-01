@@ -76,7 +76,7 @@ export default function ThreeModes() {
                 {mode.number}
               </p>
               <h3
-                className={`font-clash text-2xl font-bold mb-1 ${
+                className={`font-clash text-2xl font-medium mb-1 ${
                   mode.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
                 }`}
               >
@@ -117,7 +117,7 @@ export default function ThreeModes() {
                 }`}
               >
                 <p
-                  className={`text-xs uppercase tracking-wide font-bold mb-1 ${
+                  className={`text-xs uppercase tracking-wide font-medium mb-1 ${
                     mode.highlight ? "text-purple-300" : "text-[#3D2B4C] dark:text-purple-400"
                   }`}
                 >
