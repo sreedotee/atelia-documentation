@@ -6,11 +6,6 @@ import { fadeInUp } from "@/styles/animations";
 
 const stats = [
   {
-    number: "30–40%",
-    label: "Online fashion return rate",
-    source: "Narvar Returns Report",
-  },
-  {
     number: "$550B",
     label: "Annual cost of returns globally",
     source: "Industry reports",

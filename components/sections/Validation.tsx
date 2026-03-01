@@ -62,12 +62,6 @@ const quotes = [
   },
 ];
 
-const validated = [
-  { title: "Paste-link flow", detail: "5/5 completed successfully" },
-  { title: "Three-mode structure", detail: '"Makes sense, feels natural"' },
-  { title: "Collections organization", detail: '"This is how I think about it"' },
-  { title: "Try-on quality", detail: '"Looks realistic, I\'d trust this"' },
-];
 
 function SUSGauge({ score }: { score: number }) {
   const pct = (score / 100) * 100;
@@ -215,34 +209,6 @@ export default function Validation() {
             Participants completed the standard 10-question SUS assessment after testing all tasks.
           </p>
           <SUSGauge score={82} />
-        </motion.div>
-
-        <div className="h-px bg-[#E5E5E5] dark:bg-[#3D2B4C]/30 mb-16" />
-
-        {/* Validated */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] dark:text-white mb-6">
-            What Was Validated
-          </h3>
-          <div className="bg-[#FAFAFA] dark:bg-[#2a1e36] border border-[#E5E5E5] dark:border-[#3D2B4C]/30 p-6">
-            <div className="space-y-4">
-              {validated.map((v) => (
-                <div key={v.title} className="flex items-start gap-3">
-                  <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5 shrink-0">✓</span>
-                  <div>
-                    <p className="font-medium text-[#1D1A1C] dark:text-white text-sm">{v.title}</p>
-                    <p className="text-sm text-[#5C5759] dark:text-gray-400">{v.detail}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </motion.div>
 
         <div className="h-px bg-[#E5E5E5] dark:bg-[#3D2B4C]/30 mb-16" />
