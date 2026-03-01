@@ -101,20 +101,6 @@ export default function Overview() {
               ))}
             </div>
 
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              {[
-                { number: "30%", label: "Online fashion return rate" },
-                { number: "5/5", label: "Users validated core concept" },
-              ].map((m) => (
-                <div
-                  key={m.number}
-                  className="p-5 rounded-xl bg-[#3D2B4C] text-white"
-                >
-                  <p className="font-clash text-4xl font-bold mb-1">{m.number}</p>
-                  <p className="text-purple-200 text-sm">{m.label}</p>
-                </div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </div>

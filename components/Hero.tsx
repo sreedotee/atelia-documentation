@@ -77,6 +77,7 @@ export default function Hero() {
                 { label: "Role", value: "Product Designer" },
                 { label: "Duration", value: "6 weeks" },
                 { label: "Scope", value: "Solo project" },
+                { label: "Deliverables", value: "72 screens" },
               ].map((stat) => (
                 <div key={stat.label}>
                   <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-1">
