@@ -32,11 +32,29 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center gap-2 mb-6"
             >
-              <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C] dark:bg-purple-500/20 dark:text-purple-300">
+              <span style={{
+                display: "flex",
+                padding: "10px 20px",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "10px",
+                borderRadius: "999px",
+                border: "1px solid var(--BRANDCOLOUR-primary-800, #3D2B4C)",
+                background: "var(--gray-100, #F5F3F4)",
+              }}>
                 iOS App Design
               </span>
-              <span className="text-xs font-medium px-3 py-1 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C] dark:bg-purple-500/20 dark:text-purple-300">
-                2025
+              <span style={{
+                display: "flex",
+                padding: "10px 40px",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "10px",
+                borderRadius: "999px",
+                border: "1px solid var(--BRANDCOLOUR-primary-800, #3D2B4C)",
+                background: "var(--gray-100, #F5F3F4)",
+              }}>
+                2026
               </span>
             </motion.div>
 
