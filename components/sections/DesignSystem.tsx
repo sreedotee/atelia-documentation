@@ -29,7 +29,7 @@ export default function DesignSystem() {
   return (
     <section id="design-system" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="20" title="Design System" />
+        <SectionHeader number="16" title="Design System" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           Named "Atelia" from "atelier" (design studio), the visual system balances sophistication

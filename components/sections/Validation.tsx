@@ -123,7 +123,7 @@ export default function Validation() {
   return (
     <section id="validation" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="21" title="Validation & Testing" />
+        <SectionHeader number="17" title="Validation & Testing" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           I tested the interactive prototype with 5 users to validate core assumptions and identify
