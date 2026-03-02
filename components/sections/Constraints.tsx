@@ -120,13 +120,13 @@ const categories = [
 
 export default function Constraints() {
   return (
-    <section id="constraints" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="constraints" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="23" title="Constraints" subtitle="Design Within Reality" />
 
         <motion.p
           {...fadeInUp}
-          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-20 max-w-2xl"
+          className="text-lg text-[#5C5759] leading-relaxed mb-20 max-w-2xl"
         >
           Every design decision was made within real technical, business, and user constraints.
           These weren&apos;t limitations—they were guardrails that led to better solutions.
@@ -142,7 +142,7 @@ export default function Constraints() {
             className={ci < categories.length - 1 ? "mb-16" : "mb-0"}
           >
             {/* Category label */}
-            <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-widest mb-8">
+            <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-widest mb-8">
               {cat.label}
             </p>
 
@@ -153,15 +153,15 @@ export default function Constraints() {
                   key={item.title}
                   className={`py-6 ${
                     ii < cat.items.length - 1
-                      ? "border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                      ? "border-b border-[#E8E5E6]"
                       : ""
                   }`}
                 >
-                  <p className="text-[#1D1A1C] dark:text-gray-200 leading-relaxed mb-1">
+                  <p className="text-[#1D1A1C] leading-relaxed mb-1">
                     <span className="font-medium">{item.title}</span>{" "}
                     {item.body}
                   </p>
-                  <p className="text-sm text-[#7D767A] dark:text-gray-500 leading-relaxed mt-2">
+                  <p className="text-sm text-[#7D767A] leading-relaxed mt-2">
                     <span className="font-medium">→</span> {item.implication}
                   </p>
                 </div>
@@ -170,7 +170,7 @@ export default function Constraints() {
 
             {/* Divider between categories */}
             {ci < categories.length - 1 && (
-              <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mt-16" />
+              <div className="h-px bg-[#E8E5E6] mt-16" />
             )}
           </motion.div>
         ))}
@@ -181,12 +181,12 @@ export default function Constraints() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 max-w-2xl"
+          className="mt-16 bg-white rounded-2xl p-8 border border-[#E8E5E6] max-w-2xl"
         >
-          <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-3">
+          <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-3">
             Why Constraints Matter
           </p>
-          <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">
+          <p className="text-sm text-[#5C5759] leading-relaxed">
             These constraints weren&apos;t obstacles to work around—they shaped better decisions.
             Privacy concerns led to on-demand model setup. AI latency led to thoughtful loading
             states. Cost constraints led to the credit system. Designing within reality produces

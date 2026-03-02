@@ -11,14 +11,9 @@ export default function Hero() {
         background: "linear-gradient(160deg, #ffffff 0%, #FAF9FA 50%, #f0ebf5 100%)",
       }}
     >
-      <div className="dark:hidden absolute inset-0 pointer-events-none"
+      <div className="absolute inset-0 pointer-events-none"
         style={{
           background: "linear-gradient(160deg, #ffffff 0%, #FAF9FA 50%, #f0ebf5 100%)",
-        }}
-      />
-      <div className="hidden dark:block absolute inset-0 pointer-events-none"
-        style={{
-          background: "linear-gradient(160deg, #1a1520 0%, #1e1730 50%, #2a1e36 100%)",
         }}
       />
 
@@ -62,7 +57,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="font-clash text-[72px] md:text-[120px] lg:text-[200px] font-medium text-[#1D1A1C] dark:text-white leading-[1.05] mb-4"
+              className="font-clash text-[72px] md:text-[120px] lg:text-[200px] font-medium text-[#1D1A1C] leading-[1.05] mb-4"
             >
               Atelia
             </motion.h1>
@@ -71,7 +66,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="font-clash font-light text-lg md:text-xl lg:text-[25px] text-[#3D2B4C] dark:text-purple-300 leading-snug mb-6"
+              className="font-clash font-light text-lg md:text-xl lg:text-[25px] text-[#3D2B4C] leading-snug mb-6"
             >
               AI Virtual Try-On for Confident Shopping
             </motion.p>
@@ -80,7 +75,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="font-sans text-[17px] lg:text-[20px] text-[#7D767A] dark:text-gray-400 leading-relaxed mb-10 max-w-xl line-clamp-3"
+              className="font-sans text-[17px] lg:text-[20px] text-[#7D767A] leading-relaxed mb-10 max-w-xl line-clamp-3"
             >
               Atelia combines universal item saving with AI virtual try-on, helping online shoppers visualize outfits from any store on their body before buying.
             </motion.p>
@@ -97,10 +92,10 @@ export default function Hero() {
                 { label: "Scope", value: "Solo project" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-1">
+                  <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-1">
                     {stat.label}
                   </p>
-                  <p className="font-clash text-lg font-normal text-[#1D1A1C] dark:text-white">
+                  <p className="font-clash text-lg font-normal text-[#1D1A1C]">
                     {stat.value}
                   </p>
                 </div>
@@ -121,7 +116,7 @@ export default function Hero() {
               </a>
               <a
                 href="#video"
-                className="px-6 py-3 bg-white dark:bg-white/10 text-[#3D2B4C] dark:text-white border border-[#E8E5E6] dark:border-white/20 font-medium hover:border-[#3D2B4C] dark:hover:border-white/40 transition-all hover:-translate-y-0.5"
+                className="px-6 py-3 bg-white text-[#3D2B4C] border border-[#E8E5E6] font-medium hover:border-[#3D2B4C] transition-all hover:-translate-y-0.5"
               >
                 Watch Walkthrough (3 min)
               </a>
@@ -183,13 +178,13 @@ export default function Hero() {
 
               {/* Decorative elements */}
               <div
-                className="absolute -right-8 top-20 w-16 h-16 rounded-2xl bg-[#3D2B4C]/20 dark:bg-purple-500/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-2xl"
+                className="absolute -right-8 top-20 w-16 h-16 rounded-2xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-2xl"
                 style={{ rotate: "12deg" }}
               >
                 ✨
               </div>
               <div
-                className="absolute -left-6 bottom-20 w-12 h-12 rounded-xl bg-[#3D2B4C]/20 dark:bg-purple-500/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-xl"
+                className="absolute -left-6 bottom-20 w-12 h-12 rounded-xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-xl"
                 style={{ rotate: "-8deg" }}
               >
                 👗
@@ -204,7 +199,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#7D767A] dark:text-gray-500"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#7D767A]"
       >
         <span className="text-xs font-medium tracking-widest uppercase">Scroll to explore</span>
         <motion.div

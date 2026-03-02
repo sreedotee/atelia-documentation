@@ -36,11 +36,11 @@ const columns = [
 
 export default function StrategicOpportunity() {
   return (
-    <section id="opportunity" className="py-28 bg-white dark:bg-[#1e1530]">
+    <section id="opportunity" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="04" title="Strategic Opportunity" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
           Of the three approaches, the shopping context offered the strongest opportunity for
           virtual try-on technology.
         </motion.p>
@@ -57,18 +57,18 @@ export default function StrategicOpportunity() {
             >
               <div className="flex items-center gap-3">
                 <span className="text-4xl">{col.icon}</span>
-                <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white">
+                <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C]">
                   {col.title}
                 </h3>
               </div>
 
               <div className="space-y-5">
                 {col.points.map((p) => (
-                  <div key={p.title} className="border-l-2 border-[#E8E5E6] dark:border-[#3D2B4C]/50 pl-4">
-                    <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wide mb-1">
+                  <div key={p.title} className="border-l-2 border-[#E8E5E6] pl-4">
+                    <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wide mb-1">
                       {p.title}
                     </p>
-                    <p className="text-[#1D1A1C] dark:text-white font-medium">{p.data}</p>
+                    <p className="text-[#1D1A1C] font-medium">{p.data}</p>
                   </div>
                 ))}
               </div>

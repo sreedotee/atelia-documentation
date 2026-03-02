@@ -45,11 +45,11 @@ const modes = [
 
 export default function ThreeModes() {
   return (
-    <section id="framework" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="framework" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="08" title="Three Behavioral Modes" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-16 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           Users don't do one thing in this app—they shift between three distinct mindsets during the
           shopping journey. Each mode needed its own UI patterns and interactions.
         </motion.p>
@@ -65,26 +65,26 @@ export default function ThreeModes() {
               className={`rounded-2xl p-8 ${
                 mode.highlight
                   ? "bg-[#3D2B4C] text-white"
-                  : "bg-white dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                  : "bg-white border border-[#E8E5E6]"
               }`}
             >
               <p
                 className={`font-clash text-7xl font-bold leading-none mb-3 ${
-                  mode.highlight ? "text-white/20" : "text-[#3D2B4C]/10 dark:text-purple-500/20"
+                  mode.highlight ? "text-white/20" : "text-[#3D2B4C]/10"
                 }`}
               >
                 {mode.number}
               </p>
               <h3
                 className={`font-clash text-lg md:text-xl lg:text-2xl font-medium mb-1 ${
-                  mode.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
+                  mode.highlight ? "text-white" : "text-[#1D1A1C]"
                 }`}
               >
                 {mode.title}
               </h3>
               <p
                 className={`font-clash text-lg mb-6 ${
-                  mode.highlight ? "text-purple-200" : "text-[#3D2B4C] dark:text-purple-300"
+                  mode.highlight ? "text-purple-200" : "text-[#3D2B4C]"
                 }`}
               >
                 {mode.subtitle}
@@ -95,14 +95,14 @@ export default function ThreeModes() {
                   <div key={d.label}>
                     <p
                       className={`text-xs uppercase tracking-wide font-medium mb-0.5 ${
-                        mode.highlight ? "text-purple-300" : "text-[#7D767A] dark:text-gray-500"
+                        mode.highlight ? "text-purple-300" : "text-[#7D767A]"
                       }`}
                     >
                       {d.label}
                     </p>
                     <p
                       className={`text-sm ${
-                        mode.highlight ? "text-white/90" : "text-[#1D1A1C] dark:text-gray-200"
+                        mode.highlight ? "text-white/90" : "text-[#1D1A1C]"
                       }`}
                     >
                       {d.value}
@@ -113,19 +113,19 @@ export default function ThreeModes() {
 
               <div
                 className={`rounded-xl p-4 ${
-                  mode.highlight ? "bg-white/10" : "bg-[#3D2B4C]/5 dark:bg-purple-500/10"
+                  mode.highlight ? "bg-white/10" : "bg-[#3D2B4C]/5"
                 }`}
               >
                 <p
                   className={`text-xs uppercase tracking-wide font-medium mb-1 ${
-                    mode.highlight ? "text-purple-300" : "text-[#3D2B4C] dark:text-purple-400"
+                    mode.highlight ? "text-purple-300" : "text-[#3D2B4C]"
                   }`}
                 >
                   Design implication
                 </p>
                 <p
                   className={`text-sm ${
-                    mode.highlight ? "text-white/90" : "text-[#5C5759] dark:text-gray-300"
+                    mode.highlight ? "text-white/90" : "text-[#5C5759]"
                   }`}
                 >
                   {mode.implication}

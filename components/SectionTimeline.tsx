@@ -45,18 +45,17 @@ const SECTIONS: Section[] = [
 // Line positioned at right: 23px (centers 2px line at 24px from right)
 const LINE_RIGHT = 23;
 
+const accent = "#3D2B4C";
+const track  = "#DDD9DE";
+
 function SectionDot({
   isCompleted,
   isCurrent,
   dotSize,
-  accent,
-  track,
 }: {
   isCompleted: boolean;
   isCurrent: boolean;
   dotSize: number;
-  accent: string;
-  track: string;
 }) {
   const r = dotSize / 2;
   const svgSize = dotSize + 4;
@@ -142,16 +141,6 @@ function SectionDot({
 
 export default function SectionTimeline() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isDark, setIsDark] = useState(false);
-
-  // Sync dark mode state with the <html> class (layout.tsx sets it from localStorage)
-  useEffect(() => {
-    const html = document.documentElement;
-    setIsDark(html.classList.contains("dark"));
-    const obs = new MutationObserver(() => setIsDark(html.classList.contains("dark")));
-    obs.observe(html, { attributes: true, attributeFilter: ["class"] });
-    return () => obs.disconnect();
-  }, []);
 
   // Scroll-based active section tracking
   useEffect(() => {
@@ -172,31 +161,20 @@ export default function SectionTimeline() {
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-  const toggleDark = () => {
-    const html = document.documentElement;
-    const next = !isDark;
-    if (next) html.classList.add("dark"); else html.classList.remove("dark");
-    localStorage.setItem("theme", next ? "dark" : "light");
-    setIsDark(next);
-  };
-
-  const accent = isDark ? "#a78bfa" : "#3D2B4C";
-  const track  = isDark ? "#3a2d4a" : "#DDD9DE";
-
   return (
-    <aside className="fixed left-0 top-0 h-screen z-50 w-[220px] hidden lg:flex flex-col bg-white dark:bg-[#13101a] border-r border-[#ECEAED] dark:border-[#2e2040] shadow-[2px_0_20px_rgba(0,0,0,0.07)]">
+    <aside className="fixed left-0 top-0 h-screen z-50 w-[220px] hidden lg:flex flex-col bg-white border-r border-[#ECEAED] shadow-[2px_0_20px_rgba(0,0,0,0.07)]">
 
       {/* Brand header */}
       <div className="px-5 pt-6 pb-5 flex-shrink-0">
-        <p className="font-clash text-[18px] font-semibold text-[#3D2B4C] dark:text-purple-300 leading-none">
+        <p className="font-clash text-[18px] font-semibold text-[#3D2B4C] leading-none">
           Atelia
         </p>
-        <p className="text-[10.5px] text-[#A498AB] dark:text-purple-400/60 mt-[5px] tracking-[0.06em] uppercase">
+        <p className="text-[10.5px] text-[#A498AB] mt-[5px] tracking-[0.06em] uppercase">
           Product Design Case Study
         </p>
       </div>
 
-      <div className="mx-5 h-px bg-[#ECEAED] dark:bg-[#2e2040] flex-shrink-0" />
+      <div className="mx-5 h-px bg-[#ECEAED] flex-shrink-0" />
 
       {/* Sections — scrollable */}
       <nav
@@ -210,21 +188,21 @@ export default function SectionTimeline() {
           const dotSize    = isNested ? 9 : 13;
 
           // Vertical line coloring
-          const topColor    = i <= activeIndex ? accent : track;  // line above this dot
-          const bottomColor = i  < activeIndex ? accent : track;  // line below this dot
+          const topColor    = i <= activeIndex ? accent : track;
+          const bottomColor = i  < activeIndex ? accent : track;
 
           // Text colors
           const numColor = isCurrent
             ? accent
             : isCompleted
-            ? (isDark ? "#6b5c82" : "#B0A5B8")
-            : (isDark ? "#3a2d4a" : "#D0CAD4");
+            ? "#B0A5B8"
+            : "#D0CAD4";
 
           const nameColor = isCurrent
-            ? (isDark ? "#ede8f7" : "#1D1A1C")
+            ? "#1D1A1C"
             : isCompleted
-            ? (isDark ? "#7d6d93" : "#8A7E92")
-            : (isDark ? "#3a2d4a" : "#C8C2CC");
+            ? "#8A7E92"
+            : "#C8C2CC";
 
           return (
             <div key={section.id} className="relative">
@@ -258,8 +236,8 @@ export default function SectionTimeline() {
               <button
                 onClick={() => scrollTo(section.id)}
                 className={`relative w-full flex items-center gap-0 text-left transition-colors duration-150
-                  hover:bg-[#F7F5F8] dark:hover:bg-[#1e1628]
-                  ${isCurrent ? "bg-[#F4F1F6] dark:bg-[#1a1228]" : ""}
+                  hover:bg-[#F7F5F8]
+                  ${isCurrent ? "bg-[#F4F1F6]" : ""}
                   ${isNested ? "pl-7 pr-4 py-[9px]" : "pl-5 pr-4 py-[11px]"}`}
               >
                 {/* Text */}
@@ -286,8 +264,6 @@ export default function SectionTimeline() {
                     isCompleted={isCompleted}
                     isCurrent={isCurrent}
                     dotSize={dotSize}
-                    accent={accent}
-                    track={track}
                   />
                 </div>
               </button>
@@ -296,34 +272,7 @@ export default function SectionTimeline() {
         })}
       </nav>
 
-      <div className="mx-5 h-px bg-[#ECEAED] dark:bg-[#2e2040] flex-shrink-0" />
-
-      {/* Dark mode toggle */}
-      <div className="px-5 py-4 flex-shrink-0">
-        <button
-          onClick={toggleDark}
-          className="flex items-center gap-2 text-[11.5px] text-[#A498AB] dark:text-purple-400/60 hover:text-[#3D2B4C] dark:hover:text-purple-300 transition-colors"
-        >
-          {isDark ? (
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="5" />
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-            </svg>
-          ) : (
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          )}
-          {isDark ? "Light mode" : "Dark mode"}
-        </button>
-      </div>
+      <div className="mx-5 h-px bg-[#ECEAED] flex-shrink-0" />
     </aside>
   );
 }

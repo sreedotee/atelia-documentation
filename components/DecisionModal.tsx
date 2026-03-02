@@ -52,11 +52,11 @@ export default function DecisionModal({
   if (!decision) return null;
 
   const categoryColors: Record<string, string> = {
-    "Navigation & IA": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300",
-    "Interaction Patterns": "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300",
-    "Visual Design": "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300",
-    "Product Decisions": "bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-300",
-    "Product Strategy": "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300",
+    "Navigation & IA": "bg-blue-100 text-blue-700",
+    "Interaction Patterns": "bg-green-100 text-green-700",
+    "Visual Design": "bg-purple-100 text-purple-700",
+    "Product Decisions": "bg-orange-100 text-orange-700",
+    "Product Strategy": "bg-rose-100 text-rose-700",
   };
 
   const catColor = categoryColors[decision.category] || "bg-gray-100 text-gray-700";
@@ -77,10 +77,10 @@ export default function DecisionModal({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-white dark:bg-[#1e1530] rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
+            className="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
           >
             {/* Progress bar */}
-            <div className="h-1 bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 rounded-t-2xl">
+            <div className="h-1 bg-[#E8E5E6] rounded-t-2xl">
               <motion.div
                 className="h-1 bg-[#3D2B4C] rounded-t-2xl"
                 initial={{ width: 0 }}
@@ -90,30 +90,30 @@ export default function DecisionModal({
             </div>
 
             {/* Header */}
-            <div className="sticky top-0 bg-white dark:bg-[#1e1530] px-8 pt-6 pb-4 border-b border-[#E8E5E6] dark:border-[#3D2B4C]/50 flex items-center justify-between z-10">
+            <div className="sticky top-0 bg-white px-8 pt-6 pb-4 border-b border-[#E8E5E6] flex items-center justify-between z-10">
               <div className="flex items-center gap-2">
                 <button
                   onClick={onPrev}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] dark:border-[#3D2B4C] flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
+                  className="w-8 h-8 rounded-full border border-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
                   aria-label="Previous decision"
                 >
                   ←
                 </button>
                 <button
                   onClick={onNext}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] dark:border-[#3D2B4C] flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
+                  className="w-8 h-8 rounded-full border border-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
                   aria-label="Next decision"
                 >
                   →
                 </button>
-                <span className="text-xs text-[#7D767A] dark:text-gray-500 ml-2">
+                <span className="text-xs text-[#7D767A] ml-2">
                   {currentIndex + 1} of {total}
                 </span>
               </div>
 
               <button
                 onClick={onClose}
-                className="w-8 h-8 rounded-full bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 flex items-center justify-center text-[#5C5759] dark:text-gray-400 hover:bg-[#3D2B4C] hover:text-white transition-all text-lg"
+                className="w-8 h-8 rounded-full bg-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white transition-all text-lg"
                 aria-label="Close"
               >
                 ✕
@@ -127,26 +127,26 @@ export default function DecisionModal({
                 <span className={`inline-block text-xs font-medium px-3 py-1 rounded-full mb-3 ${catColor}`}>
                   {decision.category}
                 </span>
-                <h3 className="font-clash text-2xl md:text-3xl font-semibold text-[#1D1A1C] dark:text-white">
+                <h3 className="font-clash text-2xl md:text-3xl font-semibold text-[#1D1A1C]">
                   {decision.title}
                 </h3>
               </div>
 
-              <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/50" />
+              <div className="h-px bg-[#E8E5E6]" />
 
               {/* Context */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-2">
+                <p className="text-xs font-medium tracking-widest text-[#7D767A] uppercase mb-2">
                   Context
                 </p>
-                <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">
+                <p className="text-[#5C5759] leading-relaxed">
                   {decision.context}
                 </p>
               </div>
 
               {/* Options */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-3">
+                <p className="text-xs font-medium tracking-widest text-[#7D767A] uppercase mb-3">
                   Options Considered
                 </p>
                 <div className="space-y-3">
@@ -156,31 +156,31 @@ export default function DecisionModal({
                       className={`rounded-xl p-4 flex items-start gap-4 transition-all ${
                         option.chosen
                           ? "bg-[#3D2B4C] text-white"
-                          : "bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/50"
+                          : "bg-[#FAF9FA] border border-[#E8E5E6]"
                       }`}
                     >
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center font-clash font-semibold text-sm shrink-0 ${
                           option.chosen
                             ? "bg-white/20 text-white"
-                            : "bg-[#E8E5E6] dark:bg-[#3D2B4C]/50 text-[#5C5759] dark:text-gray-400"
+                            : "bg-[#E8E5E6] text-[#5C5759]"
                         }`}
                       >
                         {option.letter}
                       </div>
                       <div className="flex-1">
-                        <p className={`font-medium ${option.chosen ? "text-white" : "text-[#1D1A1C] dark:text-white"}`}>
+                        <p className={`font-medium ${option.chosen ? "text-white" : "text-[#1D1A1C]"}`}>
                           {option.text}
                         </p>
                         {(option.pros || option.cons) && (
                           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                             {option.pros && (
-                              <span className={`text-xs ${option.chosen ? "text-green-200" : "text-green-600 dark:text-green-400"}`}>
+                              <span className={`text-xs ${option.chosen ? "text-green-200" : "text-green-600"}`}>
                                 ✓ {option.pros}
                               </span>
                             )}
                             {option.cons && (
-                              <span className={`text-xs ${option.chosen ? "text-red-200" : "text-red-500 dark:text-red-400"}`}>
+                              <span className={`text-xs ${option.chosen ? "text-red-200" : "text-red-500"}`}>
                                 ✗ {option.cons}
                               </span>
                             )}
@@ -197,42 +197,42 @@ export default function DecisionModal({
 
               {/* Rationale */}
               <div>
-                <p className="text-xs font-medium tracking-widest text-[#7D767A] dark:text-gray-500 uppercase mb-2">
+                <p className="text-xs font-medium tracking-widest text-[#7D767A] uppercase mb-2">
                   Rationale
                 </p>
-                <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">
+                <p className="text-[#5C5759] leading-relaxed">
                   {decision.rationale}
                 </p>
               </div>
 
               {/* Impact */}
-              <div className="bg-[#3D2B4C]/5 dark:bg-[#3D2B4C]/20 rounded-xl p-5 border-l-4 border-[#3D2B4C]">
-                <p className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase mb-2">
+              <div className="bg-[#3D2B4C]/5 rounded-xl p-5 border-l-4 border-[#3D2B4C]">
+                <p className="text-xs font-medium tracking-widest text-[#3D2B4C] uppercase mb-2">
                   Impact
                 </p>
-                <p className="text-[#1D1A1C] dark:text-gray-200 leading-relaxed font-medium">
+                <p className="text-[#1D1A1C] leading-relaxed font-medium">
                   {decision.impact}
                 </p>
               </div>
             </div>
 
             {/* Footer */}
-            <div className="px-8 py-4 border-t border-[#E8E5E6] dark:border-[#3D2B4C]/50 flex items-center justify-between">
+            <div className="px-8 py-4 border-t border-[#E8E5E6] flex items-center justify-between">
               <div className="flex gap-3">
                 <button
                   onClick={onPrev}
-                  className="text-sm text-[#5C5759] dark:text-gray-400 hover:text-[#3D2B4C] dark:hover:text-purple-300 transition-colors flex items-center gap-1"
+                  className="text-sm text-[#5C5759] hover:text-[#3D2B4C] transition-colors flex items-center gap-1"
                 >
                   ← Previous
                 </button>
                 <button
                   onClick={onNext}
-                  className="text-sm text-[#5C5759] dark:text-gray-400 hover:text-[#3D2B4C] dark:hover:text-purple-300 transition-colors flex items-center gap-1"
+                  className="text-sm text-[#5C5759] hover:text-[#3D2B4C] transition-colors flex items-center gap-1"
                 >
                   Next →
                 </button>
               </div>
-              <p className="text-xs text-[#7D767A] dark:text-gray-500">
+              <p className="text-xs text-[#7D767A]">
                 Use ← → keys to navigate
               </p>
             </div>

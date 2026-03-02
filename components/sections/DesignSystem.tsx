@@ -27,11 +27,11 @@ const radii = [8, 12, 16, 24];
 
 export default function DesignSystem() {
   return (
-    <section id="design-system" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="design-system" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="20" title="Design System" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-16 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           Named "Atelia" from "atelier" (design studio), the visual system balances sophistication
           with approachability.
         </motion.p>
@@ -44,28 +44,28 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-6">
               Colors
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {colors.map((c) => (
-                <div key={c.name} className="rounded-xl overflow-hidden border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
+                <div key={c.name} className="rounded-xl overflow-hidden border border-[#E8E5E6]">
                   <div
                     className="h-20 w-full"
                     style={{ background: c.hex }}
                   />
-                  <div className="p-3 bg-white dark:bg-[#2a1e36]">
-                    <p className="font-medium text-sm text-[#1D1A1C] dark:text-white">{c.name}</p>
-                    <p className="text-xs text-[#7D767A] dark:text-gray-500 font-mono">{c.hex}</p>
-                    <p className="text-xs text-[#7D767A] dark:text-gray-500 mt-0.5">{c.usage}</p>
+                  <div className="p-3 bg-white">
+                    <p className="font-medium text-sm text-[#1D1A1C]">{c.name}</p>
+                    <p className="text-xs text-[#7D767A] font-mono">{c.hex}</p>
+                    <p className="text-xs text-[#7D767A] mt-0.5">{c.usage}</p>
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 bg-white dark:bg-[#2a1e36] rounded-xl p-5 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="font-medium text-[#1D1A1C] dark:text-white mb-2">Color Evolution</p>
-              <p className="text-[#5C5759] dark:text-gray-300 text-sm leading-relaxed">
+            <div className="mt-6 bg-white rounded-xl p-5 border border-[#E8E5E6]">
+              <p className="font-medium text-[#1D1A1C] mb-2">Color Evolution</p>
+              <p className="text-[#5C5759] text-sm leading-relaxed">
                 Evolved from purple (commonly associated with AI) to plum for a more approachable,
                 consumer-friendly, playful feeling while maintaining sophistication.
               </p>
@@ -79,40 +79,40 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-6">
               Typography
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="p-6 bg-white dark:bg-[#2a1e36] rounded-xl border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="font-clash text-4xl mb-2 text-[#1D1A1C] dark:text-white">Clash Display</p>
-                <p className="text-sm text-[#5C5759] dark:text-gray-400">
+              <div className="p-6 bg-white rounded-xl border border-[#E8E5E6]">
+                <p className="font-clash text-4xl mb-2 text-[#1D1A1C]">Clash Display</p>
+                <p className="text-sm text-[#5C5759]">
                   Headings, key moments. Balance between technical precision (sharp edges) and warmth
                   (curved forms).
                 </p>
               </div>
-              <div className="p-6 bg-white dark:bg-[#2a1e36] rounded-xl border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="font-sans text-4xl mb-2 text-[#1D1A1C] dark:text-white">DM Sans</p>
-                <p className="text-sm text-[#5C5759] dark:text-gray-400">
+              <div className="p-6 bg-white rounded-xl border border-[#E8E5E6]">
+                <p className="font-sans text-4xl mb-2 text-[#1D1A1C]">DM Sans</p>
+                <p className="text-sm text-[#5C5759]">
                   Body text, UI elements. Clean, highly readable for scanning content.
                 </p>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-[#2a1e36] rounded-xl border border-[#E8E5E6] dark:border-[#3D2B4C]/30 overflow-hidden">
+            <div className="bg-white rounded-xl border border-[#E8E5E6] overflow-hidden">
               {typeScale.map((t, i) => (
                 <div
                   key={t.label}
                   className={`flex items-center gap-6 px-6 py-4 ${
-                    i < typeScale.length - 1 ? "border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30" : ""
+                    i < typeScale.length - 1 ? "border-b border-[#E8E5E6]" : ""
                   }`}
                 >
                   <div className="w-36 shrink-0">
-                    <p className="text-xs text-[#7D767A] dark:text-gray-500">{t.label}</p>
-                    <p className="text-xs font-mono text-[#3D2B4C] dark:text-purple-400">{t.size}</p>
+                    <p className="text-xs text-[#7D767A]">{t.label}</p>
+                    <p className="text-xs font-mono text-[#3D2B4C]">{t.size}</p>
                   </div>
                   <p
-                    className="text-[#1D1A1C] dark:text-white"
+                    className="text-[#1D1A1C]"
                     style={{
                       fontSize: t.size,
                       fontFamily: t.font.includes("Clash") ? "var(--font-clash), serif" : "var(--font-dm-sans), sans-serif",
@@ -133,36 +133,36 @@ export default function DesignSystem() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-6">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-6">
               Layout & Spacing (8pt Grid)
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-[#2a1e36] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="text-sm font-medium text-[#1D1A1C] dark:text-white mb-4">Spacing Scale</p>
+              <div className="bg-white rounded-xl p-6 border border-[#E8E5E6]">
+                <p className="text-sm font-medium text-[#1D1A1C] mb-4">Spacing Scale</p>
                 <div className="flex items-end gap-3">
                   {spacing.map((s) => (
                     <div key={s} className="flex flex-col items-center gap-2">
                       <div
-                        className="bg-[#3D2B4C]/20 dark:bg-purple-500/30 rounded"
+                        className="bg-[#3D2B4C]/20 rounded"
                         style={{ width: 16, height: s }}
                       />
-                      <span className="text-[10px] text-[#7D767A] dark:text-gray-500">{s}</span>
+                      <span className="text-[10px] text-[#7D767A]">{s}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-[#2a1e36] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <p className="text-sm font-medium text-[#1D1A1C] dark:text-white mb-4">Border Radius</p>
+              <div className="bg-white rounded-xl p-6 border border-[#E8E5E6]">
+                <p className="text-sm font-medium text-[#1D1A1C] mb-4">Border Radius</p>
                 <div className="flex items-center gap-4">
                   {radii.map((r) => (
                     <div key={r} className="flex flex-col items-center gap-2">
                       <div
-                        className="w-12 h-12 border-2 border-[#3D2B4C] dark:border-purple-400 bg-[#3D2B4C]/10 dark:bg-purple-500/20"
+                        className="w-12 h-12 border-2 border-[#3D2B4C] bg-[#3D2B4C]/10"
                         style={{ borderRadius: r }}
                       />
-                      <span className="text-[10px] text-[#7D767A] dark:text-gray-500">{r}px</span>
+                      <span className="text-[10px] text-[#7D767A]">{r}px</span>
                     </div>
                   ))}
                 </div>

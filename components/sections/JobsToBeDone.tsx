@@ -27,11 +27,11 @@ const jobs = [
 
 export default function JobsToBeDone() {
   return (
-    <section id="jobs" className="py-28 bg-white dark:bg-[#1e1530]">
+    <section id="jobs" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="07" title="Jobs-to-be-Done" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
           Based on research findings, I identified three core jobs users need to accomplish when
           shopping for clothes online.
         </motion.p>
@@ -44,15 +44,15 @@ export default function JobsToBeDone() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-start gap-8 p-8 rounded-2xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 hover:shadow-md transition-shadow"
+              className="flex items-start gap-8 p-8 rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-md transition-shadow"
             >
-              <span className="font-clash text-7xl font-bold text-[#3D2B4C]/15 dark:text-purple-500/20 leading-none shrink-0">
+              <span className="font-clash text-7xl font-bold text-[#3D2B4C]/15 leading-none shrink-0">
                 {job.number}
               </span>
               <div className="pt-2">
-                <p className="text-[#5C5759] dark:text-gray-400 text-lg mb-1">{job.when}</p>
-                <p className="text-[#1D1A1C] dark:text-white text-lg font-medium mb-1">{job.want}</p>
-                <p className="text-[#5C5759] dark:text-gray-400 text-lg italic">{job.so}</p>
+                <p className="text-[#5C5759] text-lg mb-1">{job.when}</p>
+                <p className="text-[#1D1A1C] text-lg font-medium mb-1">{job.want}</p>
+                <p className="text-[#5C5759] text-lg italic">{job.so}</p>
               </div>
             </motion.div>
           ))}
@@ -63,7 +63,7 @@ export default function JobsToBeDone() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-10 text-center text-[#5C5759] dark:text-gray-400 italic"
+          className="mt-10 text-center text-[#5C5759] italic"
         >
           These jobs shaped the app's core features and three behavioral modes.
         </motion.p>

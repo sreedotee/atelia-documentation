@@ -27,11 +27,11 @@ export default function ResearchApproach() {
   ];
 
   return (
-    <section id="research" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="research" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="02" title="Research & Approach" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
           To identify where virtual try-on creates value, I analyzed the existing landscape and
           validated user needs through interviews and card sorting.
         </motion.p>
@@ -51,15 +51,15 @@ export default function ResearchApproach() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               viewport={{ once: true }}
-              className="rounded-2xl border border-white/20 p-6 bg-white/5 hover:bg-white/10 transition-colors"
+              className="rounded-2xl border border-[#E8E5E6] p-6 bg-white hover:bg-gray-50 transition-colors"
             >
               <span className="text-3xl mb-4 block">{m.icon}</span>
-              <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-white mb-3">{m.title}</h3>
-              <p className="text-purple-200 text-sm leading-relaxed mb-5">{m.desc}</p>
+              <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-3">{m.title}</h3>
+              <p className="text-[#5C5759] text-sm leading-relaxed mb-5">{m.desc}</p>
               <ul className="space-y-1.5">
                 {m.stats.map((s) => (
-                  <li key={s} className="flex items-center gap-2 text-purple-300 text-sm">
-                    <span className="text-purple-400">•</span>
+                  <li key={s} className="flex items-center gap-2 text-[#5C5759] text-sm">
+                    <span className="text-[#A498AB]">•</span>
                     {s}
                   </li>
                 ))}

@@ -85,14 +85,14 @@ const nextSteps = [
 
 export default function Reflection() {
   return (
-    <section id="reflection" className="py-28 bg-white dark:bg-[#1e1530]">
+    <section id="reflection" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="24" title="Reflection & Learnings" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {/* Learnings */}
           <div>
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-8">
               What I Learned
             </h3>
             <div className="space-y-8">
@@ -105,14 +105,14 @@ export default function Reflection() {
                   viewport={{ once: true }}
                   className="flex gap-5"
                 >
-                  <span className="font-clash text-5xl font-bold text-[#3D2B4C]/15 dark:text-purple-500/20 shrink-0 leading-none">
+                  <span className="font-clash text-5xl font-bold text-[#3D2B4C]/15 shrink-0 leading-none">
                     {l.number}
                   </span>
                   <div>
-                    <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
+                    <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-2">
                       {l.title}
                     </h4>
-                    <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">{l.text}</p>
+                    <p className="text-[#5C5759] leading-relaxed">{l.text}</p>
                   </div>
                 </motion.div>
               ))}
@@ -121,7 +121,7 @@ export default function Reflection() {
 
           {/* What I'd do differently */}
           <div>
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-8">
               What I'd Do Differently
             </h3>
             <div className="space-y-6">
@@ -132,12 +132,12 @@ export default function Reflection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="flex gap-4 p-4 rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                  className="flex gap-4 p-4 rounded-xl bg-[#FAF9FA] border border-[#E8E5E6]"
                 >
                   <span className="text-2xl shrink-0">{imp.icon}</span>
                   <div>
-                    <h4 className="font-medium text-[#1D1A1C] dark:text-white mb-1">{imp.title}</h4>
-                    <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">{imp.text}</p>
+                    <h4 className="font-medium text-[#1D1A1C] mb-1">{imp.title}</h4>
+                    <p className="text-sm text-[#5C5759] leading-relaxed">{imp.text}</p>
                   </div>
                 </motion.div>
               ))}
@@ -147,7 +147,7 @@ export default function Reflection() {
 
         {/* Next Steps */}
         <div>
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-8">
             If This Were Real: Next Steps
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -158,18 +158,18 @@ export default function Reflection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 rounded-xl p-6"
+                className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-xl p-6"
               >
-                <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wide mb-2">
+                <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wide mb-2">
                   {ns.phase}
                 </p>
-                <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
+                <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-4">
                   {ns.title}
                 </h4>
                 <ul className="space-y-2">
                   {ns.tasks.map((t) => (
-                    <li key={t} className="flex items-start gap-2 text-sm text-[#5C5759] dark:text-gray-300">
-                      <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5">•</span>
+                    <li key={t} className="flex items-start gap-2 text-sm text-[#5C5759]">
+                      <span className="text-[#3D2B4C] mt-0.5">•</span>
                       {t}
                     </li>
                   ))}

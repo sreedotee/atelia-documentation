@@ -24,13 +24,13 @@ const stats = [
 
 export default function MarketContext() {
   return (
-    <section className="py-28 bg-white dark:bg-[#1e1530]">
+    <section className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="02b" title="Market Context" />
 
         <motion.p
           {...fadeInUp}
-          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-16 max-w-2xl"
+          className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl"
         >
           Online fashion returns are a massive problem costing retailers billions annually,
           primarily driven by fit and appearance uncertainty.
@@ -44,15 +44,15 @@ export default function MarketContext() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[#FAFAFA] dark:bg-[#2a1e36] border border-[#E5E5E5] dark:border-[#3D2B4C]/30 p-8"
+              className="bg-[#FAFAFA] border border-[#E5E5E5] p-8"
             >
-              <p className="font-clash text-5xl font-bold text-[#1D1A1C] dark:text-white leading-none">
+              <p className="font-clash text-5xl font-bold text-[#1D1A1C] leading-none">
                 {s.number}
               </p>
-              <p className="text-sm text-[#737373] dark:text-gray-400 mt-4 leading-relaxed">
+              <p className="text-sm text-[#737373] mt-4 leading-relaxed">
                 {s.label}
               </p>
-              <p className="text-xs text-[#A3A3A3] dark:text-gray-600 mt-2">
+              <p className="text-xs text-[#A3A3A3] mt-2">
                 Source: {s.source}
               </p>
             </motion.div>

@@ -56,7 +56,7 @@ export default function DesignWhiteboard({
   const cols = mode === "system" ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3";
 
   return (
-    <section className="py-20 bg-[#FAF9FA] dark:bg-[#1a1520]" id={`decisions-${mode}`}>
+    <section className="py-20 bg-[#FAF9FA]" id={`decisions-${mode}`}>
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number={sectionNumber} title={title} subtitle={subtitle} />
 
@@ -65,7 +65,7 @@ export default function DesignWhiteboard({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl"
+          className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl"
         >
           {description}
         </motion.p>
@@ -76,16 +76,16 @@ export default function DesignWhiteboard({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="whiteboard-bg rounded-2xl p-10 dark:border dark:border-[#3D2B4C]/30"
+          className="whiteboard-bg rounded-2xl p-10"
         >
           {/* Header */}
           <div className="flex items-center gap-3 mb-8">
             <span className="text-2xl">🎨</span>
             <div>
-              <h3 className="font-clash text-xl font-semibold text-[#1D1A1C] dark:text-white">
+              <h3 className="font-clash text-xl font-semibold text-[#1D1A1C]">
                 Design Decisions
               </h3>
-              <p className="text-sm text-[#7D767A] dark:text-gray-500">
+              <p className="text-sm text-[#7D767A]">
                 Click any sticky note to explore the decision rationale
               </p>
             </div>

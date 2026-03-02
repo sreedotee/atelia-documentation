@@ -106,7 +106,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="bg-[#FAF9FA] dark:bg-[#1a1520] min-h-screen lg:ml-[220px]">
+    <main className="bg-[#FAF9FA] min-h-screen lg:ml-[220px]">
       <SectionTimeline />
       <Hero />
       <Overview />
@@ -123,7 +123,7 @@ export default function Home() {
       <Iterations />
 
       {/* Mode 1: BEFORE — grouped */}
-      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+      <div className="border-l-4 border-[#3D2B4C]/25 ml-2 md:ml-6">
         <ModeDesigns
           id="mode1-designs"
           sectionNumber="12"
@@ -143,7 +143,7 @@ export default function Home() {
       </div>
 
       {/* Mode 2: DURING — grouped */}
-      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+      <div className="border-l-4 border-[#3D2B4C]/25 ml-2 md:ml-6">
         <ModeDesigns
           id="mode2-designs"
           sectionNumber="14"
@@ -167,7 +167,7 @@ export default function Home() {
       </div>
 
       {/* Mode 3: AFTER — grouped */}
-      <div className="border-l-4 border-[#3D2B4C]/25 dark:border-purple-500/30 ml-2 md:ml-6">
+      <div className="border-l-4 border-[#3D2B4C]/25 ml-2 md:ml-6">
         <ModeDesigns
           id="mode3-designs"
           sectionNumber="16"
