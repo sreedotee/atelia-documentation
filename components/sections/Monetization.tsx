@@ -15,16 +15,16 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className="w-full rounded-xl border border-[#E8E5E6] dark:border-[#3D2B4C]/30 bg-[#F7F5F8] dark:bg-[#1e1628] flex flex-col items-center justify-center p-8 gap-2"
+      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
       style={{ height }}
     >
-      <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] dark:text-gray-600 uppercase">
+      <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
         Image Placeholder
       </p>
-      <p className="text-sm text-[#C8C2CC] dark:text-gray-700 text-center max-w-md leading-relaxed">
+      <p className="text-sm text-[#C8C2CC] text-center max-w-md leading-relaxed">
         {description}
       </p>
-      <p className="text-[10px] font-mono text-[#D8D3DB] dark:text-gray-800 mt-1">{filename}</p>
+      <p className="text-[10px] font-mono text-[#D8D3DB] mt-1">{filename}</p>
     </div>
   );
 }
@@ -118,13 +118,13 @@ const assumptions = [
 
 export default function Monetization() {
   return (
-    <section id="monetization" className="py-28 bg-white dark:bg-[#13101a]">
+    <section id="monetization" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="22" title="Business Model" subtitle="How This Makes Money" />
 
         <motion.p
           {...fadeInUp}
-          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-20 max-w-2xl"
+          className="text-lg text-[#5C5759] leading-relaxed mb-20 max-w-2xl"
         >
           A product without a business model is a hobby. I explored three revenue approaches and
           landed on a hybrid model that balances user value with sustainable monetization.
@@ -138,10 +138,10 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
             Credit-Based Freemium Model
           </h3>
-          <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-4 max-w-2xl">
+          <p className="text-[#5C5759] leading-relaxed mb-4 max-w-2xl">
             Users purchase credits to generate AI try-on images. Each generation costs credits
             based on complexity (number of items selected).
           </p>
@@ -157,16 +157,16 @@ export default function Monetization() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed"
+                    className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
                   >
-                    <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5 shrink-0">—</span>
+                    <span className="text-[#3D2B4C] mt-0.5 shrink-0">—</span>
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-              <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-4">
+            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
+              <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
                 Why Credits?
               </p>
               <ul className="space-y-2">
@@ -178,9 +178,9 @@ export default function Monetization() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed"
+                    className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
                   >
-                    <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5 shrink-0">✓</span>
+                    <span className="text-[#3D2B4C] mt-0.5 shrink-0">✓</span>
                     {item}
                   </li>
                 ))}
@@ -196,12 +196,12 @@ export default function Monetization() {
               filename="/images/monetization-credits-canvas.png"
             />
           </div>
-          <p className="text-sm text-[#7D767A] dark:text-gray-500 italic">
+          <p className="text-sm text-[#7D767A] italic">
             Credits remaining visible at top right; generation cost shown on button
           </p>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── PRICING TIERS ── */}
         <motion.div
@@ -211,10 +211,10 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
             Pricing Tiers
           </h3>
-          <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
+          <p className="text-[#5C5759] leading-relaxed mb-10 max-w-2xl">
             Three tiers balance accessibility (free), power users (pro), and heavy usage
             (premier). Pricing based on AI generation costs + margin.
           </p>
@@ -227,7 +227,7 @@ export default function Monetization() {
               filename="/images/monetization-pricing-plans.png"
             />
           </div>
-          <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mb-12">
+          <p className="text-sm text-[#7D767A] italic mb-12">
             Freemium model with three tiers; annual discount saves ~17%
           </p>
 
@@ -243,12 +243,12 @@ export default function Monetization() {
                 className={`rounded-2xl p-6 ${
                   tier.highlight
                     ? "bg-[#3D2B4C] text-white"
-                    : "bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                    : "bg-[#FAF9FA] border border-[#E8E5E6]"
                 }`}
               >
                 <p
                   className={`font-clash text-sm md:text-base lg:text-lg font-medium mb-2 ${
-                    tier.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
+                    tier.highlight ? "text-white" : "text-[#1D1A1C]"
                   }`}
                 >
                   {tier.name}
@@ -256,7 +256,7 @@ export default function Monetization() {
                 <div className="flex items-baseline gap-1 mb-5">
                   <span
                     className={`font-clash text-3xl font-bold ${
-                      tier.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
+                      tier.highlight ? "text-white" : "text-[#1D1A1C]"
                     }`}
                   >
                     {tier.price}
@@ -264,7 +264,7 @@ export default function Monetization() {
                   {tier.period && (
                     <span
                       className={`text-sm ${
-                        tier.highlight ? "text-purple-200" : "text-[#7D767A] dark:text-gray-500"
+                        tier.highlight ? "text-purple-200" : "text-[#7D767A]"
                       }`}
                     >
                       {tier.period}
@@ -276,12 +276,12 @@ export default function Monetization() {
                     <li
                       key={f}
                       className={`flex items-start gap-2 text-sm leading-relaxed ${
-                        tier.highlight ? "text-white/85" : "text-[#5C5759] dark:text-gray-300"
+                        tier.highlight ? "text-white/85" : "text-[#5C5759]"
                       }`}
                     >
                       <span
                         className={`mt-0.5 shrink-0 ${
-                          tier.highlight ? "text-purple-300" : "text-[#3D2B4C] dark:text-purple-400"
+                          tier.highlight ? "text-purple-300" : "text-[#3D2B4C]"
                         }`}
                       >
                         •
@@ -292,7 +292,7 @@ export default function Monetization() {
                 </ul>
                 <p
                   className={`text-xs italic ${
-                    tier.highlight ? "text-purple-200" : "text-[#7D767A] dark:text-gray-500"
+                    tier.highlight ? "text-purple-200" : "text-[#7D767A]"
                   }`}
                 >
                   {tier.target}
@@ -302,11 +302,11 @@ export default function Monetization() {
           </div>
 
           {/* Pricing rationale */}
-          <div className="bg-[#FAF9FA] dark:bg-[#1e1628] rounded-xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 max-w-2xl">
-            <p className="text-xs font-medium text-[#7D767A] dark:text-gray-500 uppercase tracking-wider mb-3">
+          <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6] max-w-2xl">
+            <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-3">
               Pricing Rationale
             </p>
-            <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">
+            <p className="text-sm text-[#5C5759] leading-relaxed">
               Based on AI generation costs (~₹2–4 per image) + infrastructure + margin. Free tier
               sustainable because 80% of users generate &lt;5 outfits/day. Power users (20%)
               subsidize free users. Annual discount (17%) improves retention.
@@ -314,7 +314,7 @@ export default function Monetization() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── ADDITIONAL REVENUE STREAMS ── */}
         <motion.div
@@ -324,7 +324,7 @@ export default function Monetization() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
             Additional Revenue Streams
           </h3>
 
@@ -334,17 +334,17 @@ export default function Monetization() {
                 key={stream.title}
                 className={`py-6 ${
                   i < revenueStreams.length - 1
-                    ? "border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                    ? "border-b border-[#E8E5E6]"
                     : ""
                 }`}
               >
-                <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
+                <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-2">
                   {stream.title}
                 </p>
-                <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed mb-2">
+                <p className="text-sm text-[#5C5759] leading-relaxed mb-2">
                   {stream.description}
                 </p>
-                <p className="text-xs text-[#7D767A] dark:text-gray-500 italic">
+                <p className="text-xs text-[#7D767A] italic">
                   {stream.metric}
                 </p>
               </div>
@@ -352,7 +352,7 @@ export default function Monetization() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── ASSUMPTIONS TO VALIDATE ── */}
         <motion.div
@@ -361,10 +361,10 @@ export default function Monetization() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
             Assumptions to Validate
           </h3>
-          <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
+          <p className="text-[#5C5759] leading-relaxed mb-8 max-w-2xl">
             The business model is directionally right, but these questions need real data before
             committing resources.
           </p>
@@ -375,14 +375,14 @@ export default function Monetization() {
                 key={i}
                 className={`py-6 ${
                   i < assumptions.length - 1
-                    ? "border-b border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+                    ? "border-b border-[#E8E5E6]"
                     : ""
                 }`}
               >
-                <p className="text-[#1D1A1C] dark:text-gray-200 font-medium leading-relaxed mb-2">
+                <p className="text-[#1D1A1C] font-medium leading-relaxed mb-2">
                   {a.question}
                 </p>
-                <p className="text-sm text-[#7D767A] dark:text-gray-500 leading-relaxed">
+                <p className="text-sm text-[#7D767A] leading-relaxed">
                   {a.method}
                 </p>
               </div>

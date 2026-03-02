@@ -15,23 +15,23 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className="w-full rounded-xl border border-[#E8E5E6] dark:border-[#3D2B4C]/30 bg-[#F7F5F8] dark:bg-[#1e1628] flex flex-col items-center justify-center p-8 gap-2"
+      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
       style={{ height }}
     >
-      <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] dark:text-gray-600 uppercase">
+      <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
         Image Placeholder
       </p>
-      <p className="text-sm text-[#C8C2CC] dark:text-gray-700 text-center max-w-md leading-relaxed">
+      <p className="text-sm text-[#C8C2CC] text-center max-w-md leading-relaxed">
         {description}
       </p>
-      <p className="text-[10px] font-mono text-[#D8D3DB] dark:text-gray-800 mt-1">{filename}</p>
+      <p className="text-[10px] font-mono text-[#D8D3DB] mt-1">{filename}</p>
     </div>
   );
 }
 
 function BlockLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-3">
+    <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wider mb-3">
       {children}
     </p>
   );
@@ -39,11 +39,11 @@ function BlockLabel({ children }: { children: React.ReactNode }) {
 
 function InsightBox({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-[#3D2B4C]/5 dark:bg-[#3D2B4C]/20 rounded-xl p-5 border-l-4 border-[#3D2B4C] dark:border-purple-500 max-w-2xl">
-      <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wider mb-2">
+    <div className="bg-[#3D2B4C]/5 rounded-xl p-5 border-l-4 border-[#3D2B4C] max-w-2xl">
+      <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wider mb-2">
         Key Insight
       </p>
-      <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm">{children}</p>
+      <p className="text-[#5C5759] leading-relaxed text-sm">{children}</p>
     </div>
   );
 }
@@ -54,9 +54,9 @@ function WrongList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li
           key={item}
-          className="flex items-start gap-3 text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed"
+          className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
         >
-          <span className="text-[#7D767A] dark:text-gray-600 mt-0.5 shrink-0">×</span>
+          <span className="text-[#7D767A] mt-0.5 shrink-0">×</span>
           {item}
         </li>
       ))}
@@ -70,9 +70,9 @@ function NeutralList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li
           key={item}
-          className="flex items-start gap-3 text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed"
+          className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
         >
-          <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5 shrink-0">—</span>
+          <span className="text-[#3D2B4C] mt-0.5 shrink-0">—</span>
           {item}
         </li>
       ))}
@@ -86,9 +86,9 @@ function RightList({ items }: { items: string[] }) {
       {items.map((item) => (
         <li
           key={item}
-          className="flex items-start gap-3 text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed"
+          className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
         >
-          <span className="text-[#3D2B4C] dark:text-purple-400 mt-0.5 shrink-0">✓</span>
+          <span className="text-[#3D2B4C] mt-0.5 shrink-0">✓</span>
           {item}
         </li>
       ))}
@@ -107,26 +107,26 @@ function VersionHeader({
 }) {
   return (
     <div className="mb-8">
-      <p className="text-xs font-medium tracking-widest text-[#3D2B4C] dark:text-purple-400 uppercase mb-2">
+      <p className="text-xs font-medium tracking-widest text-[#3D2B4C] uppercase mb-2">
         {version}
       </p>
-      <h3 className="font-clash text-3xl font-medium text-[#1D1A1C] dark:text-white leading-tight mb-1">
+      <h3 className="font-clash text-3xl font-medium text-[#1D1A1C] leading-tight mb-1">
         {title}
       </h3>
-      <p className="text-sm text-[#7D767A] dark:text-gray-500">{date}</p>
+      <p className="text-sm text-[#7D767A]">{date}</p>
     </div>
   );
 }
 
 export default function Iterations() {
   return (
-    <section id="iterations" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="iterations" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="11" title="Iterations" subtitle="What Didn't Work" />
 
         <motion.p
           {...fadeInUp}
-          className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-20 max-w-2xl"
+          className="text-lg text-[#5C5759] leading-relaxed mb-20 max-w-2xl"
         >
           Three major iterations preceded the final design. Each taught critical lessons about
           user behavior, interaction patterns, and product positioning.
@@ -157,7 +157,7 @@ export default function Iterations() {
           <div className="space-y-6 max-w-2xl">
             <div>
               <BlockLabel>The Approach</BlockLabel>
-              <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm">
+              <p className="text-[#5C5759] leading-relaxed text-sm">
                 Build a complete shopping platform with AI try-on integrated. Users would browse
                 products, try them on, then purchase in-app. Like Amazon Fashion or Myntra, but
                 with better visualization.
@@ -182,7 +182,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── VERSION 02: Cross-Tab Navigation ── */}
         <motion.div
@@ -205,7 +205,7 @@ export default function Iterations() {
                 description={'"Wardrobe" mockup with AI Try-On button — item preview modal, "AI Try-On" button visible, "takes to or adds items to AI try on canvas" annotation'}
                 filename="/images/iteration-2a-wardrobe-tryon.png"
               />
-              <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mt-3 text-center">
+              <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Wardrobe → AI Try-On button
               </p>
             </div>
@@ -215,7 +215,7 @@ export default function Iterations() {
                 description='Recently Added → Try-On navigation — arrow showing navigation to Try-On tab, "what actions could be here from here" annotation'
                 filename="/images/iteration-2b-recently-added.png"
               />
-              <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mt-3 text-center">
+              <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Recently Added → navigation trigger
               </p>
             </div>
@@ -224,7 +224,7 @@ export default function Iterations() {
           <div className="space-y-6 max-w-2xl">
             <div>
               <BlockLabel>The Approach</BlockLabel>
-              <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm mb-4">
+              <p className="text-[#5C5759] leading-relaxed text-sm mb-4">
                 After pivoting to universal tool, explored having &ldquo;AI Try-On&rdquo; buttons
                 throughout the app that would navigate users to the Try-On tab automatically.
                 Found this pattern in multiple places:
@@ -256,7 +256,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── VERSION 03: Canvas Layout ── */}
         <motion.div
@@ -279,7 +279,7 @@ export default function Iterations() {
                 description={'Canvas with chips clutter (rejected) — selected items shown as chips on top, canvas area, "not sure on this" annotation, red X marks'}
                 filename="/images/iteration-3a-canvas-clutter.png"
               />
-              <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mt-3 text-center">
+              <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Version A: Selected items as chips (rejected)
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function Iterations() {
                 description={'Final 25/75 split canvas — canvas minimized at top (25%), category tabs: Tops, Bottoms, Outerwear, Footwear, item grid below (75%), "this is actually better" annotation'}
                 filename="/images/iteration-3b-canvas-final.png"
               />
-              <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mt-3 text-center">
+              <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Final: 25/75 split (canvas + items visible)
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function Iterations() {
           <div className="space-y-6 max-w-2xl">
             <div>
               <BlockLabel>Problem With Chips</BlockLabel>
-              <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm mb-4">
+              <p className="text-[#5C5759] leading-relaxed text-sm mb-4">
                 Early version showed selected items as chips at the top of canvas while user was
                 selecting more items.
               </p>
@@ -313,7 +313,7 @@ export default function Iterations() {
             </div>
             <div>
               <BlockLabel>Breakthrough Realization</BlockLabel>
-              <p className="text-sm text-[#5C5759] dark:text-gray-300 italic leading-relaxed mb-4">
+              <p className="text-sm text-[#5C5759] italic leading-relaxed mb-4">
                 &ldquo;When tab clicked, canvas minimized. Once generate clicked, stuff
                 collapses.&rdquo; —from notes
               </p>
@@ -335,7 +335,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] dark:bg-[#3D2B4C]/30 mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── EARLY EXPLORATIONS ── */}
         <motion.div
@@ -357,12 +357,12 @@ export default function Iterations() {
               filename="/images/iteration-early-wireframes.png"
             />
           </div>
-          <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mb-10">
+          <p className="text-sm text-[#7D767A] italic mb-10">
             Early wireframe exploration—testing paste link input, collections structure, and
             history placement
           </p>
 
-          <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed text-sm mb-4 max-w-2xl">
+          <p className="text-[#5C5759] leading-relaxed text-sm mb-4 max-w-2xl">
             These hand-drawn sketches explored the fundamental structure before committing to
             high-fidelity designs. Key explorations:
           </p>
@@ -374,7 +374,7 @@ export default function Iterations() {
               "Collections grid layout and visual density",
             ]}
           />
-          <p className="text-sm text-[#7D767A] dark:text-gray-500 italic mt-6 max-w-2xl leading-relaxed">
+          <p className="text-sm text-[#7D767A] italic mt-6 max-w-2xl leading-relaxed">
             Note the &ldquo;History should be here&rdquo; annotation—this early decision led to
             the final tab structure where Try-On contains both Canvas and History together.
           </p>

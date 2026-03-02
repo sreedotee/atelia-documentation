@@ -28,7 +28,7 @@ const outcomeItems = [
 
 export default function Overview() {
   return (
-    <section id="overview" className="py-28 bg-white dark:bg-[#1e1530]">
+    <section id="overview" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="01" title="Overview" fontWeight="font-medium" />
 
@@ -42,10 +42,10 @@ export default function Overview() {
 
           {/* Brief — desktop: col 1, row 1 */}
           <motion.div {...fadeInUp} className="lg:col-start-1 lg:row-start-1">
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-3">
               The Brief
             </h3>
-            <p className="text-[#5C5759] dark:text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed italic border-l-4 border-[#3D2B4C]/30 pl-4">
+            <p className="text-[#5C5759] text-sm md:text-base lg:text-lg leading-relaxed italic border-l-4 border-[#3D2B4C]/30 pl-4">
               "Create a mobile app that uses AI to generate outfit visualizations from clothing items."
             </p>
           </motion.div>
@@ -53,17 +53,17 @@ export default function Overview() {
           {/* Challenge + Approach — desktop: col 1, row 2 */}
           <motion.div {...fadeInUp} className="space-y-8 lg:col-start-1 lg:row-start-2">
             <div>
-              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
+              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-3">
                 The Challenge
               </h3>
-              <p className="text-[#5C5759] dark:text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed">
+              <p className="text-[#5C5759] text-sm md:text-base lg:text-lg leading-relaxed">
                 Virtual try-on technology exists—but where does it create the most value? I needed
                 to find the right problem to solve.
               </p>
             </div>
 
             <div>
-              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
+              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-3">
                 My Approach
               </h3>
               <ul className="space-y-2">
@@ -73,8 +73,8 @@ export default function Overview() {
                   "Define strategic opportunity",
                   "Design for that context",
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-[#5C5759] dark:text-gray-300 text-sm md:text-base">
-                    <span className="w-6 h-6 rounded-full bg-[#3D2B4C]/10 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 flex items-center justify-center text-xs font-bold flex-shrink-0">
+                  <li key={i} className="flex items-center gap-3 text-[#5C5759] text-sm md:text-base">
+                    <span className="w-6 h-6 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C] flex items-center justify-center text-xs font-bold flex-shrink-0">
                       {i + 1}
                     </span>
                     {item}
@@ -92,10 +92,10 @@ export default function Overview() {
             viewport={{ once: true }}
             className="lg:col-start-2 lg:row-start-1"
           >
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-3">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-3">
               The Outcome
             </h3>
-            <p className="text-[#5C5759] dark:text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed">
+            <p className="text-[#5C5759] text-sm md:text-base lg:text-lg leading-relaxed">
               A shopping companion that helps users make confident purchase decisions across any
               retailer by combining:
             </p>
@@ -109,7 +109,7 @@ export default function Overview() {
             viewport={{ once: true }}
             className="h-full lg:col-start-2 lg:row-start-2"
           >
-            <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col gap-5 md:gap-0 md:justify-around px-6 py-6">
+            <div className="h-full rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] flex flex-col gap-5 md:gap-0 md:justify-around px-6 py-6">
               {outcomeItems.map((f) => (
                 <div key={f.title} className="flex items-center gap-5">
                   {/* Icon slot — 48×48. Set iconSrc above to replace the emoji placeholder with your image/SVG */}
@@ -125,8 +125,8 @@ export default function Overview() {
                     </span>
                   )}
                   <div>
-                    <p className="font-medium text-[#1D1A1C] dark:text-white text-base leading-tight">{f.title}</p>
-                    <p className="text-[#5C5759] dark:text-gray-400 text-base leading-snug mt-1">{f.desc}</p>
+                    <p className="font-medium text-[#1D1A1C] text-base leading-tight">{f.title}</p>
+                    <p className="text-[#5C5759] text-base leading-snug mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}

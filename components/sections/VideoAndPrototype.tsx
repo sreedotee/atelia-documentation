@@ -22,11 +22,11 @@ export default function VideoAndPrototype() {
   return (
     <>
       {/* Video Section */}
-      <section id="video" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+      <section id="video" className="py-28 bg-[#FAF9FA]">
         <div className="max-w-[1200px] mx-auto px-6">
           <SectionHeader number="25" title="Video Walkthrough" />
 
-          <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
+          <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-10 max-w-2xl">
             Watch a 3-minute walkthrough of the complete user experience.
           </motion.p>
 
@@ -58,7 +58,7 @@ export default function VideoAndPrototype() {
                 </div>
                 <div className="absolute bottom-4 right-4 text-purple-300 text-sm">3:24</div>
               </div>
-              <p className="text-sm text-[#7D767A] dark:text-gray-500 mt-3 text-center">
+              <p className="text-sm text-[#7D767A] mt-3 text-center">
                 Full prototype walkthrough: Save item → Generate outfit → Save result (3:24)
               </p>
             </motion.div>
@@ -69,18 +69,18 @@ export default function VideoAndPrototype() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+              className="bg-white rounded-2xl p-6 border border-[#E8E5E6]"
             >
-              <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-5">
+              <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-5">
                 Chapters
               </h4>
               <div className="space-y-4">
                 {chapters.map((c, i) => (
                   <div key={c.time} className="flex items-start gap-3">
-                    <span className="text-xs font-mono text-[#3D2B4C] dark:text-purple-400 bg-[#3D2B4C]/10 dark:bg-purple-500/20 px-2 py-0.5 rounded shrink-0">
+                    <span className="text-xs font-mono text-[#3D2B4C] bg-[#3D2B4C]/10 px-2 py-0.5 rounded shrink-0">
                       {c.time}
                     </span>
-                    <p className="text-sm text-[#5C5759] dark:text-gray-300">{c.name}</p>
+                    <p className="text-sm text-[#5C5759]">{c.name}</p>
                   </div>
                 ))}
               </div>
@@ -90,11 +90,11 @@ export default function VideoAndPrototype() {
       </section>
 
       {/* Prototype Section */}
-      <section id="prototype" className="py-28 bg-white dark:bg-[#1e1530]">
+      <section id="prototype" className="py-28 bg-white">
         <div className="max-w-[1200px] mx-auto px-6">
           <SectionHeader number="26" title="Interactive Prototype" />
 
-          <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-10 max-w-2xl">
+          <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-10 max-w-2xl">
             Try the interactive prototype yourself. Click through the main flows.
           </motion.p>
 
@@ -108,14 +108,14 @@ export default function VideoAndPrototype() {
               className="lg:col-span-2"
             >
               <div
-                className="w-full aspect-video rounded-2xl bg-[#FAF9FA] dark:bg-[#2a1e36] border-2 border-dashed border-[#E8E5E6] dark:border-[#3D2B4C]/50 flex items-center justify-center"
+                className="w-full aspect-video rounded-2xl bg-[#FAF9FA] border-2 border-dashed border-[#E8E5E6] flex items-center justify-center"
               >
                 <div className="text-center p-8">
                   <span className="text-5xl mb-4 block">🎨</span>
-                  <p className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white mb-2">
+                  <p className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-2">
                     Figma Prototype
                   </p>
-                  <p className="text-[#5C5759] dark:text-gray-400 text-sm max-w-xs">
+                  <p className="text-[#5C5759] text-sm max-w-xs">
                     Replace this placeholder with your Figma embed URL to show the interactive
                     prototype
                   </p>
@@ -131,8 +131,8 @@ export default function VideoAndPrototype() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-[#FAF9FA] dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30">
-                <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
+              <div className="bg-[#FAF9FA] rounded-2xl p-6 border border-[#E8E5E6]">
+                <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-4">
                   Try these flows:
                 </h4>
                 <div className="space-y-4">
@@ -141,7 +141,7 @@ export default function VideoAndPrototype() {
                       <span className="w-6 h-6 rounded-full bg-[#3D2B4C] text-white flex items-center justify-center text-xs font-bold shrink-0">
                         {i + 1}
                       </span>
-                      <p className="text-sm text-[#5C5759] dark:text-gray-300">{flow}</p>
+                      <p className="text-sm text-[#5C5759]">{flow}</p>
                     </div>
                   ))}
                 </div>

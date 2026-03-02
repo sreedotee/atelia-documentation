@@ -45,11 +45,11 @@ const terms = [
 
 export default function DesignLanguage() {
   return (
-    <section id="language" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
+    <section id="language" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="09" title="Design Language" />
 
-        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
+        <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
           To create clarity throughout the app, I defined core concepts that would guide all design
           decisions.
         </motion.p>
@@ -62,20 +62,20 @@ export default function DesignLanguage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-6 border border-[#E8E5E6] hover:shadow-md transition-shadow"
             >
-              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#3D2B4C] dark:text-purple-300 mb-2">
+              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#3D2B4C] mb-2">
                 {t.term}
               </h3>
-              <p className="text-[#1D1A1C] dark:text-white mb-5 font-medium">{t.def}</p>
+              <p className="text-[#1D1A1C] mb-5 font-medium">{t.def}</p>
 
               <div className="space-y-2.5">
                 {t.details.map((d) => (
                   <div key={d.label} className="flex gap-2">
-                    <span className="text-xs text-[#7D767A] dark:text-gray-500 uppercase tracking-wide font-medium w-24 shrink-0 pt-0.5">
+                    <span className="text-xs text-[#7D767A] uppercase tracking-wide font-medium w-24 shrink-0 pt-0.5">
                       {d.label}
                     </span>
-                    <span className="text-sm text-[#5C5759] dark:text-gray-300">{d.value}</span>
+                    <span className="text-sm text-[#5C5759]">{d.value}</span>
                   </div>
                 ))}
               </div>
@@ -89,28 +89,28 @@ export default function DesignLanguage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
+          className="bg-white rounded-2xl p-8 border border-[#E8E5E6]"
         >
-          <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white mb-6 text-center">
+          <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-6 text-center">
             Information Hierarchy
           </h4>
           <div className="flex flex-col items-center gap-2">
             <div className="px-6 py-2 bg-[#3D2B4C] text-white rounded-lg font-clash font-medium">
               Saved (Superset)
             </div>
-            <div className="w-px h-6 bg-[#3D2B4C]/30 dark:bg-purple-500/30" />
+            <div className="w-px h-6 bg-[#3D2B4C]/30" />
             <div className="flex gap-4">
               {["Collection A", "Collection B", "Collection C"].map((c) => (
                 <div key={c} className="flex flex-col items-center gap-2">
-                  <div className="px-4 py-2 bg-[#3D2B4C]/20 dark:bg-purple-500/20 text-[#3D2B4C] dark:text-purple-300 rounded-lg text-sm font-medium">
+                  <div className="px-4 py-2 bg-[#3D2B4C]/20 text-[#3D2B4C] rounded-lg text-sm font-medium">
                     {c}
                   </div>
-                  <div className="w-px h-4 bg-[#3D2B4C]/20 dark:bg-purple-500/20" />
+                  <div className="w-px h-4 bg-[#3D2B4C]/20" />
                   <div className="flex gap-1.5">
-                    <div className="px-2 py-1 bg-[#FAF9FA] dark:bg-[#1e1530] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 rounded text-xs text-[#5C5759] dark:text-gray-400">
+                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#E8E5E6] rounded text-xs text-[#5C5759]">
                       Items
                     </div>
-                    <div className="px-2 py-1 bg-[#FAF9FA] dark:bg-[#1e1530] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 rounded text-xs text-[#5C5759] dark:text-gray-400">
+                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#E8E5E6] rounded text-xs text-[#5C5759]">
                       Outfits
                     </div>
                   </div>
