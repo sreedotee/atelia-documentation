@@ -51,15 +51,15 @@ export default function ResearchApproach() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               viewport={{ once: true }}
-              className="rounded-2xl border border-white/20 p-6 bg-white/5 hover:bg-white/10 transition-colors"
+              className="rounded-2xl border border-[#E8E5E6] dark:border-white/10 p-6 bg-white dark:bg-white/10 hover:bg-gray-50 dark:hover:bg-white/15 transition-colors"
             >
               <span className="text-3xl mb-4 block">{m.icon}</span>
-              <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-white mb-3">{m.title}</h3>
-              <p className="text-purple-200 text-sm leading-relaxed mb-5">{m.desc}</p>
+              <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white mb-3">{m.title}</h3>
+              <p className="text-[#5C5759] dark:text-gray-300 text-sm leading-relaxed mb-5">{m.desc}</p>
               <ul className="space-y-1.5">
                 {m.stats.map((s) => (
-                  <li key={s} className="flex items-center gap-2 text-purple-300 text-sm">
-                    <span className="text-purple-400">•</span>
+                  <li key={s} className="flex items-center gap-2 text-[#5C5759] dark:text-gray-400 text-sm">
+                    <span className="text-[#A498AB] dark:text-purple-400">•</span>
                     {s}
                   </li>
                 ))}
