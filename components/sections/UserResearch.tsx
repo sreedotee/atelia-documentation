@@ -133,7 +133,7 @@ export default function UserResearch() {
   return (
     <section id="user-research" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="05" title="User Research Findings" />
+        <SectionHeader number="" title="User Research Findings" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           I interviewed 5 online shoppers (ages 22–34, shop 2+ times/month, 80%+ online purchases)
