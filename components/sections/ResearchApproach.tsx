@@ -7,16 +7,16 @@ import { fadeInUp } from "@/styles/animations";
 export default function ResearchApproach() {
   const methods = [
     {
+      icon: "💬",
+      title: "User Research",
+      desc: "Surveyed 47 online shoppers and interviewed 5 in-depth to understand behavior, pain points, and needs.",
+      stats: ["47 survey responses", "5 interviews (30 min)", "Saving behavior", "Organization patterns", "Purchase hesitation"],
+    },
+    {
       icon: "🔍",
       title: "Competitive Analysis",
       desc: "Analyze 5 existing apps to identify use cases, gaps, and opportunities in the market.",
       stats: ["5 apps analyzed", "3 use cases identified", "Feature comparison", "Gap analysis"],
-    },
-    {
-      icon: "💬",
-      title: "User Interviews",
-      desc: "Interview 5 online shoppers to understand saving behavior, organization methods, and pain points.",
-      stats: ["5 participants", "30 min each", "Saving behavior", "Organization patterns", "Purchase pain points"],
     },
     {
       icon: "🃏",
