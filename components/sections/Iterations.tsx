@@ -122,7 +122,7 @@ export default function Iterations() {
   return (
     <section id="iterations" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="12" title="Iterations" subtitle="What Didn't Work" />
+        <SectionHeader number="11" title="Iterations" subtitle="What Didn't Work" />
 
         <motion.p
           {...fadeInUp}

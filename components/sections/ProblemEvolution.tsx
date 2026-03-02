@@ -59,7 +59,7 @@ export default function ProblemEvolution() {
   return (
     <section id="problem-evolution" className="py-28 bg-white dark:bg-[#13101a]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="11" title="Problem Evolution" subtitle="Finding the Right Problem" />
+        <SectionHeader number="10" title="Problem Evolution" subtitle="Finding the Right Problem" />
 
         <motion.p
           {...fadeInUp}
