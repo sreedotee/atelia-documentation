@@ -23,7 +23,7 @@ export default function MarketContext() {
   return (
     <section className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="02b" title="Key Findings" />
+        <SectionHeader number="" title="Key Findings" />
 
         <motion.p
           {...fadeInUp}
