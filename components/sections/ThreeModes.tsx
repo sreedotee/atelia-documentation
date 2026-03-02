@@ -47,7 +47,7 @@ export default function ThreeModes() {
   return (
     <section id="framework" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="08" title="Three Behavioral Modes" />
+        <SectionHeader number="04" title="Three Behavioral Modes" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl">
           Users don't do one thing in this app—they shift between three distinct mindsets during the

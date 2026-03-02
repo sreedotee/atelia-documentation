@@ -6,19 +6,16 @@ import { fadeInUp } from "@/styles/animations";
 
 const stats = [
   {
-    number: "30–40%",
-    label: "Online fashion return rate",
-    source: "Narvar Returns Report",
+    number: "78%",
+    label: "Browse 5+ different retailers per purchase",
   },
   {
-    number: "$550B",
-    label: "Annual cost of returns globally",
-    source: "Industry reports",
+    number: "4.2 locations",
+    label: "Average places used to save items",
   },
   {
     number: "64%",
-    label: "Returns due to fit issues",
-    source: "Fashion e-commerce studies",
+    label: 'Hesitate due to "unsure how it looks on me"',
   },
 ];
 
@@ -26,14 +23,13 @@ export default function MarketContext() {
   return (
     <section className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="02b" title="Market Context" />
+        <SectionHeader number="" title="Key Findings" />
 
         <motion.p
           {...fadeInUp}
           className="text-lg text-[#5C5759] leading-relaxed mb-16 max-w-2xl"
         >
-          Online fashion returns are a massive problem costing retailers billions annually,
-          primarily driven by fit and appearance uncertainty.
+          Survey of 47 online shoppers revealed three core behavioral patterns driving the need for better shopping tools.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -51,9 +47,6 @@ export default function MarketContext() {
               </p>
               <p className="text-sm text-[#737373] mt-4 leading-relaxed">
                 {s.label}
-              </p>
-              <p className="text-xs text-[#A3A3A3] mt-2">
-                Source: {s.source}
               </p>
             </motion.div>
           ))}
