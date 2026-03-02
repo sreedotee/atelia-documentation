@@ -46,7 +46,7 @@ export default function MarketContext() {
               viewport={{ once: true }}
               className="bg-[#FAFAFA] border border-[#E5E5E5] p-8"
             >
-              <p className="font-clash text-5xl font-bold text-[#1D1A1C] leading-none">
+              <p className="font-clash text-5xl font-semibold text-[#1D1A1C] leading-none">
                 {s.number}
               </p>
               <p className="text-sm text-[#737373] mt-4 leading-relaxed">
