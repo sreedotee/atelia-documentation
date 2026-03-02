@@ -32,7 +32,7 @@ export default function SectionHeader({
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-2 font-clash text-2xl text-[#5C5759] dark:text-gray-400">
+        <p className="mt-2 font-clash text-lg md:text-xl lg:text-2xl text-[#5C5759] dark:text-gray-400">
           {subtitle}
         </p>
       )}

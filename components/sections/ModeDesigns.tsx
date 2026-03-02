@@ -39,7 +39,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
           style={{ background: screen.bg }}
         >
           <span className="text-6xl">{screen.icon}</span>
-          <p className="font-clash text-lg font-medium text-white text-center">{screen.title}</p>
+          <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-white text-center">{screen.title}</p>
           <div className="space-y-2 w-full">
             {[1, 2, 3].map((i) => (
               <div key={i} className="h-2 rounded bg-white/20" style={{ width: `${70 + i * 10}%` }} />
@@ -93,7 +93,7 @@ export default function ModeDesigns({
           >
             <span className="text-2xl">{feature.icon}</span>
             <div>
-              <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
+              <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
                 {feature.title}
               </h4>
               <p className="text-[#5C5759] dark:text-gray-300">{feature.text}</p>
@@ -109,7 +109,7 @@ export default function ModeDesigns({
             viewport={{ once: true }}
             className="bg-[#FAF9FA] dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
           >
-            <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
+            <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
               User Flow
             </h4>
             <div className="flex flex-wrap items-center gap-2">

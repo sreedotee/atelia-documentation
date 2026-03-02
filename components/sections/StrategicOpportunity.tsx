@@ -57,7 +57,7 @@ export default function StrategicOpportunity() {
             >
               <div className="flex items-center gap-3">
                 <span className="text-4xl">{col.icon}</span>
-                <h3 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white">
+                <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white">
                   {col.title}
                 </h3>
               </div>
@@ -83,7 +83,7 @@ export default function StrategicOpportunity() {
           viewport={{ once: true }}
           className="bg-[#3D2B4C] text-white rounded-2xl p-8 text-center"
         >
-          <h3 className="font-clash text-2xl font-medium mb-3">Strategic Decision</h3>
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium mb-3">Strategic Decision</h3>
           <p className="text-purple-200 text-lg max-w-2xl mx-auto">
             Design for the shopping context. This became my design constraint and opportunity.
           </p>

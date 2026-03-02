@@ -92,7 +92,7 @@ export default function Reflection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {/* Learnings */}
           <div>
-            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
               What I Learned
             </h3>
             <div className="space-y-8">
@@ -109,7 +109,7 @@ export default function Reflection() {
                     {l.number}
                   </span>
                   <div>
-                    <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
+                    <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-2">
                       {l.title}
                     </h4>
                     <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed">{l.text}</p>
@@ -121,7 +121,7 @@ export default function Reflection() {
 
           {/* What I'd do differently */}
           <div>
-            <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
               What I'd Do Differently
             </h3>
             <div className="space-y-6">
@@ -147,7 +147,7 @@ export default function Reflection() {
 
         {/* Next Steps */}
         <div>
-          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-8">
             If This Were Real: Next Steps
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -163,7 +163,7 @@ export default function Reflection() {
                 <p className="text-xs font-medium text-[#3D2B4C] dark:text-purple-400 uppercase tracking-wide mb-2">
                   {ns.phase}
                 </p>
-                <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
+                <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
                   {ns.title}
                 </h4>
                 <ul className="space-y-2">

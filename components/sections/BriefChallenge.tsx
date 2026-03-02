@@ -57,7 +57,7 @@ export default function BriefChallenge() {
               } hover:shadow-lg transition-shadow`}
             >
               <h3
-                className={`font-clash text-xl font-medium mb-4 ${
+                className={`font-clash text-base md:text-lg lg:text-xl font-medium mb-4 ${
                   card.highlight ? "text-white" : "text-[#1D1A1C] dark:text-white"
                 }`}
               >

@@ -78,7 +78,7 @@ export default function ProblemEvolution() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             The Input Problem
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
@@ -120,7 +120,7 @@ export default function ProblemEvolution() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Shopping Platform vs Universal Tool
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
@@ -181,7 +181,7 @@ export default function ProblemEvolution() {
             <p className="text-[10px] font-bold text-[#7D767A] dark:text-gray-500 uppercase tracking-[0.1em] mb-3">
               The Pivot
             </p>
-            <p className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white leading-snug mb-3">
+            <p className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white leading-snug mb-3">
               Instead of being a retailer WITH try-on, be a try-on tool that works with ANY
               retailer.
             </p>
@@ -201,7 +201,7 @@ export default function ProblemEvolution() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="font-clash text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] dark:text-white mb-4">
             Questions That Needed Answers
           </h3>
           <p className="text-[#5C5759] dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
