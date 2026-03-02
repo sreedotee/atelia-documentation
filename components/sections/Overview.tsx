@@ -109,7 +109,7 @@ export default function Overview() {
             viewport={{ once: true }}
             className="h-full lg:col-start-2 lg:row-start-2"
           >
-            <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col justify-around px-6 py-6">
+            <div className="h-full rounded-xl bg-[#FAF9FA] dark:bg-[#2a1e36] border border-[#E8E5E6] dark:border-[#3D2B4C]/30 flex flex-col gap-5 md:gap-0 md:justify-around px-6 py-6">
               {outcomeItems.map((f) => (
                 <div key={f.title} className="flex items-center gap-5">
                   {/* Icon slot — 48×48. Set iconSrc above to replace the emoji placeholder with your image/SVG */}
@@ -125,8 +125,8 @@ export default function Overview() {
                     </span>
                   )}
                   <div>
-                    <p className="font-medium text-[#1D1A1C] dark:text-white text-sm md:text-base lg:text-[18px] leading-tight">{f.title}</p>
-                    <p className="text-[#5C5759] dark:text-gray-400 text-sm md:text-base lg:text-[18px] leading-snug mt-1">{f.desc}</p>
+                    <p className="font-medium text-[#1D1A1C] dark:text-white text-base leading-tight">{f.title}</p>
+                    <p className="text-[#5C5759] dark:text-gray-400 text-base leading-snug mt-1">{f.desc}</p>
                   </div>
                 </div>
               ))}
