@@ -192,7 +192,7 @@ export default function SectionTimeline() {
           Atelia
         </p>
         <p className="text-[10.5px] text-[#A498AB] dark:text-purple-400/60 mt-[5px] tracking-[0.06em] uppercase">
-          UX Case Study
+          Product Design Case Study
         </p>
       </div>
 
