@@ -122,7 +122,7 @@ export default function Constraints() {
   return (
     <section id="constraints" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="24" title="Constraints" subtitle="Design Within Reality" />
+        <SectionHeader number="23" title="Constraints" subtitle="Design Within Reality" />
 
         <motion.p
           {...fadeInUp}

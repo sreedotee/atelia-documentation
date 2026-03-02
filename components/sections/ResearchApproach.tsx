@@ -29,7 +29,7 @@ export default function ResearchApproach() {
   return (
     <section id="research" className="py-28 bg-[#FAF9FA] dark:bg-[#1a1520]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="03" title="Research & Approach" />
+        <SectionHeader number="02" title="Research & Approach" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
           To identify where virtual try-on creates value, I analyzed the existing landscape and

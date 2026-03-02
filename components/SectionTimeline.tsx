@@ -12,32 +12,31 @@ interface Section {
 
 const SECTIONS: Section[] = [
   { id: "overview",                label: "Overview",               number: "01" },
-  { id: "brief",                   label: "Brief & Challenge",       number: "02" },
-  { id: "research",                label: "Research & Approach",     number: "03" },
-  { id: "competitive-landscape",   label: "Competitive Landscape",   number: "04" },
-  { id: "opportunity",             label: "Strategic Opportunity",   number: "05" },
-  { id: "user-research",           label: "User Research",           number: "06" },
-  { id: "card-sorting",            label: "Card Sorting",            number: "07" },
-  { id: "jobs",                    label: "Jobs-to-be-Done",         number: "08" },
-  { id: "framework",               label: "Three Modes",             number: "09" },
-  { id: "language",                label: "Design Language",         number: "10" },
-  { id: "problem-evolution",       label: "Problem Evolution",       number: "11" },
-  { id: "iterations",              label: "Iterations",              number: "12" },
-  { id: "mode1-designs",           label: "Mode 1: BEFORE",         number: "13", nested: true },
-  { id: "decisions-mode1",         label: "Decisions · Mode 1",     number: "14", nested: true },
-  { id: "mode2-designs",           label: "Mode 2: DURING",         number: "15", nested: true },
-  { id: "decisions-mode2",         label: "Decisions · Mode 2",     number: "16", nested: true },
-  { id: "mode3-designs",           label: "Mode 3: AFTER",          number: "17", nested: true },
-  { id: "decisions-mode3",         label: "Decisions · Mode 3",     number: "18", nested: true },
-  { id: "decisions-system",        label: "System Decisions",        number: "19" },
-  { id: "information-architecture",label: "Info Architecture",       number: "20" },
-  { id: "design-system",           label: "Design System",           number: "21" },
-  { id: "validation",              label: "Validation & Testing",    number: "22" },
-  { id: "monetization",            label: "Business Model",          number: "23" },
-  { id: "constraints",             label: "Constraints",             number: "24" },
-  { id: "reflection",              label: "Reflection",              number: "25" },
-  { id: "video",                   label: "Video Walkthrough",       number: "26" },
-  { id: "prototype",               label: "Prototype",               number: "27" },
+  { id: "research",                label: "Research & Approach",     number: "02" },
+  { id: "competitive-landscape",   label: "Competitive Landscape",   number: "03" },
+  { id: "opportunity",             label: "Strategic Opportunity",   number: "04" },
+  { id: "user-research",           label: "User Research",           number: "05" },
+  { id: "card-sorting",            label: "Card Sorting",            number: "06" },
+  { id: "jobs",                    label: "Jobs-to-be-Done",         number: "07" },
+  { id: "framework",               label: "Three Modes",             number: "08" },
+  { id: "language",                label: "Design Language",         number: "09" },
+  { id: "problem-evolution",       label: "Problem Evolution",       number: "10" },
+  { id: "iterations",              label: "Iterations",              number: "11" },
+  { id: "mode1-designs",           label: "Mode 1: BEFORE",         number: "12", nested: true },
+  { id: "decisions-mode1",         label: "Decisions · Mode 1",     number: "13", nested: true },
+  { id: "mode2-designs",           label: "Mode 2: DURING",         number: "14", nested: true },
+  { id: "decisions-mode2",         label: "Decisions · Mode 2",     number: "15", nested: true },
+  { id: "mode3-designs",           label: "Mode 3: AFTER",          number: "16", nested: true },
+  { id: "decisions-mode3",         label: "Decisions · Mode 3",     number: "17", nested: true },
+  { id: "decisions-system",        label: "System Decisions",        number: "18" },
+  { id: "information-architecture",label: "Info Architecture",       number: "19" },
+  { id: "design-system",           label: "Design System",           number: "20" },
+  { id: "validation",              label: "Validation & Testing",    number: "21" },
+  { id: "monetization",            label: "Business Model",          number: "22" },
+  { id: "constraints",             label: "Constraints",             number: "23" },
+  { id: "reflection",              label: "Reflection",              number: "24" },
+  { id: "video",                   label: "Video Walkthrough",       number: "25" },
+  { id: "prototype",               label: "Prototype",               number: "26" },
 ];
 
 // Dot sizes: main 13px, nested 9px
@@ -193,7 +192,7 @@ export default function SectionTimeline() {
           Atelia
         </p>
         <p className="text-[10.5px] text-[#A498AB] dark:text-purple-400/60 mt-[5px] tracking-[0.06em] uppercase">
-          UX Case Study
+          Product Design Case Study
         </p>
       </div>
 

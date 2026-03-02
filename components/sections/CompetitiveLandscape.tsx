@@ -55,7 +55,7 @@ export default function CompetitiveLandscape() {
   return (
     <section id="competitive-landscape" className="py-28 bg-white dark:bg-[#1e1530]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="04" title="Competitive Landscape" />
+        <SectionHeader number="03" title="Competitive Landscape" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] dark:text-gray-300 leading-relaxed mb-12 max-w-2xl">
           I analyzed 5 existing virtual try-on and fashion organization apps to identify market
@@ -131,7 +131,7 @@ export default function CompetitiveLandscape() {
         </motion.div>
 
         {/* Enhanced Comparison Table */}
-        <SectionHeader number="04b" title="Feature Comparison" />
+        <SectionHeader number="03b" title="Feature Comparison" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}

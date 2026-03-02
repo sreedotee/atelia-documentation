@@ -120,7 +120,7 @@ export default function Monetization() {
   return (
     <section id="monetization" className="py-28 bg-white dark:bg-[#13101a]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="23" title="Business Model" subtitle="How This Makes Money" />
+        <SectionHeader number="22" title="Business Model" subtitle="How This Makes Money" />
 
         <motion.p
           {...fadeInUp}
