@@ -51,7 +51,7 @@ export default function InformationArchitecture() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 mb-8 overflow-x-auto"
         >
-          <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-8 text-center">
+          <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-8 text-center">
             App Structure
           </h4>
 
@@ -134,7 +134,7 @@ export default function InformationArchitecture() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
         >
-          <h4 className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
+          <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-4">
             Key Principles
           </h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

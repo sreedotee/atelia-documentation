@@ -183,7 +183,7 @@ export default function Constraints() {
           viewport={{ once: true }}
           className="mt-16 bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 max-w-2xl"
         >
-          <p className="font-clash text-lg font-medium text-[#1D1A1C] dark:text-white mb-3">
+          <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] dark:text-white mb-3">
             Why Constraints Matter
           </p>
           <p className="text-sm text-[#5C5759] dark:text-gray-300 leading-relaxed">

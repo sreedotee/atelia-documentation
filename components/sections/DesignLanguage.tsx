@@ -64,7 +64,7 @@ export default function DesignLanguage() {
               viewport={{ once: true }}
               className="bg-white dark:bg-[#2a1e36] rounded-2xl p-6 border border-[#E8E5E6] dark:border-[#3D2B4C]/30 hover:shadow-md transition-shadow"
             >
-              <h3 className="font-clash text-2xl font-medium text-[#3D2B4C] dark:text-purple-300 mb-2">
+              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#3D2B4C] dark:text-purple-300 mb-2">
                 {t.term}
               </h3>
               <p className="text-[#1D1A1C] dark:text-white mb-5 font-medium">{t.def}</p>
@@ -91,7 +91,7 @@ export default function DesignLanguage() {
           viewport={{ once: true }}
           className="bg-white dark:bg-[#2a1e36] rounded-2xl p-8 border border-[#E8E5E6] dark:border-[#3D2B4C]/30"
         >
-          <h4 className="font-clash text-xl font-medium text-[#1D1A1C] dark:text-white mb-6 text-center">
+          <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] dark:text-white mb-6 text-center">
             Information Hierarchy
           </h4>
           <div className="flex flex-col items-center gap-2">
