@@ -45,7 +45,57 @@ export default function StrategicOpportunity() {
           virtual try-on technology.
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Desktop layout: row-aligned grid with continuous vertical lines */}
+        <div className="hidden md:block mb-12">
+          {/* Column headers */}
+          <div className="grid grid-cols-3 gap-x-8 mb-6">
+            {columns.map((col, i) => (
+              <motion.div
+                key={col.title}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                viewport={{ once: true }}
+                className="flex items-center gap-3"
+              >
+                <span className="text-4xl">{col.icon}</span>
+                <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C]">
+                  {col.title}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+
+          {/*
+            Row-major grid: iterate rows first so each CSS grid row contains
+            one item from each column. Grid auto-rows makes every item in the
+            same row identical in height → horizontal alignment.
+            No row-gap means border-l segments from adjacent rows in the same
+            column are flush → single continuous vertical line per column.
+          */}
+          <div className="grid grid-cols-3 gap-x-8">
+            {[0, 1, 2].map((rowIdx) =>
+              columns.map((col, colIdx) => (
+                <motion.div
+                  key={`${col.title}-${rowIdx}`}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: colIdx * 0.1, duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className={`border-l-2 border-[#E8E5E6] pl-4 pt-5${rowIdx === 2 ? " pb-2" : ""}`}
+                >
+                  <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wide mb-1">
+                    {col.points[rowIdx].title}
+                  </p>
+                  <p className="text-[#1D1A1C] font-medium">{col.points[rowIdx].data}</p>
+                </motion.div>
+              ))
+            )}
+          </div>
+        </div>
+
+        {/* Mobile layout: original column-stacked design */}
+        <div className="md:hidden grid grid-cols-1 gap-8 mb-12">
           {columns.map((col, i) => (
             <motion.div
               key={col.title}
@@ -57,11 +107,10 @@ export default function StrategicOpportunity() {
             >
               <div className="flex items-center gap-3">
                 <span className="text-4xl">{col.icon}</span>
-                <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C]">
+                <h3 className="font-clash text-xl font-medium text-[#1D1A1C]">
                   {col.title}
                 </h3>
               </div>
-
               <div className="space-y-5">
                 {col.points.map((p) => (
                   <div key={p.title} className="border-l-2 border-[#E8E5E6] pl-4">
