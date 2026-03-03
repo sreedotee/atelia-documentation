@@ -45,7 +45,7 @@ const terms = [
 
 export default function DesignLanguage() {
   return (
-    <section id="language" className="py-28 bg-[#FAF9FA]">
+    <section id="language" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="05" title="Design Language" />
 
