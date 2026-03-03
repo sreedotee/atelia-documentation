@@ -131,10 +131,11 @@ export default function Home() {
       />
       <DesignWhiteboard
         mode="mode1"
-        sectionNumber="09"
+        sectionNumber=""
         title="Design Decisions"
         subtitle="Mode 1: BEFORE"
         description="9 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+        bg="bg-white"
       />
 
       <ModeDesigns
@@ -149,10 +150,11 @@ export default function Home() {
           title: "On-Demand Model Setup",
           text: "Model creation happens when user first tries Try-On, not forced during signup. Reduces onboarding friction while maintaining feature quality.",
         }}
+        bg="bg-[#FAF9FA]"
       />
       <DesignWhiteboard
         mode="mode2"
-        sectionNumber="11"
+        sectionNumber=""
         title="Design Decisions"
         subtitle="Mode 2: DURING"
         description="8 key choices that shaped the Try-On canvas experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
@@ -168,10 +170,11 @@ export default function Home() {
       />
       <DesignWhiteboard
         mode="mode3"
-        sectionNumber="13"
+        sectionNumber=""
         title="Design Decisions"
         subtitle="Mode 3: AFTER"
         description="8 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
+        bg="bg-white"
       />
 
       <DesignWhiteboard

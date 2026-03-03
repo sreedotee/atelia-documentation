@@ -25,9 +25,11 @@ export default function SectionHeader({
       viewport={{ once: true, margin: "-100px" }}
       className={`mb-12 ${centered ? "text-center" : ""}`}
     >
-      <span className="text-xs font-medium tracking-widest text-[#3D2B4C] uppercase block mb-3">
-        {number}
-      </span>
+      {number && (
+        <span className="text-xs font-medium tracking-widest text-[#3D2B4C] uppercase block mb-3">
+          {number}
+        </span>
+      )}
       <h2 className={`font-clash text-4xl md:text-5xl ${fontWeight} text-[#1D1A1C] leading-tight`}>
         {title}
       </h2>
