@@ -36,7 +36,7 @@ const columns = [
 
 export default function StrategicOpportunity() {
   return (
-    <section id="opportunity" className="py-28 bg-white">
+    <section id="opportunity" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="" title="Strategic Opportunity" />
 
