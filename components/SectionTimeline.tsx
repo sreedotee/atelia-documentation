@@ -13,10 +13,6 @@ interface Section {
 const SECTIONS: Section[] = [
   { id: "overview",                label: "Overview",               number: "01" },
   { id: "research",                label: "Research & Approach",     number: "02" },
-  { id: "competitive-landscape",   label: "Competitive Landscape",   number: "" },
-  { id: "opportunity",             label: "Strategic Opportunity",   number: "" },
-  { id: "user-research",           label: "User Research",           number: "" },
-  { id: "card-sorting",            label: "Card Sorting",            number: "" },
   { id: "jobs",                    label: "Jobs-to-be-Done",         number: "03" },
   { id: "framework",               label: "Three Modes",             number: "04" },
   { id: "language",                label: "Design Language",         number: "05" },
@@ -37,6 +33,38 @@ const SECTIONS: Section[] = [
   { id: "reflection",              label: "Reflection",              number: "20" },
   { id: "video",                   label: "Video Walkthrough",       number: "21" },
   { id: "prototype",               label: "Prototype",               number: "22" },
+];
+
+// All DOM section IDs in page order, mapped to their visible SECTIONS index.
+// Hidden sections (competitive-landscape, opportunity, user-research, card-sorting)
+// map back to "research" (index 1) so its dot stays active while scrolling through them.
+const SCROLL_MAP: { id: string; visibleIndex: number }[] = [
+  { id: "overview",                visibleIndex: 0 },
+  { id: "research",                visibleIndex: 1 },
+  { id: "competitive-landscape",   visibleIndex: 1 },
+  { id: "opportunity",             visibleIndex: 1 },
+  { id: "user-research",           visibleIndex: 1 },
+  { id: "card-sorting",            visibleIndex: 1 },
+  { id: "jobs",                    visibleIndex: 2 },
+  { id: "framework",               visibleIndex: 3 },
+  { id: "language",                visibleIndex: 4 },
+  { id: "problem-evolution",       visibleIndex: 5 },
+  { id: "iterations",              visibleIndex: 6 },
+  { id: "mode1-designs",           visibleIndex: 7 },
+  { id: "decisions-mode1",         visibleIndex: 8 },
+  { id: "mode2-designs",           visibleIndex: 9 },
+  { id: "decisions-mode2",         visibleIndex: 10 },
+  { id: "mode3-designs",           visibleIndex: 11 },
+  { id: "decisions-mode3",         visibleIndex: 12 },
+  { id: "decisions-system",        visibleIndex: 13 },
+  { id: "information-architecture",visibleIndex: 14 },
+  { id: "design-system",           visibleIndex: 15 },
+  { id: "validation",              visibleIndex: 16 },
+  { id: "monetization",            visibleIndex: 17 },
+  { id: "constraints",             visibleIndex: 18 },
+  { id: "reflection",              visibleIndex: 19 },
+  { id: "video",                   visibleIndex: 20 },
+  { id: "prototype",               visibleIndex: 21 },
 ];
 
 // Dot sizes: main 13px, nested 9px
@@ -147,9 +175,9 @@ export default function SectionTimeline() {
     const update = () => {
       const threshold = window.innerHeight * 0.4;
       let current = 0;
-      for (let i = 0; i < SECTIONS.length; i++) {
-        const el = document.getElementById(SECTIONS[i].id);
-        if (el && el.getBoundingClientRect().top <= threshold) current = i;
+      for (const { id, visibleIndex } of SCROLL_MAP) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= threshold) current = visibleIndex;
       }
       setActiveIndex(current);
     };
