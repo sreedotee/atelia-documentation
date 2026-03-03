@@ -174,9 +174,6 @@ export default function Home() {
         description="8 key choices that shaped the history and reviewing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
       />
 
-      <ProblemEvolution />
-      <Iterations />
-
       <DesignWhiteboard
         mode="system"
         sectionNumber="14"
@@ -187,6 +184,9 @@ export default function Home() {
 
       <InformationArchitecture />
       <DesignSystem />
+
+      <ProblemEvolution />
+      <Iterations />
       <Validation />
       <Monetization />
       <Constraints />
