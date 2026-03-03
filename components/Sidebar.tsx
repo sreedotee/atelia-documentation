@@ -3,16 +3,16 @@
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { href: "#overview", label: "Overview" },
-  { href: "#research", label: "Research" },
-  { href: "#framework", label: "Framework" },
-  { href: "#mode1-designs", label: "Mode Designs" },
-  { href: "#information-architecture", label: "IA & System" },
-  { href: "#iterations", label: "Iterations" },
-  { href: "#validation", label: "Validation" },
-  { href: "#monetization", label: "Monetization" },
-  { href: "#constraints", label: "Constraints" },
-  { href: "#reflection", label: "Reflection" },
+  { href: "#overview", label: "01  Overview" },
+  { href: "#research", label: "02  Research" },
+  { href: "#framework", label: "04  Framework" },
+  { href: "#mode1-designs", label: "06  Mode Designs" },
+  { href: "#information-architecture", label: "10  IA & System" },
+  { href: "#iterations", label: "13  Iterations" },
+  { href: "#validation", label: "14  Validation" },
+  { href: "#monetization", label: "15  Monetization" },
+  { href: "#constraints", label: "16  Constraints" },
+  { href: "#reflection", label: "17  Reflection" },
 ];
 
 const sectionIds = navItems.map((item) => item.href.replace("#", ""));
