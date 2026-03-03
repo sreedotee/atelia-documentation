@@ -36,7 +36,7 @@ export default function InformationArchitecture() {
   return (
     <section id="information-architecture" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="15" title="Information Architecture" />
+        <SectionHeader number="10" title="Information Architecture" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
           The app structure directly reflects the three behavioral modes, with each tab serving a

@@ -87,7 +87,7 @@ export default function Reflection() {
   return (
     <section id="reflection" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
-        <SectionHeader number="20" title="Reflection & Learnings" />
+        <SectionHeader number="17" title="Reflection & Learnings" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
           {/* Learnings */}

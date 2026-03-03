@@ -6,12 +6,12 @@ const navItems = [
   { href: "#overview", label: "Overview" },
   { href: "#research", label: "Research" },
   { href: "#framework", label: "Framework" },
+  { href: "#mode1-designs", label: "Mode Designs" },
+  { href: "#information-architecture", label: "IA & System" },
   { href: "#iterations", label: "Iterations" },
-  { href: "#decisions", label: "Decisions" },
-  { href: "#final-design", label: "Final Design" },
   { href: "#validation", label: "Validation" },
+  { href: "#monetization", label: "Monetization" },
   { href: "#constraints", label: "Constraints" },
-  { href: "#impact", label: "Impact" },
   { href: "#reflection", label: "Reflection" },
 ];
 
