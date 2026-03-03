@@ -42,14 +42,6 @@ const tableData = [
   { app: "Pinterest",        tryon: "—", save: "✓", organize: "✓", multiStore: "✓", downloads: "500M+", rating: "4.5★" },
 ];
 
-const featureScores = [
-  { app: "ASOS", score: 2 },
-  { app: "Stylebook", score: 2 },
-  { app: "Combyne", score: 3 },
-  { app: "Drest", score: 3 },
-  { app: "Pinterest", score: 2 },
-  { app: "Atelia", score: 4, highlight: true },
-];
 
 export default function CompetitiveLandscape() {
   return (
@@ -193,45 +185,6 @@ export default function CompetitiveLandscape() {
           <p className="text-center text-sm text-[#A3A3A3] mt-4 italic">
             Atelia is the only solution combining all four core capabilities
           </p>
-        </motion.div>
-
-        {/* Bar Chart Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="mt-12"
-        >
-          <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-6">
-            Feature Coverage Comparison
-          </h3>
-
-          {/* Inline bar chart built with divs */}
-          <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-8">
-            <div className="space-y-4">
-              {featureScores.map((item) => (
-                <div key={item.app} className="flex items-center gap-4">
-                  <span className={`text-sm w-20 shrink-0 ${item.highlight ? "font-medium text-[#3D2B4C]" : "text-[#737373]"}`}>
-                    {item.app}
-                  </span>
-                  <div className="flex-1 bg-[#E5E5E5] h-8 rounded-sm overflow-hidden">
-                    <div
-                      className={`h-full rounded-sm flex items-center px-3 transition-all ${item.highlight ? "bg-[#3D2B4C]" : "bg-[#D4D4D4]"}`}
-                      style={{ width: `${(item.score / 4) * 100}%` }}
-                    >
-                      <span className={`text-xs font-medium ${item.highlight ? "text-white" : "text-[#737373]"}`}>
-                        {item.score}/4
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="text-xs text-[#A3A3A3] mt-6 text-center">
-              Feature score based on: Try-On · Save · Organize · Multi-Store support
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
