@@ -20,6 +20,7 @@ interface ModeDesignsProps {
   screens: Screen[];
   feature?: { icon: string; title: string; text: string };
   flowSteps?: string[];
+  bg?: string;
 }
 
 // Placeholder phone screen component
@@ -67,9 +68,10 @@ export default function ModeDesigns({
   screens,
   feature,
   flowSteps,
+  bg = "bg-white",
 }: ModeDesignsProps) {
   return (
-    <section id={id} className="py-28 bg-white">
+    <section id={id} className={`py-28 ${bg}`}>
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number={sectionNumber} title={modeTitle} subtitle={subtitle} />
 

@@ -13,6 +13,7 @@ interface DesignWhiteboardProps {
   title: string;
   subtitle: string;
   description: string;
+  bg?: string;
 }
 
 const modeDecisionIds: Record<string, string[]> = {
@@ -28,6 +29,7 @@ export default function DesignWhiteboard({
   title,
   subtitle,
   description,
+  bg = "bg-[#FAF9FA]",
 }: DesignWhiteboardProps) {
   const [openDecisionId, setOpenDecisionId] = useState<string | null>(null);
 
@@ -56,7 +58,7 @@ export default function DesignWhiteboard({
   const cols = mode === "system" ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3";
 
   return (
-    <section className="py-20 bg-[#FAF9FA]" id={`decisions-${mode}`}>
+    <section className={`py-20 ${bg}`} id={`decisions-${mode}`}>
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number={sectionNumber} title={title} subtitle={subtitle} />
 
