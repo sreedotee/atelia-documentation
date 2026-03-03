@@ -84,7 +84,7 @@ export default function ThreeModes() {
               </h3>
               <p
                 className={`font-clash text-lg mb-6 ${
-                  mode.highlight ? "text-purple-200" : "text-[#3D2B4C]"
+                  mode.highlight ? "text-white" : "text-[#3D2B4C]"
                 }`}
               >
                 {mode.subtitle}
@@ -95,7 +95,7 @@ export default function ThreeModes() {
                   <div key={d.label}>
                     <p
                       className={`text-xs uppercase tracking-wide font-medium mb-0.5 ${
-                        mode.highlight ? "text-purple-300" : "text-[#7D767A]"
+                        mode.highlight ? "text-white" : "text-[#7D767A]"
                       }`}
                     >
                       {d.label}
@@ -118,7 +118,7 @@ export default function ThreeModes() {
               >
                 <p
                   className={`text-xs uppercase tracking-wide font-medium mb-1 ${
-                    mode.highlight ? "text-purple-300" : "text-[#3D2B4C]"
+                    mode.highlight ? "text-white" : "text-[#3D2B4C]"
                   }`}
                 >
                   Design implication
