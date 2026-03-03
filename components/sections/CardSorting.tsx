@@ -18,7 +18,7 @@ export default function CardSorting() {
   ];
 
   return (
-    <section id="card-sorting" className="py-28 bg-white">
+    <section id="card-sorting" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="" title="Card Sorting Results" />
 

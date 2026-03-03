@@ -44,12 +44,12 @@ export default function JobsToBeDone() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               viewport={{ once: true }}
-              className="flex items-start gap-8 p-8 rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-md transition-shadow"
+              className="flex items-center gap-8 p-8 rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-md transition-shadow"
             >
               <span className="font-clash text-7xl font-bold text-[#3D2B4C]/15 leading-none shrink-0">
                 {job.number}
               </span>
-              <div className="pt-2">
+              <div>
                 <p className="text-[#5C5759] text-lg mb-1">{job.when}</p>
                 <p className="text-[#1D1A1C] text-lg font-medium mb-1">{job.want}</p>
                 <p className="text-[#5C5759] text-lg italic">{job.so}</p>

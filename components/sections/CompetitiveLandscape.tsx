@@ -45,7 +45,7 @@ const tableData = [
 
 export default function CompetitiveLandscape() {
   return (
-    <section id="competitive-landscape" className="py-28 bg-white">
+    <section id="competitive-landscape" className="py-28 bg-[#FAF9FA]">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="" title="Competitive Landscape" />
 
