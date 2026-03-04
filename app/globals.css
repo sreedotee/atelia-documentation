@@ -75,11 +75,11 @@ body {
 
 /* Sticky note styles */
 .sticky-note {
-  background: linear-gradient(135deg, #EDE6F5, #DDD0EE);
+  background: linear-gradient(135deg, #F7F0C8, #F2E88A);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 4px;
-  border: 1px solid #C4B0DC;
+  border: 1px solid #E8D87A;
   cursor: pointer;
   transition: all 0.2s ease;
   min-height: 120px;
