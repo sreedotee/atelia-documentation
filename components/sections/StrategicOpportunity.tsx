@@ -111,9 +111,9 @@ export default function StrategicOpportunity() {
                   {col.title}
                 </h3>
               </div>
-              <div className="space-y-5">
+              <div className="border-l-2 border-[#E8E5E6] pl-4 space-y-5">
                 {col.points.map((p) => (
-                  <div key={p.title} className="border-l-2 border-[#E8E5E6] pl-4">
+                  <div key={p.title}>
                     <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wide mb-1">
                       {p.title}
                     </p>

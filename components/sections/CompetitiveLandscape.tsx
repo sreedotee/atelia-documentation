@@ -108,7 +108,7 @@ export default function CompetitiveLandscape() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-16 flex items-start gap-4"
+          className="bg-[#F5EDD8] border border-[#D4B880] rounded-2xl p-6 mb-16 flex items-start gap-4"
         >
           <span className="text-3xl">💡</span>
           <div>
