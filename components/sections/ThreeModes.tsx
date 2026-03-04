@@ -95,8 +95,9 @@ export default function ThreeModes() {
                   <div key={d.label}>
                     <p
                       className={`text-xs uppercase tracking-wide font-medium mb-0.5 ${
-                        mode.highlight ? "text-white" : "text-[#7D767A]"
+                        mode.highlight ? "" : "text-[#7D767A]"
                       }`}
+                      style={mode.highlight ? { color: "#9A9A9A" } : {}}
                     >
                       {d.label}
                     </p>
