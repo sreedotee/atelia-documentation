@@ -124,7 +124,7 @@ export default function DecisionModal({
             <div className="px-8 py-6 space-y-6">
               {/* Title + Category */}
               <div>
-                <span className={`inline-block text-xs font-medium px-3 py-1 rounded-full mb-3 ${catColor}`}>
+                <span className={`inline-block text-xs font-medium px-6 py-2 rounded-full mb-3 ${catColor}`}>
                   {decision.category}
                 </span>
                 <h3 className="font-clash text-2xl md:text-3xl font-semibold text-[#1D1A1C]">
@@ -153,7 +153,7 @@ export default function DecisionModal({
                   {decision.options.map((option) => (
                     <div
                       key={option.id}
-                      className={`rounded-xl p-4 flex items-start gap-4 transition-all ${
+                      className={`rounded-xl p-4 flex items-center gap-4 transition-all ${
                         option.chosen
                           ? "bg-[#3D2B4C] text-white"
                           : "bg-[#FAF9FA] border border-[#E8E5E6]"
@@ -187,9 +187,6 @@ export default function DecisionModal({
                           </div>
                         )}
                       </div>
-                      {option.chosen && (
-                        <span className="text-green-300 text-lg shrink-0">✓</span>
-                      )}
                     </div>
                   ))}
                 </div>
