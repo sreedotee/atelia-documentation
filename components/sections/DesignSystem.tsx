@@ -13,17 +13,6 @@ const colors = [
   { name: "Gray 200", hex: "#E8E5E6", usage: "Borders, dividers", text: "black" },
 ];
 
-const typeScale = [
-  { label: "Display", size: "40px", font: "Clash Display Medium", sample: "Atelia" },
-  { label: "Heading/Section", size: "24px", font: "Clash Display Medium", sample: "Collections" },
-  { label: "Heading/Card", size: "20px", font: "Clash Display Medium", sample: "Summer Vacation" },
-  { label: "Body/Emphasized", size: "17px", font: "DM Sans Medium", sample: "Save to collection" },
-  { label: "Body/Default", size: "14px", font: "DM Sans Regular", sample: "Paste link from any store" },
-  { label: "Body/Small", size: "12px", font: "DM Sans Regular", sample: "3 items • 2 outfits" },
-];
-
-const spacing = [4, 8, 16, 24, 32, 40, 48];
-const radii = [8, 12, 16, 24];
 
 export default function DesignSystem() {
   return (
@@ -99,75 +88,6 @@ export default function DesignSystem() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl border border-[#E8E5E6] overflow-hidden">
-              {typeScale.map((t, i) => (
-                <div
-                  key={t.label}
-                  className={`flex items-center gap-6 px-6 py-4 ${
-                    i < typeScale.length - 1 ? "border-b border-[#E8E5E6]" : ""
-                  }`}
-                >
-                  <div className="w-36 shrink-0">
-                    <p className="text-xs text-[#7D767A]">{t.label}</p>
-                    <p className="text-xs font-mono text-[#3D2B4C]">{t.size}</p>
-                  </div>
-                  <p
-                    className="text-[#1D1A1C]"
-                    style={{
-                      fontSize: t.size,
-                      fontFamily: t.font.includes("Clash") ? "var(--font-clash), serif" : "var(--font-dm-sans), sans-serif",
-                      fontWeight: t.font.includes("Medium") ? 500 : 400,
-                    }}
-                  >
-                    {t.sample}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Spacing */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-6">
-              Layout & Spacing (8pt Grid)
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-[#E8E5E6]">
-                <p className="text-sm font-medium text-[#1D1A1C] mb-4">Spacing Scale</p>
-                <div className="flex items-end gap-3">
-                  {spacing.map((s) => (
-                    <div key={s} className="flex flex-col items-center gap-2">
-                      <div
-                        className="bg-[#3D2B4C]/20 rounded"
-                        style={{ width: 16, height: s }}
-                      />
-                      <span className="text-[10px] text-[#7D767A]">{s}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 border border-[#E8E5E6]">
-                <p className="text-sm font-medium text-[#1D1A1C] mb-4">Border Radius</p>
-                <div className="flex items-center gap-4">
-                  {radii.map((r) => (
-                    <div key={r} className="flex flex-col items-center gap-2">
-                      <div
-                        className="w-12 h-12 border-2 border-[#3D2B4C] bg-[#3D2B4C]/10"
-                        style={{ borderRadius: r }}
-                      />
-                      <span className="text-[10px] text-[#7D767A]">{r}px</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
