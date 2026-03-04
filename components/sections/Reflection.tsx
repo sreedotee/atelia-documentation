@@ -132,7 +132,7 @@ export default function Reflection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="flex gap-4 p-4 rounded-xl bg-[#FAF9FA] border border-[#C9B8D4]"
+                  className="flex gap-4 p-4 rounded-xl bg-[#FAF9FA] border border-[#E8E5E6]"
                 >
                   <span className="text-2xl shrink-0">{imp.icon}</span>
                   <div>
@@ -158,7 +158,7 @@ export default function Reflection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-[#FAF9FA] border border-[#C9B8D4] rounded-xl p-6"
+                className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-xl p-6"
               >
                 <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wide mb-2">
                   {ns.phase}

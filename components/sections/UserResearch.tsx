@@ -173,7 +173,7 @@ export default function UserResearch() {
                   </div>
 
                   {/* Insight box */}
-                  <div className="bg-white p-5 border border-[#C9B8D4] mt-4">
+                  <div className="bg-white p-5 border border-[#E8E5E6] mt-4">
                     <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wider mb-2">
                       {f.insightLabel}
                     </p>
@@ -189,7 +189,7 @@ export default function UserResearch() {
               {f.cardSort && <CardSortChart />}
 
               {i < findings.length - 1 && (
-                <div className="mt-16 h-px bg-[#C9B8D4]" />
+                <div className="mt-16 h-px bg-[#E8E5E6]" />
               )}
             </motion.div>
           ))}

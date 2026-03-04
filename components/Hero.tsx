@@ -8,12 +8,12 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex flex-col justify-center relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #ffffff 0%, #f5eff9 50%, #dcc8eb 100%)",
+        background: "linear-gradient(160deg, #ffffff 0%, #FAF9FA 50%, #f0ebf5 100%)",
       }}
     >
       <div className="absolute inset-0 pointer-events-none"
         style={{
-          background: "linear-gradient(160deg, #ffffff 0%, #f5eff9 50%, #dcc8eb 100%)",
+          background: "linear-gradient(160deg, #ffffff 0%, #FAF9FA 50%, #f0ebf5 100%)",
         }}
       />
 
@@ -116,7 +116,7 @@ export default function Hero() {
               </a>
               <a
                 href="#video"
-                className="px-6 py-3 bg-white text-[#3D2B4C] border border-[#C9B8D4] font-medium hover:border-[#3D2B4C] transition-all hover:-translate-y-0.5"
+                className="px-6 py-3 bg-white text-[#3D2B4C] border border-[#E8E5E6] font-medium hover:border-[#3D2B4C] transition-all hover:-translate-y-0.5"
               >
                 Watch Walkthrough (3 min)
               </a>

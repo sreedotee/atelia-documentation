@@ -15,7 +15,7 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className="w-full rounded-xl border border-[#C9B8D4] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
+      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
       style={{ height }}
     >
       <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
@@ -165,7 +165,7 @@ export default function Monetization() {
                 ))}
               </ul>
             </div>
-            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#C9B8D4]">
+            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
               <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
                 Why Credits?
               </p>
@@ -201,7 +201,7 @@ export default function Monetization() {
           </p>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── PRICING TIERS ── */}
         <motion.div
@@ -243,7 +243,7 @@ export default function Monetization() {
                 className={`rounded-2xl p-6 ${
                   tier.highlight
                     ? "bg-[#3D2B4C] text-white"
-                    : "bg-[#FAF9FA] border border-[#C9B8D4]"
+                    : "bg-[#FAF9FA] border border-[#E8E5E6]"
                 }`}
               >
                 <p
@@ -302,7 +302,7 @@ export default function Monetization() {
           </div>
 
           {/* Pricing rationale */}
-          <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#C9B8D4] max-w-2xl">
+          <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6] max-w-2xl">
             <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-3">
               Pricing Rationale
             </p>
@@ -314,7 +314,7 @@ export default function Monetization() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── ADDITIONAL REVENUE STREAMS ── */}
         <motion.div
@@ -334,7 +334,7 @@ export default function Monetization() {
                 key={stream.title}
                 className={`py-6 ${
                   i < revenueStreams.length - 1
-                    ? "border-b border-[#C9B8D4]"
+                    ? "border-b border-[#E8E5E6]"
                     : ""
                 }`}
               >
@@ -352,7 +352,7 @@ export default function Monetization() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── ASSUMPTIONS TO VALIDATE ── */}
         <motion.div
@@ -375,7 +375,7 @@ export default function Monetization() {
                 key={i}
                 className={`py-6 ${
                   i < assumptions.length - 1
-                    ? "border-b border-[#C9B8D4]"
+                    ? "border-b border-[#E8E5E6]"
                     : ""
                 }`}
               >

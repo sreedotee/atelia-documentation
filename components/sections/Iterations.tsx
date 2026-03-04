@@ -15,7 +15,7 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className="w-full rounded-xl border border-[#C9B8D4] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
+      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
       style={{ height }}
     >
       <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
@@ -182,7 +182,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── VERSION 02: Cross-Tab Navigation ── */}
         <motion.div
@@ -256,7 +256,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── VERSION 03: Canvas Layout ── */}
         <motion.div
@@ -335,7 +335,7 @@ export default function Iterations() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#C9B8D4] mb-20" />
+        <div className="h-px bg-[#E8E5E6] mb-20" />
 
         {/* ── EARLY EXPLORATIONS ── */}
         <motion.div

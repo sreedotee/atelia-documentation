@@ -72,10 +72,10 @@ const validated = [
 function SUSGauge({ score }: { score: number }) {
   const pct = (score / 100) * 100;
   const getGrade = (s: number) => {
-    if (s >= 86) return { label: "Excellent", color: "text-green-700" };
-    if (s >= 71) return { label: "Good", color: "text-emerald-600" };
-    if (s >= 51) return { label: "OK", color: "text-amber-600" };
-    return { label: "Poor", color: "text-red-600" };
+    if (s >= 86) return { label: "Excellent", color: "text-[#2E6A54]" };
+    if (s >= 71) return { label: "Good", color: "text-[#3D8A72]" };
+    if (s >= 51) return { label: "OK", color: "text-[#8A6030]" };
+    return { label: "Poor", color: "text-[#9E3D58]" };
   };
   const grade = getGrade(score);
 
@@ -99,10 +99,10 @@ function SUSGauge({ score }: { score: number }) {
       {/* Scale bar */}
       <div className="relative h-4 bg-[#E5E5E5] rounded-full overflow-hidden mb-3">
         <div className="absolute inset-0 flex">
-          <div className="w-[50%] bg-red-200" />
-          <div className="w-[20%] bg-amber-200" />
-          <div className="w-[15%] bg-emerald-200" />
-          <div className="w-[15%] bg-green-300" />
+          <div className="w-[50%] bg-[#D9A0B8]" />
+          <div className="w-[20%] bg-[#D4B880]" />
+          <div className="w-[15%] bg-[#8CC4B0]" />
+          <div className="w-[15%] bg-[#3D8A72]" />
         </div>
         <div
           className="absolute top-0 h-full w-1 bg-[#1D1A1C]"
@@ -145,7 +145,7 @@ export default function Validation() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-white border border-[#C9B8D4] p-8 text-center"
+              className="bg-white border border-[#E8E5E6] p-8 text-center"
             >
               <span className="text-3xl block mb-4">{stat.icon}</span>
               <p className="font-clash text-4xl font-bold text-[#1D1A1C] leading-none mb-3">
@@ -176,13 +176,13 @@ export default function Validation() {
                 <div key={task.name}>
                   <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
                     <span className="text-sm font-medium text-[#1D1A1C]">{task.name}</span>
-                    <span className={`text-sm font-medium ${task.warning ? "text-amber-600" : "text-[#1D1A1C]"}`}>
+                    <span className={`text-sm font-medium ${task.warning ? "text-[#8A6030]" : "text-[#1D1A1C]"}`}>
                       {task.success}
                     </span>
                   </div>
                   <div className="h-8 bg-[#E5E5E5] rounded-sm overflow-hidden">
                     <div
-                      className={`h-full rounded-sm flex items-center px-3 ${task.warning ? "bg-amber-400" : "bg-[#3D2B4C]"}`}
+                      className={`h-full rounded-sm flex items-center px-3 ${task.warning ? "bg-[#C8984A]" : "bg-[#3D2B4C]"}`}
                       style={{ width: `${task.pct}%` }}
                     >
                       <span className="text-xs font-medium text-white">{task.pct}%</span>
@@ -304,7 +304,7 @@ export default function Validation() {
             {quotes.map((q) => (
               <div
                 key={q.attr}
-                className="bg-white border border-[#C9B8D4] border-l-4 border-l-[#3D2B4C] p-6"
+                className="bg-white border border-[#E8E5E6] border-l-4 border-l-[#3D2B4C] p-6"
               >
                 <p className="text-[#1D1A1C] italic leading-relaxed mb-4">
                   &ldquo;{q.text}&rdquo;

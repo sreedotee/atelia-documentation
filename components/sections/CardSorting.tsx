@@ -6,9 +6,9 @@ import { fadeInUp } from "@/styles/animations";
 
 export default function CardSorting() {
   const typeCategories = [
-    { name: "Tops", count: 3, color: "#C9B8D4" },
-    { name: "Bottoms", count: 2, color: "#C9B8D4" },
-    { name: "Shoes", count: 2, color: "#C9B8D4" },
+    { name: "Tops", count: 3, color: "#E8E5E6" },
+    { name: "Bottoms", count: 2, color: "#E8E5E6" },
+    { name: "Shoes", count: 2, color: "#E8E5E6" },
   ];
 
   const occasionCategories = [
@@ -34,10 +34,10 @@ export default function CardSorting() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="border border-[#C9B8D4] rounded-2xl p-6"
+            className="border border-[#E8E5E6] rounded-2xl p-6"
           >
             <div className="flex items-center gap-2 mb-5">
-              <span className="text-red-500">✗</span>
+              <span className="text-[#A03060]">✗</span>
               <h3 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C]">
                 Type-Based Organization
               </h3>
@@ -51,7 +51,7 @@ export default function CardSorting() {
                     {Array.from({ length: cat.count }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-14 h-14 rounded-lg bg-[#C9B8D4] flex items-center justify-center text-xs text-[#7D767A]"
+                        className="w-14 h-14 rounded-lg bg-[#E8E5E6] flex items-center justify-center text-xs text-[#7D767A]"
                       >
                         👕
                       </div>
@@ -61,7 +61,7 @@ export default function CardSorting() {
               ))}
             </div>
 
-            <div className="bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-sm font-medium text-red-600">
+            <div className="bg-[#F5E4EC] border border-[#D4A0B8] rounded-xl px-4 py-3 text-sm font-medium text-[#80244A]">
               0/5 participants organized this way
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ export default function CardSorting() {
             className="border-2 border-[#3D2B4C] rounded-2xl p-6 bg-[#3D2B4C]/5"
           >
             <div className="flex items-center gap-2 mb-5">
-              <span className="text-green-500">✓</span>
+              <span className="text-[#3D8A72]">✓</span>
               <h3 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C]">
                 Occasion-Based Organization
               </h3>
@@ -99,7 +99,7 @@ export default function CardSorting() {
               ))}
             </div>
 
-            <div className="bg-green-50 border border-green-200 rounded-xl px-4 py-3 text-sm font-medium text-green-600">
+            <div className="bg-[#E0F0EA] border border-[#8CC4B0] rounded-xl px-4 py-3 text-sm font-medium text-[#2E6A54]">
               4/5 participants organized this way
             </div>
           </motion.div>
@@ -110,9 +110,9 @@ export default function CardSorting() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-green-50 border border-green-200 rounded-2xl p-6 flex items-start gap-4"
+          className="bg-[#E0F0EA] border border-[#8CC4B0] rounded-2xl p-6 flex items-start gap-4"
         >
-          <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white shrink-0">✓</div>
+          <div className="w-8 h-8 rounded-full bg-[#3D8A72] flex items-center justify-center text-white shrink-0">✓</div>
           <div>
             <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-2">Validated</h4>
             <p className="text-[#5C5759]">

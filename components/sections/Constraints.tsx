@@ -153,7 +153,7 @@ export default function Constraints() {
                   key={item.title}
                   className={`py-6 ${
                     ii < cat.items.length - 1
-                      ? "border-b border-[#C9B8D4]"
+                      ? "border-b border-[#E8E5E6]"
                       : ""
                   }`}
                 >
@@ -170,7 +170,7 @@ export default function Constraints() {
 
             {/* Divider between categories */}
             {ci < categories.length - 1 && (
-              <div className="h-px bg-[#C9B8D4] mt-16" />
+              <div className="h-px bg-[#E8E5E6] mt-16" />
             )}
           </motion.div>
         ))}
@@ -181,7 +181,7 @@ export default function Constraints() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 bg-white rounded-2xl p-8 border border-[#C9B8D4] max-w-2xl"
+          className="mt-16 bg-white rounded-2xl p-8 border border-[#E8E5E6] max-w-2xl"
         >
           <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-3">
             Why Constraints Matter

@@ -53,7 +53,7 @@ export default function BriefChallenge() {
               className={`rounded-2xl p-8 ${
                 card.highlight
                   ? "bg-[#3D2B4C] text-white"
-                  : "bg-white border border-[#C9B8D4]"
+                  : "bg-white border border-[#E8E5E6]"
               } hover:shadow-lg transition-shadow`}
             >
               <h3
