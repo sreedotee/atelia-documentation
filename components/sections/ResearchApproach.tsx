@@ -51,7 +51,7 @@ export default function ResearchApproach() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.15, duration: 0.5 }}
               viewport={{ once: true }}
-              className="rounded-2xl border border-[#E8E5E6] p-6 bg-white hover:bg-gray-50 transition-colors"
+              className="rounded-2xl border border-[#C9B8D4] p-6 bg-white hover:bg-gray-50 transition-colors"
             >
               <span className="text-3xl mb-4 block">{m.icon}</span>
               <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-3">{m.title}</h3>

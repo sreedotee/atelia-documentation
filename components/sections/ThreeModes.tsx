@@ -65,7 +65,7 @@ export default function ThreeModes() {
               className={`rounded-2xl p-8 ${
                 mode.highlight
                   ? "bg-[#3D2B4C] text-white"
-                  : "bg-white border border-[#E8E5E6]"
+                  : "bg-white border border-[#C9B8D4]"
               }`}
             >
               <p

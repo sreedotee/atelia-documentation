@@ -62,7 +62,7 @@ export default function DesignLanguage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[#E8E5E6] hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl p-6 border border-[#C9B8D4] hover:shadow-md transition-shadow"
             >
               <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#3D2B4C] mb-2">
                 {t.term}
@@ -89,7 +89,7 @@ export default function DesignLanguage() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-8 border border-[#E8E5E6]"
+          className="bg-white rounded-2xl p-8 border border-[#C9B8D4]"
         >
           <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-6 text-center">
             Information Hierarchy
@@ -107,10 +107,10 @@ export default function DesignLanguage() {
                   </div>
                   <div className="w-px h-4 bg-[#3D2B4C]/20" />
                   <div className="flex gap-1.5">
-                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#E8E5E6] rounded text-xs text-[#5C5759]">
+                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#C9B8D4] rounded text-xs text-[#5C5759]">
                       Items
                     </div>
-                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#E8E5E6] rounded text-xs text-[#5C5759]">
+                    <div className="px-2 py-1 bg-[#FAF9FA] border border-[#C9B8D4] rounded text-xs text-[#5C5759]">
                       Outfits
                     </div>
                   </div>

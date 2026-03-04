@@ -15,7 +15,7 @@ function ImagePlaceholder({
 }) {
   return (
     <div
-      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
+      className="w-full rounded-xl border border-[#C9B8D4] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
       style={{ height }}
     >
       <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
@@ -110,7 +110,7 @@ export default function ProblemEvolution() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] mb-20" />
+        <div className="h-px bg-[#C9B8D4] mb-20" />
 
         {/* ── SHOPPING PLATFORM VS UNIVERSAL TOOL ── */}
         <motion.div
@@ -142,7 +142,7 @@ export default function ProblemEvolution() {
 
           {/* Two-column comparison */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mb-12">
-            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
+            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#C9B8D4]">
               <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
                 What Seemed Appealing
               </p>
@@ -158,7 +158,7 @@ export default function ProblemEvolution() {
                 ))}
               </ul>
             </div>
-            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
+            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#C9B8D4]">
               <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
                 Why It Failed
               </p>
@@ -192,7 +192,7 @@ export default function ProblemEvolution() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] mb-20" />
+        <div className="h-px bg-[#C9B8D4] mb-20" />
 
         {/* ── RESEARCH QUESTIONS ── */}
         <motion.div
@@ -215,7 +215,7 @@ export default function ProblemEvolution() {
                 key={i}
                 className={`py-5 ${
                   i < researchQuestions.length - 1
-                    ? "border-b border-[#E8E5E6]"
+                    ? "border-b border-[#C9B8D4]"
                     : ""
                 }`}
               >

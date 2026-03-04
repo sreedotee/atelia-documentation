@@ -69,7 +69,7 @@ export default function VideoAndPrototype() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[#E8E5E6]"
+              className="bg-white rounded-2xl p-6 border border-[#C9B8D4]"
             >
               <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-5">
                 Chapters
@@ -108,7 +108,7 @@ export default function VideoAndPrototype() {
               className="lg:col-span-2"
             >
               <div
-                className="w-full aspect-video rounded-2xl bg-[#FAF9FA] border-2 border-dashed border-[#E8E5E6] flex items-center justify-center"
+                className="w-full aspect-video rounded-2xl bg-[#FAF9FA] border-2 border-dashed border-[#C9B8D4] flex items-center justify-center"
               >
                 <div className="text-center p-8">
                   <span className="text-5xl mb-4 block">🎨</span>
@@ -131,7 +131,7 @@ export default function VideoAndPrototype() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="bg-[#FAF9FA] rounded-2xl p-6 border border-[#E8E5E6]">
+              <div className="bg-[#FAF9FA] rounded-2xl p-6 border border-[#C9B8D4]">
                 <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-4">
                   Try these flows:
                 </h4>

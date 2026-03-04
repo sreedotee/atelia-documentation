@@ -33,7 +33,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
       viewport={{ once: true }}
       className="group"
     >
-      <div className="relative mb-4 overflow-hidden rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div className="relative mb-4 overflow-hidden rounded-2xl bg-[#FAF9FA] border border-[#C9B8D4] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
         {/* Mock phone screen */}
         <div
           className="w-full aspect-[9/16] flex flex-col items-center justify-center gap-4 p-6"
@@ -91,7 +91,7 @@ export default function ModeDesigns({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-6 flex items-start gap-4 mb-8"
+            className="bg-[#FAF9FA] border border-[#C9B8D4] rounded-2xl p-6 flex items-start gap-4 mb-8"
           >
             <span className="text-2xl">{feature.icon}</span>
             <div>
@@ -109,7 +109,7 @@ export default function ModeDesigns({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-[#FAF9FA] rounded-2xl p-6 border border-[#E8E5E6]"
+            className="bg-[#FAF9FA] rounded-2xl p-6 border border-[#C9B8D4]"
           >
             <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-4">
               User Flow
@@ -117,7 +117,7 @@ export default function ModeDesigns({
             <div className="flex flex-wrap items-center gap-2">
               {flowSteps.map((step, i) => (
                 <div key={step} className="flex items-center gap-2">
-                  <span className="px-3 py-1.5 bg-white border border-[#E8E5E6] rounded-lg text-sm text-[#1D1A1C] font-medium">
+                  <span className="px-3 py-1.5 bg-white border border-[#C9B8D4] rounded-lg text-sm text-[#1D1A1C] font-medium">
                     {step}
                   </span>
                   {i < flowSteps.length - 1 && (

@@ -63,7 +63,7 @@ export default function CompetitiveLandscape() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-7 hover:shadow-lg transition-shadow"
+              className="bg-[#FAF9FA] border border-[#C9B8D4] rounded-2xl p-7 hover:shadow-lg transition-shadow"
             >
               <p className="font-clash text-6xl font-bold text-[#3D2B4C]/10 mb-2">
                 {a.number}

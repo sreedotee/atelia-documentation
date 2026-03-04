@@ -61,7 +61,7 @@ export default function Navigation() {
         <div className="flex items-center gap-3">
           {/* Mobile menu button */}
           <button
-            className="md:hidden w-9 h-9 rounded-full flex items-center justify-center bg-[#E8E5E6]"
+            className="md:hidden w-9 h-9 rounded-full flex items-center justify-center bg-[#C9B8D4]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -87,14 +87,14 @@ export default function Navigation() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-white border-t border-[#E8E5E6] px-6 py-4"
+            className="md:hidden bg-white border-t border-[#C9B8D4] px-6 py-4"
           >
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-3 text-sm font-medium text-[#5C5759] hover:text-[#3D2B4C] border-b border-[#E8E5E6] last:border-0"
+                className="block py-3 text-sm font-medium text-[#5C5759] hover:text-[#3D2B4C] border-b border-[#C9B8D4] last:border-0"
               >
                 {link.label}
               </a>

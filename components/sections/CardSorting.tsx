@@ -6,9 +6,9 @@ import { fadeInUp } from "@/styles/animations";
 
 export default function CardSorting() {
   const typeCategories = [
-    { name: "Tops", count: 3, color: "#E8E5E6" },
-    { name: "Bottoms", count: 2, color: "#E8E5E6" },
-    { name: "Shoes", count: 2, color: "#E8E5E6" },
+    { name: "Tops", count: 3, color: "#C9B8D4" },
+    { name: "Bottoms", count: 2, color: "#C9B8D4" },
+    { name: "Shoes", count: 2, color: "#C9B8D4" },
   ];
 
   const occasionCategories = [
@@ -34,7 +34,7 @@ export default function CardSorting() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="border border-[#E8E5E6] rounded-2xl p-6"
+            className="border border-[#C9B8D4] rounded-2xl p-6"
           >
             <div className="flex items-center gap-2 mb-5">
               <span className="text-red-500">✗</span>
@@ -51,7 +51,7 @@ export default function CardSorting() {
                     {Array.from({ length: cat.count }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-14 h-14 rounded-lg bg-[#E8E5E6] flex items-center justify-center text-xs text-[#7D767A]"
+                        className="w-14 h-14 rounded-lg bg-[#C9B8D4] flex items-center justify-center text-xs text-[#7D767A]"
                       >
                         👕
                       </div>

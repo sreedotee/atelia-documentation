@@ -80,7 +80,7 @@ export default function DecisionModal({
             className="bg-white rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative shadow-2xl"
           >
             {/* Progress bar */}
-            <div className="h-1 bg-[#E8E5E6] rounded-t-2xl">
+            <div className="h-1 bg-[#C9B8D4] rounded-t-2xl">
               <motion.div
                 className="h-1 bg-[#3D2B4C] rounded-t-2xl"
                 initial={{ width: 0 }}
@@ -90,18 +90,18 @@ export default function DecisionModal({
             </div>
 
             {/* Header */}
-            <div className="sticky top-0 bg-white px-8 pt-6 pb-4 border-b border-[#E8E5E6] flex items-center justify-between z-10">
+            <div className="sticky top-0 bg-white px-8 pt-6 pb-4 border-b border-[#C9B8D4] flex items-center justify-between z-10">
               <div className="flex items-center gap-2">
                 <button
                   onClick={onPrev}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
+                  className="w-8 h-8 rounded-full border border-[#C9B8D4] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
                   aria-label="Previous decision"
                 >
                   ←
                 </button>
                 <button
                   onClick={onNext}
-                  className="w-8 h-8 rounded-full border border-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
+                  className="w-8 h-8 rounded-full border border-[#C9B8D4] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white hover:border-[#3D2B4C] transition-all"
                   aria-label="Next decision"
                 >
                   →
@@ -113,7 +113,7 @@ export default function DecisionModal({
 
               <button
                 onClick={onClose}
-                className="w-8 h-8 rounded-full bg-[#E8E5E6] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white transition-all text-lg"
+                className="w-8 h-8 rounded-full bg-[#C9B8D4] flex items-center justify-center text-[#5C5759] hover:bg-[#3D2B4C] hover:text-white transition-all text-lg"
                 aria-label="Close"
               >
                 ✕
@@ -132,7 +132,7 @@ export default function DecisionModal({
                 </h3>
               </div>
 
-              <div className="h-px bg-[#E8E5E6]" />
+              <div className="h-px bg-[#C9B8D4]" />
 
               {/* Context */}
               <div>
@@ -156,14 +156,14 @@ export default function DecisionModal({
                       className={`rounded-xl p-4 flex items-center gap-4 transition-all ${
                         option.chosen
                           ? "bg-[#3D2B4C] text-white"
-                          : "bg-[#FAF9FA] border border-[#E8E5E6]"
+                          : "bg-[#FAF9FA] border border-[#C9B8D4]"
                       }`}
                     >
                       <div
                         className={`w-8 h-8 rounded-full flex items-center justify-center font-clash font-semibold text-sm shrink-0 ${
                           option.chosen
                             ? "bg-white/20 text-white"
-                            : "bg-[#E8E5E6] text-[#5C5759]"
+                            : "bg-[#C9B8D4] text-[#5C5759]"
                         }`}
                       >
                         {option.letter}
@@ -214,7 +214,7 @@ export default function DecisionModal({
             </div>
 
             {/* Footer */}
-            <div className="px-8 py-4 border-t border-[#E8E5E6] flex items-center justify-between">
+            <div className="px-8 py-4 border-t border-[#C9B8D4] flex items-center justify-between">
               <div className="flex gap-3">
                 <button
                   onClick={onPrev}

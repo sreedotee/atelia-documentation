@@ -17,7 +17,7 @@ function TreeNode({ label, primary }: TreeNodeProps) {
       className={`px-4 py-2 rounded-lg text-sm font-medium text-center ${
         primary
           ? "bg-[#3D2B4C] text-white font-clash"
-          : "bg-white border border-[#E8E5E6] text-[#1D1A1C]"
+          : "bg-white border border-[#C9B8D4] text-[#1D1A1C]"
       }`}
     >
       {label}
@@ -49,7 +49,7 @@ export default function InformationArchitecture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-8 border border-[#E8E5E6] mb-8 overflow-x-auto"
+          className="bg-white rounded-2xl p-8 border border-[#C9B8D4] mb-8 overflow-x-auto"
         >
           <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-8 text-center">
             App Structure
@@ -62,7 +62,7 @@ export default function InformationArchitecture() {
             </div>
           </div>
           <div className="flex justify-center mb-4">
-            <div className="w-px h-8 bg-[#E8E5E6]" />
+            <div className="w-px h-8 bg-[#C9B8D4]" />
           </div>
 
           {/* Tab row */}
@@ -81,7 +81,7 @@ export default function InformationArchitecture() {
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-4">
             {[3, 2, 3].map((_, i) => (
               <div key={i} className="flex justify-center">
-                <div className="w-px h-6 bg-[#E8E5E6]" />
+                <div className="w-px h-6 bg-[#C9B8D4]" />
               </div>
             ))}
           </div>
@@ -93,7 +93,7 @@ export default function InformationArchitecture() {
               {["Recently Added", "Saved (Items + Outfits)", "Collections"].map((item) => (
                 <div
                   key={item}
-                  className="px-3 py-2 bg-[#FAF9FA] border border-[#E8E5E6] rounded-lg text-xs text-[#5C5759] text-center"
+                  className="px-3 py-2 bg-[#FAF9FA] border border-[#C9B8D4] rounded-lg text-xs text-[#5C5759] text-center"
                 >
                   {item}
                 </div>
@@ -105,7 +105,7 @@ export default function InformationArchitecture() {
               {["Canvas (Item Selection)", "History (Timeline)"].map((item) => (
                 <div
                   key={item}
-                  className="px-3 py-2 bg-[#FAF9FA] border border-[#E8E5E6] rounded-lg text-xs text-[#5C5759] text-center"
+                  className="px-3 py-2 bg-[#FAF9FA] border border-[#C9B8D4] rounded-lg text-xs text-[#5C5759] text-center"
                 >
                   {item}
                 </div>
@@ -117,7 +117,7 @@ export default function InformationArchitecture() {
               {["Measurements", "Settings", "Support"].map((item) => (
                 <div
                   key={item}
-                  className="px-3 py-2 bg-[#FAF9FA] border border-[#E8E5E6] rounded-lg text-xs text-[#5C5759] text-center"
+                  className="px-3 py-2 bg-[#FAF9FA] border border-[#C9B8D4] rounded-lg text-xs text-[#5C5759] text-center"
                 >
                   {item}
                 </div>
@@ -132,7 +132,7 @@ export default function InformationArchitecture() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl p-6 border border-[#E8E5E6]"
+          className="bg-white rounded-2xl p-6 border border-[#C9B8D4]"
         >
           <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-4">
             Key Principles

@@ -10,7 +10,7 @@ const colors = [
   { name: "Text Primary", hex: "#1D1A1C", usage: "Headings, body", text: "white" },
   { name: "Text Secondary", hex: "#5C5759", usage: "Supporting text", text: "white" },
   { name: "Text Tertiary", hex: "#7D767A", usage: "Captions, labels", text: "white" },
-  { name: "Gray 200", hex: "#E8E5E6", usage: "Borders, dividers", text: "black" },
+  { name: "Gray 200", hex: "#C9B8D4", usage: "Borders, dividers", text: "black" },
 ];
 
 
@@ -38,7 +38,7 @@ export default function DesignSystem() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {colors.map((c) => (
-                <div key={c.name} className="rounded-xl overflow-hidden border border-[#E8E5E6]">
+                <div key={c.name} className="rounded-xl overflow-hidden border border-[#C9B8D4]">
                   <div
                     className="h-20 w-full"
                     style={{ background: c.hex }}
@@ -52,7 +52,7 @@ export default function DesignSystem() {
               ))}
             </div>
 
-            <div className="mt-6 bg-white rounded-xl p-5 border border-[#E8E5E6]">
+            <div className="mt-6 bg-white rounded-xl p-5 border border-[#C9B8D4]">
               <p className="font-medium text-[#1D1A1C] mb-2">Color Evolution</p>
               <p className="text-[#5C5759] text-sm leading-relaxed">
                 Evolved from purple (commonly associated with AI) to plum for a more approachable,
@@ -73,14 +73,14 @@ export default function DesignSystem() {
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div className="p-6 bg-white rounded-xl border border-[#E8E5E6]">
+              <div className="p-6 bg-white rounded-xl border border-[#C9B8D4]">
                 <p className="font-clash text-4xl mb-2 text-[#1D1A1C]">Clash Display</p>
                 <p className="text-sm text-[#5C5759]">
                   Headings, key moments. Balance between technical precision (sharp edges) and warmth
                   (curved forms).
                 </p>
               </div>
-              <div className="p-6 bg-white rounded-xl border border-[#E8E5E6]">
+              <div className="p-6 bg-white rounded-xl border border-[#C9B8D4]">
                 <p className="font-sans text-4xl mb-2 text-[#1D1A1C]">DM Sans</p>
                 <p className="text-sm text-[#5C5759]">
                   Body text, UI elements. Clean, highly readable for scanning content.

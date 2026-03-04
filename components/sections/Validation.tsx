@@ -145,7 +145,7 @@ export default function Validation() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-white border border-[#E8E5E6] p-8 text-center"
+              className="bg-white border border-[#C9B8D4] p-8 text-center"
             >
               <span className="text-3xl block mb-4">{stat.icon}</span>
               <p className="font-clash text-4xl font-bold text-[#1D1A1C] leading-none mb-3">
@@ -304,7 +304,7 @@ export default function Validation() {
             {quotes.map((q) => (
               <div
                 key={q.attr}
-                className="bg-white border border-[#E8E5E6] border-l-4 border-l-[#3D2B4C] p-6"
+                className="bg-white border border-[#C9B8D4] border-l-4 border-l-[#3D2B4C] p-6"
               >
                 <p className="text-[#1D1A1C] italic leading-relaxed mb-4">
                   &ldquo;{q.text}&rdquo;
