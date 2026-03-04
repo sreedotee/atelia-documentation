@@ -119,7 +119,7 @@ export default function DesignWhiteboard({
                   transition={{ delay: i * 0.05, duration: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-[#1D1A1C] font-semibold text-sm leading-snug">
+                  <span className="text-[#1D1A1C] font-medium text-sm leading-snug">
                     {decision.title}
                   </span>
                 </motion.button>

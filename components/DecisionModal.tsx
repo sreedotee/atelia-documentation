@@ -52,11 +52,11 @@ export default function DecisionModal({
   if (!decision) return null;
 
   const categoryColors: Record<string, string> = {
-    "Navigation & IA": "bg-blue-100 text-blue-700",
-    "Interaction Patterns": "bg-green-100 text-green-700",
-    "Visual Design": "bg-purple-100 text-purple-700",
-    "Product Decisions": "bg-orange-100 text-orange-700",
-    "Product Strategy": "bg-rose-100 text-rose-700",
+    "Navigation & IA": "bg-[#EAF0F7] text-[#3A5A80]",
+    "Interaction Patterns": "bg-[#EAF2EC] text-[#3A6349]",
+    "Visual Design": "bg-[#EFE9F5] text-[#6B4A8A]",
+    "Product Decisions": "bg-[#F5EEE5] text-[#8A5A30]",
+    "Product Strategy": "bg-[#F5E9ED] text-[#8A3E55]",
   };
 
   const catColor = categoryColors[decision.category] || "bg-gray-100 text-gray-700";
@@ -175,12 +175,12 @@ export default function DecisionModal({
                         {(option.pros || option.cons) && (
                           <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                             {option.pros && (
-                              <span className={`text-xs ${option.chosen ? "text-green-200" : "text-green-600"}`}>
+                              <span className={`text-xs ${option.chosen ? "text-[#A8C5B5]" : "text-[#4A7060]"}`}>
                                 ✓ {option.pros}
                               </span>
                             )}
                             {option.cons && (
-                              <span className={`text-xs ${option.chosen ? "text-red-200" : "text-red-500"}`}>
+                              <span className={`text-xs ${option.chosen ? "text-[#C5A8A8]" : "text-[#8C4A4A]"}`}>
                                 ✗ {option.cons}
                               </span>
                             )}
