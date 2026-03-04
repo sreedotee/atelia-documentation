@@ -153,7 +153,7 @@ export default function DecisionModal({
                   {decision.options.map((option) => (
                     <div
                       key={option.id}
-                      className={`rounded-xl p-4 flex items-start gap-4 transition-all ${
+                      className={`rounded-xl p-4 flex items-center gap-4 transition-all ${
                         option.chosen
                           ? "bg-[#3D2B4C] text-white"
                           : "bg-[#FAF9FA] border border-[#E8E5E6]"
@@ -187,9 +187,6 @@ export default function DecisionModal({
                           </div>
                         )}
                       </div>
-                      {option.chosen && (
-                        <span className="text-green-300 text-lg shrink-0">✓</span>
-                      )}
                     </div>
                   ))}
                 </div>
