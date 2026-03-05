@@ -59,7 +59,13 @@ export default function Home() {
       caption: "25/75 split layout. Category picker top, items grid bottom. See avatar + items simultaneously.",
       bg: "linear-gradient(135deg, #1a1520 0%, #3D2B4C 100%)",
       icon: "✨",
-      imageSrc: "/images/TryOnCanvas.svg",
+      slideshow: [
+        "/images/TryOnCanvas.svg",
+        "/images/Bottoms Try On.svg",
+        "/images/Outerwear Try On.svg",
+        "/images/Footwear Try On.svg",
+        "/images/Accessories Try On.svg",
+      ],
     },
     {
       title: "Item Selection",
