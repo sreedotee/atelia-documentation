@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
+import EmojiImage from "../EmojiImage";
 import { fadeInUp } from "@/styles/animations";
 
 const tasks = [
@@ -139,15 +140,17 @@ export default function Validation() {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
         >
           {[
-            { icon: "👥", label: "Participants", value: "5", detail: "Ages 22–34, online shoppers" },
-            { icon: "📱", label: "Per session", value: "30 min", detail: "Remote moderated (Zoom)" },
-            { icon: "✓", label: "Task completion", value: "95%", detail: "Average across 3 tasks" },
+            { icon: "person", label: "Participants", value: "5", detail: "Ages 22–34, online shoppers" },
+            { icon: "mobile-phone", label: "Per session", value: "30 min", detail: "Remote moderated (Zoom)" },
+            { icon: null, symbol: "✓", label: "Task completion", value: "95%", detail: "Average across 3 tasks" },
           ].map((stat) => (
             <div
               key={stat.label}
               className="bg-white border border-[#E8E5E6] p-8 text-center"
             >
-              <span className="text-3xl block mb-4">{stat.icon}</span>
+              <span className="flex justify-center mb-4">
+                {stat.icon ? <EmojiImage name={stat.icon} size={32} /> : <span className="text-3xl">{stat.symbol}</span>}
+              </span>
               <p className="font-clash text-4xl font-bold text-[#1D1A1C] leading-none mb-3">
                 {stat.value}
               </p>
