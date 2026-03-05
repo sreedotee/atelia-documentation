@@ -103,6 +103,7 @@ export default function Home() {
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
       icon: "❤️",
       imageSrc: "/images/ExpandedOutfitDetails.svg",
+      scrollable: true,
     },
     {
       title: "Item Detail",
@@ -110,6 +111,7 @@ export default function Home() {
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
       icon: "🔍",
       imageSrc: "/images/ExpandedItemDetails.svg",
+      scrollable: true,
     },
     {
       title: "Collections Grid View",
