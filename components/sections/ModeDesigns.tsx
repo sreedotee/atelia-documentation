@@ -141,7 +141,7 @@ export default function ModeDesigns({
           {intro}
         </motion.p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           {screens.map((screen) => (
             <PhoneScreen key={screen.title} screen={screen} />
           ))}
