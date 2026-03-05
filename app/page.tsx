@@ -59,6 +59,7 @@ export default function Home() {
       caption: "25/75 split layout. Category picker top, items grid bottom. See avatar + items simultaneously.",
       bg: "linear-gradient(135deg, #1a1520 0%, #3D2B4C 100%)",
       icon: "✨",
+      imageSrc: "/images/TryOnCanvas.svg",
     },
     {
       title: "Item Selection",
@@ -71,12 +72,15 @@ export default function Home() {
       caption: "Processing state with clear messaging. Loading animation builds anticipation.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #6b3fa0 100%)",
       icon: "⚡",
+      imageSrc: "/images/OutfitHistory.svg",
     },
     {
       title: "Post-Generation Result",
       caption: "Save, Share, Regenerate options immediately available. Shows items used + total price.",
       bg: "linear-gradient(135deg, #4a3560 0%, #8b5fc0 100%)",
       icon: "🎉",
+      imageSrc: "/images/Post-Generation-Result.svg",
+      scrollable: true,
     },
   ];
 

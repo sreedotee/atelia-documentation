@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
@@ -10,6 +11,7 @@ interface Screen {
   bg: string;
   icon: string;
   imageSrc?: string;
+  scrollable?: boolean;
 }
 
 interface ModeDesignsProps {
@@ -24,8 +26,25 @@ interface ModeDesignsProps {
   bg?: string;
 }
 
-// Placeholder phone screen component
 function PhoneScreen({ screen }: { screen: Screen }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [scrollY, setScrollY] = useState(0);
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    if (screen.scrollable && containerRef.current && imgRef.current) {
+      const dist = imgRef.current.offsetHeight - containerRef.current.offsetHeight;
+      setScrollY(dist > 0 ? -dist : 0);
+    }
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setScrollY(0);
+    setHovered(false);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -34,20 +53,34 @@ function PhoneScreen({ screen }: { screen: Screen }) {
       viewport={{ once: true }}
       className="group"
     >
-      <div className="relative mb-4 overflow-hidden rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-        {/* Mock phone screen */}
+      <div className="relative mb-4 overflow-hidden rounded-2xl bg-[#FAF9FA] border border-[#E8E5E6] hover:shadow-xl transition-shadow duration-300">
+        {/* Phone screen area */}
         <div
-          className="w-full aspect-[9/16] flex flex-col items-center justify-center gap-4 p-6"
+          ref={containerRef}
+          className="w-full aspect-[9/16] overflow-hidden"
           style={screen.imageSrc ? {} : { background: screen.bg }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           {screen.imageSrc ? (
-            <img
-              src={screen.imageSrc}
-              alt={screen.title}
-              className="w-full h-full object-cover rounded-xl"
-            />
+            screen.scrollable ? (
+              <motion.img
+                ref={imgRef}
+                src={screen.imageSrc}
+                alt={screen.title}
+                className="w-full h-auto block"
+                animate={{ y: hovered ? scrollY : 0 }}
+                transition={{ duration: 2.5, ease: "easeInOut" }}
+              />
+            ) : (
+              <img
+                src={screen.imageSrc}
+                alt={screen.title}
+                className="w-full h-full object-cover"
+              />
+            )
           ) : (
-            <>
+            <div className="w-full h-full flex flex-col items-center justify-center gap-4 p-6">
               <span className="text-6xl">{screen.icon}</span>
               <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-white text-center">{screen.title}</p>
               <div className="space-y-2 w-full">
@@ -55,7 +88,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
                   <div key={i} className="h-2 rounded bg-white/20" style={{ width: `${70 + i * 10}%` }} />
                 ))}
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
