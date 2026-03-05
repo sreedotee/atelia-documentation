@@ -147,10 +147,10 @@ export default function Iterations() {
           />
 
           <div className="max-w-4xl mb-8">
-            <ImagePlaceholder
-              height={420}
-              description="Shopping platform flow diagram — Shows: Input problem → weak link → Shopify site. Decision tree: buy outfit vs no. Cart icon with issues listed."
-              filename="/images/iteration-1-shopping-platform.png"
+            <img
+              src="/images/prev iteration.svg"
+              alt="Shopping platform flow diagram — input problem, weak link, Shopify site, decision tree"
+              className="w-full rounded-xl"
             />
           </div>
 
@@ -200,20 +200,20 @@ export default function Iterations() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mb-8">
             <div>
-              <ImagePlaceholder
-                height={480}
-                description={'"Wardrobe" mockup with AI Try-On button — item preview modal, "AI Try-On" button visible, "takes to or adds items to AI try on canvas" annotation'}
-                filename="/images/iteration-2a-wardrobe-tryon.png"
+              <img
+                src="/images/wardrobenav.svg"
+                alt='Wardrobe mockup with AI Try-On button — item preview modal with "AI Try-On" button visible'
+                className="w-full rounded-xl"
               />
               <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Wardrobe → AI Try-On button
               </p>
             </div>
             <div>
-              <ImagePlaceholder
-                height={480}
-                description='Recently Added → Try-On navigation — arrow showing navigation to Try-On tab, "what actions could be here from here" annotation'
-                filename="/images/iteration-2b-recently-added.png"
+              <img
+                src="/images/crosstabnav.svg"
+                alt="Recently Added → Try-On navigation — arrow showing navigation to Try-On tab"
+                className="w-full rounded-xl"
               />
               <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Recently Added → navigation trigger
@@ -272,10 +272,10 @@ export default function Iterations() {
           />
 
           <div className="max-w-4xl mb-4">
-            <ImagePlaceholder
-              height={300}
-              description='Hand-drawn wireframes (3 screens side by side) — paste link flow, recently added placement, collections structure, "History should be here" annotation visible'
-              filename="/images/iteration-early-wireframes.png"
+            <img
+              src="/images/handdrawn.svg"
+              alt='Hand-drawn wireframes — paste link flow, recently added placement, collections structure, with "History should be here" annotation'
+              className="w-full rounded-xl"
             />
           </div>
           <p className="text-sm text-[#7D767A] italic mb-10">

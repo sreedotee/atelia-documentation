@@ -88,10 +88,10 @@ export default function ProblemEvolution() {
           </p>
 
           <div className="max-w-3xl mb-4">
-            <ImagePlaceholder
-              height={380}
-              description='"The Input Problem" diagram — Flow: Input → Bottleneck → Generator → Output. Yellow sticky note: "bottleneck". Green circle: "experimented with broken link inputs". Annotations visible.'
-              filename="/images/problem-input-bottleneck.png"
+            <img
+              src="/images/inputproblemapp.svg"
+              alt="The Input Problem diagram — flow showing input bottleneck through to generator output"
+              className="w-full rounded-xl"
             />
           </div>
           <p className="text-sm text-[#7D767A] italic mb-10">
