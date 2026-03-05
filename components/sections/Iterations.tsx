@@ -148,7 +148,7 @@ export default function Iterations() {
 
           <div className="max-w-4xl mb-8">
             <img
-              src="/images/prev iteration.svg"
+              src="/images/prev-iteration.svg"
               alt="Shopping platform flow diagram — input problem, weak link, Shopify site, decision tree"
               className="w-full rounded-xl"
             />
@@ -201,7 +201,7 @@ export default function Iterations() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mb-8">
             <div>
               <img
-                src="/images/wardrobenav.svg"
+                src="/images/wardrobe-nav.svg"
                 alt='Wardrobe mockup with AI Try-On button — item preview modal with "AI Try-On" button visible'
                 className="w-full rounded-xl"
               />
@@ -211,7 +211,7 @@ export default function Iterations() {
             </div>
             <div>
               <img
-                src="/images/crosstabnav.svg"
+                src="/images/crosstab-nav.svg"
                 alt="Recently Added → Try-On navigation — arrow showing navigation to Try-On tab"
                 className="w-full rounded-xl"
               />
@@ -273,7 +273,7 @@ export default function Iterations() {
 
           <div className="max-w-4xl mb-4">
             <img
-              src="/images/handdrawn.svg"
+              src="/images/hand-drawn.svg"
               alt='Hand-drawn wireframes — paste link flow, recently added placement, collections structure, with "History should be here" annotation'
               className="w-full rounded-xl"
             />
