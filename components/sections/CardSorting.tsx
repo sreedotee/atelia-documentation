@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 export default function CardSorting() {
   const typeCategories = [
@@ -51,9 +52,9 @@ export default function CardSorting() {
                     {Array.from({ length: cat.count }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-14 h-14 rounded-lg bg-[#E8E5E6] flex items-center justify-center text-xs text-[#7D767A]"
+                        className="w-14 h-14 rounded-lg bg-[#E8E5E6] flex items-center justify-center"
                       >
-                        👕
+                        <EmojiImage name="tshirt" size={32} alt="clothing item" />
                       </div>
                     ))}
                   </div>
@@ -89,9 +90,9 @@ export default function CardSorting() {
                     {Array.from({ length: cat.count }).map((_, i) => (
                       <div
                         key={i}
-                        className="w-14 h-14 rounded-lg bg-[#d4bee3] flex items-center justify-center text-xs"
+                        className="w-14 h-14 rounded-lg bg-[#d4bee3] flex items-center justify-center"
                       >
-                        {["👗", "👠", "👜", "🩱"][i % 4]}
+                        <EmojiImage name={["dress", "high-heel", "handbag", "one-piece-swimsuit"][i % 4]} size={32} alt="clothing item" />
                       </div>
                     ))}
                   </div>

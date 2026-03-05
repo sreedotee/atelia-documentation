@@ -3,23 +3,24 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 export default function ResearchApproach() {
   const methods = [
     {
-      icon: "💬",
+      icon: "speech-bubble",
       title: "User Research",
       desc: "Surveyed 47 online shoppers and interviewed 5 in-depth to understand behavior, pain points, and needs.",
       stats: ["47 survey responses", "5 interviews (30 min)", "Saving behavior", "Organization patterns", "Purchase hesitation"],
     },
     {
-      icon: "🔍",
+      icon: "magnifying-glass",
       title: "Competitive Analysis",
       desc: "Analyze 5 existing apps to identify use cases, gaps, and opportunities in the market.",
       stats: ["5 apps analyzed", "3 use cases identified", "Feature comparison", "Gap analysis"],
     },
     {
-      icon: "🃏",
+      icon: "joker",
       title: "Card Sorting",
       desc: "Test how users naturally organize clothing to validate occasion-based vs. type-based mental models.",
       stats: ["20 clothing items", "Photo sorting task", "Occasion vs. type", "Mental model validation"],
@@ -53,7 +54,7 @@ export default function ResearchApproach() {
               viewport={{ once: true }}
               className="rounded-2xl border border-[#E8E5E6] p-6 bg-white hover:bg-gray-50 transition-colors"
             >
-              <span className="text-3xl mb-4 block">{m.icon}</span>
+              <EmojiImage name={m.icon} size={30} className="mb-4 block" />
               <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-3">{m.title}</h3>
               <p className="text-[#5C5759] text-sm leading-relaxed mb-5">{m.desc}</p>
               <ul className="space-y-1.5">

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 const learnings = [
   {
@@ -29,22 +30,22 @@ const learnings = [
 
 const improvements = [
   {
-    icon: "🔄",
+    icon: "refresh",
     title: "Test earlier and more often",
     text: "Built too many screens before validating core flows. Should have tested rough prototypes at 30% completion, not 80%. Would have caught usability issues sooner.",
   },
   {
-    icon: "📊",
+    icon: "bar-chart",
     title: "Include retailer perspective",
     text: "Focused heavily on consumer experience but didn't validate with actual retailers. Their needs (data, integration, ROI) would have shaped some decisions differently.",
   },
   {
-    icon: "🔐",
+    icon: "locked",
     title: "Deeper privacy exploration",
     text: "Photo upload privacy concerns surfaced in testing. Should have researched this earlier and designed more robust privacy communication from the start.",
   },
   {
-    icon: "📐",
+    icon: "triangular-ruler",
     title: "Simplify scope",
     text: "72 screens is comprehensive but overkill for a concept project. Could have launched with 40 screens and iterated. Perfect is the enemy of done.",
   },
@@ -134,7 +135,7 @@ export default function Reflection() {
                   viewport={{ once: true }}
                   className="flex gap-4 p-4 rounded-xl bg-[#FAF9FA] border border-[#E8E5E6]"
                 >
-                  <span className="text-2xl shrink-0">{imp.icon}</span>
+                  <EmojiImage name={imp.icon} size={24} />
                   <div>
                     <h4 className="font-medium text-[#1D1A1C] mb-1">{imp.title}</h4>
                     <p className="text-sm text-[#5C5759] leading-relaxed">{imp.text}</p>

@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 interface Screen {
   title: string;
@@ -99,7 +100,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
             )
           ) : (
             <div className="w-full h-full flex flex-col items-center justify-center gap-4 p-6">
-              <span className="text-6xl">{screen.icon}</span>
+              <EmojiImage name={screen.icon} size={60} alt={screen.title} />
               <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-white text-center">{screen.title}</p>
               <div className="space-y-2 w-full">
                 {[1, 2, 3].map((i) => (
@@ -155,7 +156,7 @@ export default function ModeDesigns({
             viewport={{ once: true }}
             className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-6 flex items-start gap-4 mb-8"
           >
-            <span className="text-2xl">{feature.icon}</span>
+            <EmojiImage name={feature.icon} size={24} />
             <div>
               <h4 className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-2">
                 {feature.title}

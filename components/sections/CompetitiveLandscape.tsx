@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 const approaches = [
   {
@@ -110,7 +111,7 @@ export default function CompetitiveLandscape() {
           viewport={{ once: true }}
           className="bg-[#F5EDD8] border border-[#D4B880] rounded-2xl p-6 mb-16 flex items-start gap-4"
         >
-          <span className="text-3xl">💡</span>
+          <EmojiImage name="lightbulb" size={30} alt="lightbulb" />
           <div>
             <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-2">
               The Gap

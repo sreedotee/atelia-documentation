@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import EmojiImage from "./EmojiImage";
 
 export default function Hero() {
   return (
@@ -166,16 +167,16 @@ export default function Hero() {
 
               {/* Decorative elements */}
               <div
-                className="absolute -right-8 top-20 w-16 h-16 rounded-2xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-2xl"
+                className="absolute -right-8 top-20 w-16 h-16 rounded-2xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center"
                 style={{ rotate: "12deg" }}
               >
-                ✨
+                <EmojiImage name="sparkles" size={28} alt="sparkles" />
               </div>
               <div
-                className="absolute -left-6 bottom-20 w-12 h-12 rounded-xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center text-xl"
+                className="absolute -left-6 bottom-20 w-12 h-12 rounded-xl bg-[#3D2B4C]/20 backdrop-blur-sm border border-[#3D2B4C]/20 flex items-center justify-center"
                 style={{ rotate: "-8deg" }}
               >
-                👗
+                <EmojiImage name="dress" size={22} alt="dress" />
               </div>
             </motion.div>
             <p className="text-center mt-3 text-[10px] text-[#7D767A] tracking-wide">↗ Click to open Figma file</p>
