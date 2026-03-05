@@ -9,22 +9,22 @@ const learnings = [
   {
     number: "1",
     title: "Strategic positioning matters more than features",
-    text: "Starting with technology (AI try-on) forced me to think about where it creates value, not just how to implement it. This strategic discovery process was more valuable than any individual design decision.",
+    text: "Starting with the technology (AI try-on) forced me to ask where it creates value, not just how to implement it. This strategic framing shaped the entire product direction.",
   },
   {
     number: "2",
     title: "Mental models > features",
-    text: "Early versions had all the features but no clear structure. Adding the three-mode framework (BEFORE/DURING/AFTER) made everything click. Users don't need features—they need coherent mental models.",
+    text: "Early versions had many features but no clear structure. The three-mode framework (BEFORE / DURING / AFTER) created a clear mental model that made the product easier to understand.",
   },
   {
     number: "3",
     title: "Research validates (or invalidates) assumptions",
-    text: "Originally planned to collect height, weight, and sizes during onboarding. User research showed this was unnecessary friction. Photos alone are sufficient. This saved weeks of work on unused features.",
+    text: "I initially planned to collect height, weight, and sizes during onboarding. User research showed this created unnecessary friction—photos alone were sufficient.",
   },
   {
     number: "4",
-    title: "Context-appropriate patterns > consistency for its own sake",
-    text: "History list vs. Collections grid felt inconsistent at first, but serves different user needs better than forcing one pattern. Different contexts deserve different treatments.",
+    title: "Context-appropriate patterns > forced consistency",
+    text: "History uses a list while collections use a grid. Different contexts benefit from different patterns rather than forcing one design everywhere.",
   },
 ];
 
@@ -32,22 +32,22 @@ const improvements = [
   {
     icon: "refresh",
     title: "Test earlier and more often",
-    text: "Built too many screens before validating core flows. Should have tested rough prototypes at 30% completion, not 80%. Would have caught usability issues sooner.",
+    text: "I built too many screens before validating core flows. Testing rough prototypes earlier would have surfaced usability issues sooner.",
   },
   {
     icon: "bar-chart",
-    title: "Include retailer perspective",
-    text: "Focused heavily on consumer experience but didn't validate with actual retailers. Their needs (data, integration, ROI) would have shaped some decisions differently.",
+    title: "Include the retailer perspective",
+    text: "The project focused heavily on the consumer experience but didn't validate assumptions with retailers. Their needs (data, integration, ROI) would likely influence some decisions.",
   },
   {
     icon: "locked",
-    title: "Deeper privacy exploration",
-    text: "Photo upload privacy concerns surfaced in testing. Should have researched this earlier and designed more robust privacy communication from the start.",
+    title: "Explore privacy concerns earlier",
+    text: "Photo-upload hesitation surfaced during testing. Earlier research into privacy expectations could have informed clearer trust messaging from the start.",
   },
   {
     icon: "triangular-ruler",
-    title: "Simplify scope",
-    text: "72 screens is comprehensive but overkill for a concept project. Could have launched with 40 screens and iterated. Perfect is the enemy of done.",
+    title: "Simplify the scope",
+    text: "The prototype includes 72 screens—more than necessary for a concept project. A smaller MVP would allow faster iteration and quicker learning.",
   },
 ];
 

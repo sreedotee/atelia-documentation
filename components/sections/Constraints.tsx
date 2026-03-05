@@ -10,39 +10,33 @@ const categories = [
     items: [
       {
         title: "AI quality depends on input photos.",
-        body: "Garbage in, garbage out. If a user uploads blurry or poorly lit photos, generated outfits will be poor quality. Better models can't fix bad inputs.",
+        body: "If users upload blurry or poorly lit photos, generated outfits will be poor quality. Better models can't fix bad inputs.",
         implication:
-          "Photo upload instructions must be explicit (lighting, angles, poses). Show examples of good vs bad inputs during onboarding.",
+          "Provide clear photo guidelines during model setup with examples of good vs bad lighting, angles, and poses.",
       },
       {
-        title: "Generation latency is 4–7 seconds minimum.",
-        body: "Can't make it instant—AI processing takes time. Faster processing requires more expensive infrastructure.",
+        title: "Generation latency (4–7 seconds).",
+        body: "AI processing takes time. Instant results aren't possible without expensive infrastructure.",
         implication:
-          "Loading states must feel intentional, not broken. Progress indicators and anticipatory messaging ('Generating your look...') reduce perceived wait time.",
+          "Loading states are designed to feel intentional, with progress indicators and anticipatory messaging (\u201cGenerating your look\u2026\u201d).",
       },
       {
-        title: "Link parsing can fail.",
-        body: "Not all websites allow scraping. Some have bot protection; others don't expose metadata cleanly. Can't guarantee 100% success rate.",
+        title: "Link parsing isn't always reliable.",
+        body: "Some retailers block scraping or expose poor metadata.",
         implication:
-          "Fallback to manual upload. Clear, non-blaming error messages when a link fails. Always offer an alternative path.",
+          "Provide a manual upload fallback and clear error messaging when parsing fails.",
       },
       {
-        title: "Items go out of stock or links break.",
-        body: "User saves an item today; two weeks later it's sold out or the URL is dead. Retailer inventory is outside our control.",
+        title: "Retailer inventory changes constantly.",
+        body: "Items saved today may go out of stock later.",
         implication:
-          "Cache item images and details locally. Show 'may no longer be available' on older items. Never delete from a collection when a link breaks.",
+          "Cache item images and details locally and show \u201cmay no longer be available\u201d when links break.",
       },
       {
-        title: "Can't directly purchase in-app.",
-        body: "No payment processing, fulfillment, or customer service infrastructure. Competing with retailers on this is a losing battle.",
+        title: "No direct in-app purchasing.",
+        body: "Handling payments, fulfillment, and support would create unnecessary operational complexity.",
         implication:
-          "Deep-link to retailer site for purchase. Position Atelia as a decision tool, not a shopping platform.",
-      },
-      {
-        title: "Multi-store support means no single source of truth.",
-        body: "Each retailer has different size charts, return policies, and shipping costs. Standardizing across stores isn't possible.",
-        implication:
-          "Don't promise fit guarantees. Show size and fit info from the retailer but don't interpret it. Let users make informed decisions.",
+          "Deep-link to retailer sites for purchase and position Atelia as a decision tool rather than a shopping platform.",
       },
     ],
   },
@@ -50,34 +44,34 @@ const categories = [
     label: "User Experience",
     items: [
       {
-        title: "Privacy concerns with body photos.",
-        body: "Users must upload 6 face + 2 body photos to create an AI model. This is sensitive personal data—many will hesitate or abandon.",
+        title: "Privacy concerns around body photos.",
+        body: "Creating a model requires multiple photos, which many users may hesitate to upload.",
         implication:
-          "On-demand model setup (not forced at signup). Clear privacy messaging: 'Photos processed locally, not shared, deleted on request.' Build trust before asking.",
+          "Model creation happens on demand, with clear messaging about how photos are processed and stored.",
       },
       {
-        title: "Learning curve for a new interaction pattern.",
-        body: "Paste-link saving isn't standard behavior. Users need to learn: copy link → open app → paste → save. This adds friction initially.",
+        title: "Paste-link saving is unfamiliar behavior.",
+        body: "Users must learn a new flow: copy link → open app → paste → save.",
         implication:
-          "Onboarding must show the paste-link flow clearly with tooltips and an example video. Make it easy to discover and remember.",
+          "Onboarding demonstrates the flow with tooltips and a short example video.",
       },
       {
-        title: "Trust deficit with AI-generated images.",
-        body: "'This looks fake' or 'It won't actually look like this on me'—skepticism about AI try-on accuracy is real and reasonable.",
+        title: "Skepticism about AI try-on accuracy.",
+        body: "Users may doubt whether generated outfits reflect reality.",
         implication:
-          "Set expectations honestly: 'Preview only, fit may vary.' Show quality differences between free and premium models. Don't overpromise realism.",
+          "Set expectations clearly: previews show styling possibilities, not guaranteed fit.",
       },
       {
-        title: "Spam prevention is necessary.",
-        body: "Free tier allows abuse: bots generating thousands of outfits, fake links, low-quality uploads. Manual moderation at scale isn't viable.",
+        title: "Abuse and spam risks.",
+        body: "Unlimited generation could lead to automated abuse.",
         implication:
-          "Credit limits throttle abuse (50/day is manageable). Rate limiting on paste-link (max 20 items/day for free tier). Require phone verification.",
+          "Credit limits and rate-limiting reduce spam while keeping the free tier usable.",
       },
       {
         title: "AI generation can fail.",
-        body: "Model errors, timeouts, incompatible item types. Can't guarantee 100% success for every attempt.",
+        body: "Model errors or incompatible inputs occasionally occur.",
         implication:
-          "Graceful failure states with refunded credits. 'Generation failed, try again'—never charge for a failed attempt. Clear error messages, not generic ones.",
+          "Failed generations never charge credits and provide clear retry messaging.",
       },
     ],
   },
@@ -85,34 +79,28 @@ const categories = [
     label: "Business",
     items: [
       {
-        title: "Retailer partnerships are required for long-term success.",
-        body: "While the app works without them, affiliate rates improve with direct partnerships. Some retailers may see this as competition.",
+        title: "Retailer relationships matter.",
+        body: "Some brands may view third-party tools as competition.",
         implication:
-          "Position as value-add, not a threat. Emphasize return reduction and higher conversion. Offer a B2B white-label version for reluctant retailers.",
+          "Position Atelia as a conversion tool that reduces returns and increases purchase confidence.",
       },
       {
-        title: "Success metrics are undefined initially.",
-        body: "Is success: user retention? outfits generated? purchases made? return rate reduction? Different metrics require different product priorities.",
+        title: "Success metrics aren't obvious initially.",
+        body: "It's unclear whether success means retention, purchases, or try-on usage.",
         implication:
-          "Instrument everything. Track: save rate, generation rate, collection usage, affiliate clicks, purchase conversion. Learn what matters, then optimize for it.",
+          "Instrument key behaviors early and optimize based on real usage patterns.",
       },
       {
-        title: "Monetization must balance revenue with user value.",
-        body: "Too aggressive (low free tier) kills growth. Too generous (high limits) is unsustainable. Finding the right balance is iterative.",
+        title: "Monetization must balance growth and cost.",
+        body: "AI generation has real infrastructure costs.",
         implication:
-          "Start conservative (50 credits/day), measure conversion and churn, then adjust. A/B test different free tier limits across user cohorts.",
+          "Start with conservative credit limits and iterate based on conversion and retention data.",
       },
       {
-        title: "Customer support at scale is expensive.",
-        body: "Users will have questions about AI quality, credits, refunds, privacy, and technical issues. A large support team isn't affordable initially.",
+        title: "Customer support must scale efficiently.",
+        body: "AI products often generate questions around quality, privacy, and credits.",
         implication:
-          "Self-service help center, FAQ, in-app tooltips. Anticipate common questions and answer them proactively in the UI to reduce support tickets.",
-      },
-      {
-        title: "The competitive landscape is moving fast.",
-        body: "Other AI try-on apps exist (ASOS, Zara AR). Big players like Amazon and Google could enter with far more resources.",
-        implication:
-          "Differentiate on experience, not just technology. Universal tool (works everywhere) vs single-retailer. Build a moat through superior UX, not just AI quality.",
+          "Anticipate common issues through in-product guidance, FAQs, and self-service help.",
       },
     ],
   },
@@ -128,8 +116,8 @@ export default function Constraints() {
           {...fadeInUp}
           className="text-lg text-[#5C5759] leading-relaxed mb-20 max-w-2xl"
         >
-          Every design decision was made within real technical, business, and user constraints.
-          These weren&apos;t limitations—they were guardrails that led to better solutions.
+          Every design decision was shaped by real technical, user, and business constraints.
+          These weren&apos;t limitations—they were guardrails that led to more resilient solutions.
         </motion.p>
 
         {categories.map((cat, ci) => (
@@ -188,9 +176,9 @@ export default function Constraints() {
           </p>
           <p className="text-sm text-[#5C5759] leading-relaxed">
             These constraints weren&apos;t obstacles to work around—they shaped better decisions.
-            Privacy concerns led to on-demand model setup. AI latency led to thoughtful loading
-            states. Cost constraints led to the credit system. Designing within reality produces
-            more resilient solutions than ignoring it.
+            Privacy concerns led to on-demand model setup. AI latency informed loading states.
+            Infrastructure costs informed the credit system. Designing within real constraints
+            produces more resilient products than ignoring them.
           </p>
         </motion.div>
       </div>
