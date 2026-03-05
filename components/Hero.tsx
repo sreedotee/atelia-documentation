@@ -146,31 +146,11 @@ export default function Hero() {
                 }}
               >
                 {/* Screen content */}
-                <div className="absolute inset-0 flex flex-col p-4 pt-12">
-                  <div className="bg-white/10 rounded-2xl p-4 mb-3">
-                    <div className="w-20 h-3 bg-white/30 rounded mb-2" />
-                    <div className="w-32 h-2 bg-white/20 rounded" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-2 mb-3">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div
-                        key={i}
-                        className="bg-white/10 rounded-xl"
-                        style={{ height: 100 }}
-                      >
-                        <div className="w-full h-full rounded-xl bg-gradient-to-br from-white/20 to-transparent" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="bg-white/10 rounded-2xl p-4">
-                    <div className="w-16 h-2 bg-white/30 rounded mb-3" />
-                    <div className="flex gap-2 mb-2">
-                      {[1, 2, 3].map((i) => (
-                        <div key={i} className="w-12 h-12 rounded-lg bg-white/15" />
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src="/images/atelia-logo.svg"
+                  alt="Atelia app screen"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
 
                 {/* Notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-7 bg-[#2a1e36] rounded-b-2xl z-10" />
