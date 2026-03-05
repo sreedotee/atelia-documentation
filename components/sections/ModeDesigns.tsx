@@ -57,7 +57,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
         {/* Phone screen area */}
         <div
           ref={containerRef}
-          className="w-full aspect-[9/16] overflow-hidden"
+          className="w-full aspect-[393/852] overflow-hidden"
           style={screen.imageSrc ? {} : { background: screen.bg }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
