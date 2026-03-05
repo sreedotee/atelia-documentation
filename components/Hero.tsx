@@ -136,25 +136,33 @@ export default function Hero() {
               className="relative"
             >
               {/* Phone frame */}
-              <div
-                className="relative rounded-[40px] overflow-hidden shadow-2xl"
-                style={{
-                  width: 280,
-                  height: 560,
-                  background: "linear-gradient(135deg, #3D2B4C 0%, #6b3fa0 100%)",
-                  border: "6px solid #2a1e36",
-                }}
+              <a
+                href="https://www.figma.com/design/hXD4oYWtSgWnLmnnu6v4ru/Atelia-ProdDesign?node-id=1-413&t=fU96BZaT1aymZ59X-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block cursor-pointer"
+                style={{ width: 280 }}
               >
-                {/* Screen content */}
-                <img
-                  src="/images/atelia-logo.svg"
-                  alt="Atelia app screen"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div
+                  className="relative rounded-[40px] overflow-hidden shadow-2xl hover:shadow-[0_0_40px_rgba(61,43,76,0.4)] transition-shadow duration-300"
+                  style={{
+                    width: 280,
+                    height: 560,
+                    background: "linear-gradient(135deg, #3D2B4C 0%, #6b3fa0 100%)",
+                    border: "6px solid #2a1e36",
+                  }}
+                >
+                  {/* Screen content */}
+                  <img
+                    src="/images/atelia-logo.svg"
+                    alt="Atelia app screen"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
 
-                {/* Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-7 bg-[#2a1e36] rounded-b-2xl z-10" />
-              </div>
+                  {/* Notch */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-7 bg-[#2a1e36] rounded-b-2xl z-10" />
+                </div>
+              </a>
 
               {/* Decorative elements */}
               <div

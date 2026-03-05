@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
 
@@ -75,18 +75,11 @@ function PhoneScreen({ screen }: { screen: Screen }) {
           onMouseLeave={handleMouseLeave}
         >
           {screen.slideshow ? (
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={activeSrc}
-                src={activeSrc}
-                alt={screen.title}
-                className="w-full h-full object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-              />
-            </AnimatePresence>
+            <img
+              src={activeSrc}
+              alt={screen.title}
+              className="w-full h-full object-cover"
+            />
           ) : activeSrc ? (
             screen.scrollable ? (
               <motion.img
