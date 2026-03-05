@@ -6,37 +6,38 @@
  *
  * File naming — drop files in /public/images/emojis/ using these slugs:
  *
- *   palette.png            🎨
- *   sparkles.png           ✨
- *   dress.png              👗
- *   home.png               🏠
- *   link.png               🔗
- *   floppy-disk.png        💾
- *   card-index-dividers.png 🗂️
- *   lightning.png          ⚡
- *   party-popper.png       🎉
- *   clipboard.png          📋
- *   heart.png              ❤️
- *   magnifying-glass.png   🔍
- *   card-file-box.png      🗃️
- *   email.png              📧
- *   briefcase.png          💼
- *   bird.png               🐦
- *   basketball.png         🏀
- *   tshirt.png             👕
- *   high-heel.png          👠
- *   handbag.png            👜
- *   one-piece-swimsuit.png 🩱
- *   speech-bubble.png      💬
- *   joker.png              🃏
- *   person.png             👤
- *   office.png             🏢
- *   bar-chart.png          📊
- *   lightbulb.png          💡
- *   refresh.png            🔄
- *   locked.png             🔐
- *   triangular-ruler.png   📐
- *   mobile-phone.png       📱
+ *   FILE                    EMOJI   USED IN
+ *   palette.png             🎨      Design Decisions whiteboard header
+ *   sparkles.png            ✨      Hero (floating badge), Mode 2 Try-On Canvas placeholder, Mode 2 feature banner
+ *   dress.png               👗      Hero (floating badge), Mode 2 Item Selection placeholder
+ *   home.png                🏠      Mode 1 Home screen placeholder
+ *   link.png                🔗      Mode 1 Paste Link Preview placeholder
+ *   floppy-disk.png         💾      Mode 1 Save to Collection placeholder
+ *   card-index-dividers.png 🗂️      Mode 1 Collection Detail placeholder, Overview outcome item
+ *   lightning.png           ⚡      Mode 2 Generating... placeholder
+ *   party-popper.png        🎉      Mode 2 Post-Generation Result placeholder
+ *   clipboard.png           📋      Mode 3 Try-On History placeholder
+ *   heart.png               ❤️      Mode 3 Outfit Detail placeholder
+ *   magnifying-glass.png    🔍      Mode 3 Item Detail placeholder, Research Approach competitive analysis card
+ *   card-file-box.png       🗃️      Mode 3 Collections Grid placeholder
+ *   email.png               📧      Footer contact links
+ *   briefcase.png           💼      Footer contact links (LinkedIn)
+ *   bird.png                🐦      Footer contact links (Twitter)
+ *   basketball.png          🏀      Footer contact links (Dribbble)
+ *   tshirt.png              👕      Card Sorting — type-based column
+ *   high-heel.png           👠      Card Sorting — occasion-based column
+ *   handbag.png             👜      Card Sorting — occasion-based column
+ *   one-piece-swimsuit.png  🩱      Card Sorting — occasion-based column
+ *   speech-bubble.png       💬      Research Approach — User Research card
+ *   joker.png               🃏      Research Approach — Card Sorting card
+ *   person.png              👤      Strategic Opportunity — Consumer Value column
+ *   office.png              🏢      Strategic Opportunity — Retailer Value column
+ *   bar-chart.png           📊      Strategic Opportunity — Market Gap column, Reflection improvements
+ *   lightbulb.png           💡      Competitive Landscape — The Gap callout
+ *   refresh.png             🔄      Reflection — "Test earlier" improvement
+ *   locked.png              🔐      Reflection — "Deeper privacy" improvement
+ *   triangular-ruler.png    📐      Reflection — "Simplify scope" improvement
+ *   mobile-phone.png        📱      Overview outcome item (Universal Saving)
  */
 
 interface EmojiImageProps {
