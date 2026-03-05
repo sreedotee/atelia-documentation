@@ -96,6 +96,7 @@ export default function Home() {
       caption: "Timeline list shows chronological generation history. Saved vs unsaved clearly distinguished.",
       bg: "linear-gradient(135deg, #1a1520 0%, #2a1e36 100%)",
       icon: "📋",
+      imageSrc: "/images/OutfitHistory.svg",
     },
     {
       title: "Outfit Detail (Saved)",
