@@ -154,7 +154,7 @@ export default function ModeDesigns({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-6 flex items-start gap-4 mb-8"
+            className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-6 flex items-center gap-4 mb-8"
           >
             <EmojiImage name={feature.icon} size={24} />
             <div>

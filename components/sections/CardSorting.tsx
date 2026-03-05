@@ -111,7 +111,7 @@ export default function CardSorting() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-[#E0F0EA] border border-[#8CC4B0] rounded-2xl p-6 flex items-start gap-4"
+          className="bg-[#E0F0EA] border border-[#8CC4B0] rounded-2xl p-6 flex items-center gap-4"
         >
           <div className="w-8 h-8 rounded-full bg-[#3D8A72] flex items-center justify-center text-white shrink-0">✓</div>
           <div>
