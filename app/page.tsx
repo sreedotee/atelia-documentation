@@ -96,12 +96,14 @@ export default function Home() {
       caption: '"Items used" section like recipe ingredients. Each item tappable for purchase.',
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
       icon: "❤️",
+      imageSrc: "/images/expandedoutfitdetails.svg",
     },
     {
       title: "Item Detail",
       caption: "Shows collections it's in + outfits using this item. Demonstrates relationships.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
       icon: "🔍",
+      imageSrc: "/images/ExpandedItemDetails.svg",
     },
     {
       title: "Collections Grid View",
