@@ -30,6 +30,7 @@ export default function Home() {
       caption: "Paste link always accessible at top. Visual grid shows recent saves with quick actions.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
       icon: "🏠",
+      imageSrc: "/images/Recently Added.svg",
     },
     {
       title: "Paste Link Preview",
@@ -48,6 +49,7 @@ export default function Home() {
       caption: 'Items/Outfits tabs together. Organized by occasion (e.g., "Summer Vacation").',
       bg: "linear-gradient(135deg, #3D2B4C 0%, #7b4fb5 100%)",
       icon: "🗂️",
+      imageSrc: "/images/Collection-Items.svg",
     },
   ];
 

@@ -9,6 +9,7 @@ interface Screen {
   caption: string;
   bg: string;
   icon: string;
+  imageSrc?: string;
 }
 
 interface ModeDesignsProps {
@@ -37,15 +38,25 @@ function PhoneScreen({ screen }: { screen: Screen }) {
         {/* Mock phone screen */}
         <div
           className="w-full aspect-[9/16] flex flex-col items-center justify-center gap-4 p-6"
-          style={{ background: screen.bg }}
+          style={screen.imageSrc ? {} : { background: screen.bg }}
         >
-          <span className="text-6xl">{screen.icon}</span>
-          <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-white text-center">{screen.title}</p>
-          <div className="space-y-2 w-full">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="h-2 rounded bg-white/20" style={{ width: `${70 + i * 10}%` }} />
-            ))}
-          </div>
+          {screen.imageSrc ? (
+            <img
+              src={screen.imageSrc}
+              alt={screen.title}
+              className="w-full h-full object-cover rounded-xl"
+            />
+          ) : (
+            <>
+              <span className="text-6xl">{screen.icon}</span>
+              <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-white text-center">{screen.title}</p>
+              <div className="space-y-2 w-full">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="h-2 rounded bg-white/20" style={{ width: `${70 + i * 10}%` }} />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
 
