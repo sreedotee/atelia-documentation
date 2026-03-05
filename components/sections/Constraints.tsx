@@ -18,7 +18,7 @@ const categories = [
         title: "Generation latency (4–7 seconds).",
         body: "AI processing takes time. Instant results aren't possible without expensive infrastructure.",
         implication:
-          "Loading states are designed to feel intentional, with progress indicators and anticipatory messaging ("Generating your look…").",
+          "Loading states are designed to feel intentional, with progress indicators and anticipatory messaging (\u201cGenerating your look\u2026\u201d).",
       },
       {
         title: "Link parsing isn't always reliable.",
@@ -30,7 +30,7 @@ const categories = [
         title: "Retailer inventory changes constantly.",
         body: "Items saved today may go out of stock later.",
         implication:
-          "Cache item images and details locally and show "may no longer be available" when links break.",
+          "Cache item images and details locally and show \u201cmay no longer be available\u201d when links break.",
       },
       {
         title: "No direct in-app purchasing.",
