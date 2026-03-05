@@ -203,7 +203,7 @@ export default function Iterations() {
               <img
                 src="/images/wardrobe-nav.svg"
                 alt='Wardrobe mockup with AI Try-On button — item preview modal with "AI Try-On" button visible'
-                className="w-full rounded-xl"
+                className="w-full h-[520px] object-contain rounded-xl"
               />
               <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Wardrobe → AI Try-On button
@@ -213,7 +213,7 @@ export default function Iterations() {
               <img
                 src="/images/crosstab-nav.svg"
                 alt="Recently Added → Try-On navigation — arrow showing navigation to Try-On tab"
-                className="w-full rounded-xl"
+                className="w-full h-[520px] object-contain rounded-xl"
               />
               <p className="text-sm text-[#7D767A] italic mt-3 text-center">
                 Recently Added → navigation trigger

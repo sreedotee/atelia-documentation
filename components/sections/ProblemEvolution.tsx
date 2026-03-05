@@ -89,7 +89,7 @@ export default function ProblemEvolution() {
 
           <div className="max-w-3xl mb-4">
             <img
-              src="/images/input-problem.svg"
+              src="/images/input-problem-fixed.svg"
               alt="The Input Problem diagram — flow showing input bottleneck through to generator output"
               className="w-full rounded-xl"
             />
