@@ -29,48 +29,6 @@ function ImagePlaceholder({
   );
 }
 
-const pricingTiers = [
-  {
-    name: "Free",
-    price: "₹0",
-    period: "",
-    features: [
-      "50 credits/day (~12 outfits)",
-      "Free AI model (standard quality)",
-      "Unlimited saves & collections",
-      "Basic try-on features",
-    ],
-    target: "Casual shoppers, try-before-buy",
-    highlight: false,
-  },
-  {
-    name: "Pro",
-    price: "₹999",
-    period: "/month",
-    features: [
-      "2,500 credits/month (~600 outfits)",
-      "Premium AI models (higher quality)",
-      "Priority processing (faster)",
-      "Multiple body models (3 avatars)",
-    ],
-    target: "Frequent shoppers, fashion enthusiasts",
-    highlight: true,
-  },
-  {
-    name: "Premier",
-    price: "₹2,999",
-    period: "/month",
-    features: [
-      "10,000 credits/month (~2,400 outfits)",
-      "Best AI models (photorealistic)",
-      "Instant processing",
-      "Unlimited avatars",
-      "API access (for influencers/stylists)",
-    ],
-    target: "Professional stylists, influencers",
-    highlight: false,
-  },
-];
 
 const revenueStreams = [
   {
@@ -230,76 +188,6 @@ export default function Monetization() {
           <p className="text-sm text-[#7D767A] italic mb-12">
             Freemium model with three tiers; annual discount saves ~17%
           </p>
-
-          {/* Pricing cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {pricingTiers.map((tier, i) => (
-              <motion.div
-                key={tier.name}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                className={`rounded-2xl p-6 ${
-                  tier.highlight
-                    ? "bg-[#3D2B4C] text-white"
-                    : "bg-[#FAF9FA] border border-[#E8E5E6]"
-                }`}
-              >
-                <p
-                  className={`font-clash text-sm md:text-base lg:text-lg font-medium mb-2 ${
-                    tier.highlight ? "text-white" : "text-[#1D1A1C]"
-                  }`}
-                >
-                  {tier.name}
-                </p>
-                <div className="flex items-baseline gap-1 mb-5">
-                  <span
-                    className={`font-clash text-3xl font-bold ${
-                      tier.highlight ? "text-white" : "text-[#1D1A1C]"
-                    }`}
-                  >
-                    {tier.price}
-                  </span>
-                  {tier.period && (
-                    <span
-                      className={`text-sm ${
-                        tier.highlight ? "text-purple-200" : "text-[#7D767A]"
-                      }`}
-                    >
-                      {tier.period}
-                    </span>
-                  )}
-                </div>
-                <ul className="space-y-2 mb-5">
-                  {tier.features.map((f) => (
-                    <li
-                      key={f}
-                      className={`flex items-start gap-2 text-sm leading-relaxed ${
-                        tier.highlight ? "text-white/85" : "text-[#5C5759]"
-                      }`}
-                    >
-                      <span
-                        className={`mt-0.5 shrink-0 ${
-                          tier.highlight ? "text-purple-300" : "text-[#3D2B4C]"
-                        }`}
-                      >
-                        •
-                      </span>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-                <p
-                  className={`text-xs italic ${
-                    tier.highlight ? "text-purple-200" : "text-[#7D767A]"
-                  }`}
-                >
-                  {tier.target}
-                </p>
-              </motion.div>
-            ))}
-          </div>
 
           {/* Pricing rationale */}
           <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6] max-w-2xl">
