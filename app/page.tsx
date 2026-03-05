@@ -96,7 +96,7 @@ export default function Home() {
       caption: '"Items used" section like recipe ingredients. Each item tappable for purchase.',
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
       icon: "❤️",
-      imageSrc: "/images/expandedoutfitdetails.svg",
+      imageSrc: "/images/ExpandedOutfitDetails.svg",
     },
     {
       title: "Item Detail",
