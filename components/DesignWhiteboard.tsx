@@ -6,6 +6,7 @@ import { decisions, decisionsByMode } from "@/data/decisions";
 import DecisionModal from "./DecisionModal";
 import SectionHeader from "./SectionHeader";
 import { stickyRotations } from "@/styles/animations";
+import EmojiImage from "./EmojiImage";
 
 interface DesignWhiteboardProps {
   mode: "mode1" | "mode2" | "mode3" | "system";
@@ -82,7 +83,7 @@ export default function DesignWhiteboard({
         >
           {/* Header */}
           <div className="flex items-center gap-3 mb-8">
-            <span className="text-2xl">🎨</span>
+            <EmojiImage name="palette" size={24} alt="palette" />
             <div>
               <h3 className="font-clash text-xl font-semibold text-[#1D1A1C]">
                 Design Decisions

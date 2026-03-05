@@ -3,10 +3,11 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 const columns = [
   {
-    icon: "👤",
+    icon: "person",
     title: "Consumer Value",
     points: [
       { title: "Real pain point", data: "30% of online fashion purchases returned" },
@@ -15,7 +16,7 @@ const columns = [
     ],
   },
   {
-    icon: "🏢",
+    icon: "office",
     title: "Retailer Value",
     points: [
       { title: "Returns cost", data: "$550B annually in fashion industry" },
@@ -24,7 +25,7 @@ const columns = [
     ],
   },
   {
-    icon: "📊",
+    icon: "bar-chart",
     title: "Market Gap",
     points: [
       { title: "User behavior", data: "Shop across multiple retailers, not loyal to one" },
@@ -58,7 +59,7 @@ export default function StrategicOpportunity() {
                 viewport={{ once: true }}
                 className="flex items-center gap-3"
               >
-                <span className="text-4xl">{col.icon}</span>
+                <EmojiImage name={col.icon} size={36} alt={col.title} />
                 <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C]">
                   {col.title}
                 </h3>
@@ -106,7 +107,7 @@ export default function StrategicOpportunity() {
               className="space-y-6"
             >
               <div className="flex items-center gap-3">
-                <span className="text-4xl">{col.icon}</span>
+                <EmojiImage name={col.icon} size={36} alt={col.title} />
                 <h3 className="font-clash text-xl font-medium text-[#1D1A1C]">
                   {col.title}
                 </h3>

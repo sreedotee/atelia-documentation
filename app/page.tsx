@@ -29,26 +29,26 @@ export default function Home() {
       title: "Home - Recently Added",
       caption: "Paste link always accessible at top. Visual grid shows recent saves with quick actions.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
-      icon: "🏠",
+      icon: "home",
       imageSrc: "/images/Recently Added.svg",
     },
     {
       title: "Paste Link Preview",
       caption: "Instant preview from URL metadata. Shows image, price, store, category.",
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
-      icon: "🔗",
+      icon: "link",
     },
     {
       title: "Save to Collection",
       caption: "Bottom sheet modal for quick save. Multiple collection selection supported.",
       bg: "linear-gradient(135deg, #4a3560 0%, #6b3fa0 100%)",
-      icon: "💾",
+      icon: "floppy-disk",
     },
     {
       title: "Collection Detail",
       caption: 'Items/Outfits tabs together. Organized by occasion (e.g., "Summer Vacation").',
       bg: "linear-gradient(135deg, #3D2B4C 0%, #7b4fb5 100%)",
-      icon: "🗂️",
+      icon: "card-index-dividers",
       imageSrc: "/images/Collection-Items.svg",
     },
   ];
@@ -58,7 +58,7 @@ export default function Home() {
       title: "Try-On Canvas",
       caption: "25/75 split layout. Category picker top, items grid bottom. See avatar + items simultaneously.",
       bg: "linear-gradient(135deg, #1a1520 0%, #3D2B4C 100%)",
-      icon: "✨",
+      icon: "sparkles",
       slideshow: [
         "/images/TryOnCanvas.svg",
         "/images/Bottoms Try On.svg",
@@ -71,20 +71,20 @@ export default function Home() {
       title: "Item Selection",
       caption: "Fashion logic enforced: one top, one bottom, multiple accessories. Clear selected state.",
       bg: "linear-gradient(135deg, #2a1e36 0%, #4a3560 100%)",
-      icon: "👗",
+      icon: "dress",
     },
     {
       title: "Generating...",
       caption: "Processing state with clear messaging. Loading animation builds anticipation.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #6b3fa0 100%)",
-      icon: "⚡",
+      icon: "lightning",
       imageSrc: "/images/OutfitHistory.svg",
     },
     {
       title: "Post-Generation Result",
       caption: "Save, Share, Regenerate options immediately available. Shows items used + total price.",
       bg: "linear-gradient(135deg, #4a3560 0%, #8b5fc0 100%)",
-      icon: "🎉",
+      icon: "party-popper",
       imageSrc: "/images/Post-Generation-Result.svg",
       scrollable: true,
     },
@@ -95,13 +95,14 @@ export default function Home() {
       title: "Try-On History",
       caption: "Timeline list shows chronological generation history. Saved vs unsaved clearly distinguished.",
       bg: "linear-gradient(135deg, #1a1520 0%, #2a1e36 100%)",
-      icon: "📋",
+      icon: "clipboard",
+      imageSrc: "/images/OutfitHistory.svg",
     },
     {
       title: "Outfit Detail (Saved)",
       caption: '"Items used" section like recipe ingredients. Each item tappable for purchase.',
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
-      icon: "❤️",
+      icon: "heart",
       imageSrc: "/images/ExpandedOutfitDetails.svg",
       scrollable: true,
     },
@@ -109,7 +110,7 @@ export default function Home() {
       title: "Item Detail",
       caption: "Shows collections it's in + outfits using this item. Demonstrates relationships.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
-      icon: "🔍",
+      icon: "magnifying-glass",
       imageSrc: "/images/ExpandedItemDetails.svg",
       scrollable: true,
     },
@@ -117,7 +118,7 @@ export default function Home() {
       title: "Collections Grid View",
       caption: "Visual browsing of curated outfits. 2-column grid optimized for scanning.",
       bg: "linear-gradient(135deg, #4a3560 0%, #6b3fa0 100%)",
-      icon: "🗃️",
+      icon: "card-file-box",
     },
   ];
 
@@ -162,7 +163,7 @@ export default function Home() {
         intro="The DURING mode is about playful experimentation. Users mix items from their collection to generate AI outfit visualizations."
         screens={mode2Screens}
         feature={{
-          icon: "✨",
+          icon: "sparkles",
           title: "On-Demand Model Setup",
           text: "Model creation happens when user first tries Try-On, not forced during signup. Reduces onboarding friction while maintaining feature quality.",
         }}

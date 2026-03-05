@@ -3,24 +3,25 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 // Drop your image/SVG in /public/icons/ and set iconSrc — the emoji placeholder is replaced automatically.
 const outcomeItems = [
   {
     iconSrc: "", // e.g. "/icons/universal-saving.svg"
-    placeholder: "📱",
+    placeholder: "mobile-phone",
     title: "Universal Saving",
     desc: "Paste links from any store to build collections",
   },
   {
     iconSrc: "", // e.g. "/icons/virtual-try-on.svg"
-    placeholder: "✨",
+    placeholder: "sparkles",
     title: "AI Virtual Try-On",
     desc: "See how items look on your body before buying",
   },
   {
     iconSrc: "", // e.g. "/icons/occasion-based.svg"
-    placeholder: "🗂️",
+    placeholder: "card-index-dividers",
     title: "Occasion-Based Organization",
     desc: "Collections for vacation, work, events—not item types",
   },
@@ -120,9 +121,7 @@ export default function Overview() {
                       className="w-12 h-12 object-contain flex-shrink-0"
                     />
                   ) : (
-                    <span className="w-12 h-12 flex-shrink-0 flex items-center justify-center text-3xl">
-                      {f.placeholder}
-                    </span>
+                    <EmojiImage name={f.placeholder} size={48} alt={f.title} className="w-12 h-12" />
                   )}
                   <div>
                     <p className="font-medium text-[#1D1A1C] text-base leading-tight">{f.title}</p>

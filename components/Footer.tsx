@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "./EmojiImage";
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -30,17 +31,17 @@ export default function Footer() {
             <h3 className="font-clash text-xl font-semibold mb-4">Let's Connect</h3>
             <div className="space-y-3">
               {[
-                { icon: "📧", label: "Email", href: "mailto:your@email.com" },
-                { icon: "💼", label: "LinkedIn", href: "#" },
-                { icon: "🐦", label: "Twitter", href: "#" },
-                { icon: "🏀", label: "Dribbble", href: "#" },
+                { icon: "email", label: "Email", href: "mailto:your@email.com" },
+                { icon: "briefcase", label: "LinkedIn", href: "#" },
+                { icon: "bird", label: "Twitter", href: "#" },
+                { icon: "basketball", label: "Dribbble", href: "#" },
               ].map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
                 >
-                  <span>{link.icon}</span>
+                  <EmojiImage name={link.icon} size={20} alt={link.label} />
                   <span>{link.label}</span>
                 </a>
               ))}
