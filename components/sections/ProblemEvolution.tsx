@@ -4,48 +4,6 @@ import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
 
-function ImagePlaceholder({
-  height,
-  description,
-  filename,
-}: {
-  height: number;
-  description: string;
-  filename: string;
-}) {
-  return (
-    <div
-      className="w-full rounded-xl border border-[#E8E5E6] bg-[#F7F5F8] flex flex-col items-center justify-center p-8 gap-2"
-      style={{ height }}
-    >
-      <p className="text-[10px] font-medium tracking-widest text-[#B0A5B8] uppercase">
-        Image Placeholder
-      </p>
-      <p className="text-sm text-[#C8C2CC] text-center max-w-md leading-relaxed">
-        {description}
-      </p>
-      <p className="text-[10px] font-mono text-[#D8D3DB] mt-1">
-        {filename}
-      </p>
-    </div>
-  );
-}
-
-const shoppingAppealing = [
-  "Complete control over experience",
-  "Direct revenue (not just affiliate)",
-  "Can optimize entire funnel for try-on",
-  "Reference: Myntra, Amazon Fashion",
-];
-
-const shoppingFailed = [
-  "Can't compete on inventory/selection",
-  "Can't compete on price or shipping",
-  "Massive operational complexity (payments, fulfillment)",
-  "Limits users to our catalog only",
-  "Wrong problem—users already know WHERE to shop",
-];
-
 const researchQuestions = [
   "Do people shop by occasion or item type?",
   "At what part of the shopping process does try-on add value?",
@@ -106,88 +64,6 @@ export default function ProblemEvolution() {
               Instead of manual upload, automatic link parsing became the solution. This reduced
               save time from ~60 seconds to ~5 seconds and aligned with existing user behavior
               (sharing links with friends).
-            </p>
-          </div>
-        </motion.div>
-
-        <div className="h-px bg-[#E8E5E6] mb-20" />
-
-        {/* ── SHOPPING PLATFORM VS UNIVERSAL TOOL ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
-            Shopping Platform vs Universal Tool
-          </h3>
-          <p className="text-[#5C5759] leading-relaxed mb-8 max-w-2xl">
-            Early explorations wrestled with a fundamental question: Should this be a shopping
-            platform with try-on built in (like Amazon with AR), or a universal tool that works
-            with any retailer?
-          </p>
-
-          <div className="max-w-4xl mb-4">
-            <ImagePlaceholder
-              height={420}
-              description="Shopping platform flow diagram — Shows: Input problem → weak link → Shopify site. Decision tree: buy outfit vs no. Cart icon with issues listed. Hand-drawn diagram style."
-              filename="/images/shopping-platform-approach.png"
-            />
-          </div>
-          <p className="text-sm text-[#7D767A] italic mb-10">
-            Version 1: In-app shopping platform approach (rejected)
-          </p>
-
-          {/* Two-column comparison */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mb-12">
-            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
-              <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
-                What Seemed Appealing
-              </p>
-              <ul className="space-y-2">
-                {shoppingAppealing.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
-                  >
-                    <span className="text-[#3D2B4C] mt-0.5 shrink-0">—</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-[#FAF9FA] rounded-xl p-6 border border-[#E8E5E6]">
-              <p className="text-xs font-medium text-[#7D767A] uppercase tracking-wider mb-4">
-                Why It Failed
-              </p>
-              <ul className="space-y-2">
-                {shoppingFailed.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-sm text-[#5C5759] leading-relaxed"
-                  >
-                    <span className="text-[#7D767A] mt-0.5 shrink-0">×</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Pivot box */}
-          <div className="border-2 border-[#1D1A1C] rounded-2xl p-8 max-w-2xl">
-            <p className="text-[10px] font-bold text-[#7D767A] uppercase tracking-[0.1em] mb-3">
-              The Pivot
-            </p>
-            <p className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] leading-snug mb-3">
-              Instead of being a retailer WITH try-on, be a try-on tool that works with ANY
-              retailer.
-            </p>
-            <p className="text-sm text-[#5C5759] leading-relaxed">
-              This single decision unlocked the paste-link approach and became the foundation of
-              the entire product.
             </p>
           </div>
         </motion.div>
