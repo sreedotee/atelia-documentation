@@ -30,49 +30,6 @@ function ImagePlaceholder({
 }
 
 
-const revenueStreams = [
-  {
-    title: "Affiliate Commissions",
-    description:
-      "When users purchase items through the app, earn 3–8% commission from retailers (Myntra, ASOS, Zara affiliate programs). Non-intrusive—users already intend to buy, we just facilitate the link.",
-    metric: "Potential: ₹50–200 per purchase, 15–20% of users buy within 7 days",
-  },
-  {
-    title: "B2B SaaS for Retailers",
-    description:
-      "License try-on technology to fashion e-commerce sites. Retailers get white-label try-on widget, reducing their return rates (30% → 20% = massive savings). Charge per integration + usage fees.",
-    metric: "Potential: ₹50,000–5,00,000/month per enterprise client",
-  },
-  {
-    title: "Premium Features (Future)",
-    description:
-      "Style recommendations, AI stylist chat, outfit scheduling, trend alerts. These are 'nice-to-haves' that power users pay for. Roll out after core product validated.",
-    metric: "Potential: ₹200–500/month add-on revenue per pro user",
-  },
-];
-
-const assumptions = [
-  {
-    question: "Will users pay for credits, or expect unlimited free?",
-    method:
-      "Test: A/B test free tier limits (25 vs 50 vs 100 credits/day). Measure conversion to paid, retention, and complaints.",
-  },
-  {
-    question: "Is ₹999/month acceptable for the Indian market?",
-    method:
-      "Test: Survey users on willingness to pay. Compare to Spotify (₹119), Netflix (₹199–799). Fashion tools may justify higher price if ROI is clear (saves returns, bad purchases).",
-  },
-  {
-    question: "Do users actually buy items they try on?",
-    method:
-      "Test: Track affiliate click-through and purchase rates. If <5% convert, affiliate revenue won't work. Need 15–20% to be meaningful.",
-  },
-  {
-    question: "Will retailers integrate or see this as competition?",
-    method:
-      "Test: Pitch to 3–5 mid-size retailers. Gauge interest in white-label vs API vs partnership. May need to prove consumer traction first.",
-  },
-];
 
 export default function Monetization() {
   return (
@@ -202,81 +159,6 @@ export default function Monetization() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E8E5E6] mb-20" />
-
-        {/* ── ADDITIONAL REVENUE STREAMS ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
-            Additional Revenue Streams
-          </h3>
-
-          <div className="max-w-2xl">
-            {revenueStreams.map((stream, i) => (
-              <div
-                key={stream.title}
-                className={`py-6 ${
-                  i < revenueStreams.length - 1
-                    ? "border-b border-[#E8E5E6]"
-                    : ""
-                }`}
-              >
-                <p className="font-clash text-sm md:text-base lg:text-lg font-medium text-[#1D1A1C] mb-2">
-                  {stream.title}
-                </p>
-                <p className="text-sm text-[#5C5759] leading-relaxed mb-2">
-                  {stream.description}
-                </p>
-                <p className="text-xs text-[#7D767A] italic">
-                  {stream.metric}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        <div className="h-px bg-[#E8E5E6] mb-20" />
-
-        {/* ── ASSUMPTIONS TO VALIDATE ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-4">
-            Assumptions to Validate
-          </h3>
-          <p className="text-[#5C5759] leading-relaxed mb-8 max-w-2xl">
-            The business model is directionally right, but these questions need real data before
-            committing resources.
-          </p>
-
-          <div className="max-w-2xl">
-            {assumptions.map((a, i) => (
-              <div
-                key={i}
-                className={`py-6 ${
-                  i < assumptions.length - 1
-                    ? "border-b border-[#E8E5E6]"
-                    : ""
-                }`}
-              >
-                <p className="text-[#1D1A1C] font-medium leading-relaxed mb-2">
-                  {a.question}
-                </p>
-                <p className="text-sm text-[#7D767A] leading-relaxed">
-                  {a.method}
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
