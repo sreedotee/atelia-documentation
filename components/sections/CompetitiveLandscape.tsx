@@ -35,14 +35,6 @@ const approaches = [
   },
 ];
 
-const tableData = [
-  { app: "ASOS See My Fit", tryon: "✓", save: "✓", organize: "—", multiStore: "—", downloads: "10M+", rating: "3.2★" },
-  { app: "Stylebook",        tryon: "—", save: "✓", organize: "✓", multiStore: "—", downloads: "500K+", rating: "4.6★" },
-  { app: "Combyne",          tryon: "2D only", save: "✓", organize: "Basic", multiStore: "✓", downloads: "5M+", rating: "4.1★" },
-  { app: "Drest",            tryon: "✓", save: "✓", organize: "✓", multiStore: "Designer only", downloads: "1M+", rating: "4.3★" },
-  { app: "Pinterest",        tryon: "—", save: "✓", organize: "✓", multiStore: "✓", downloads: "500M+", rating: "4.5★" },
-];
-
 
 export default function CompetitiveLandscape() {
   return (
@@ -123,70 +115,6 @@ export default function CompetitiveLandscape() {
           </div>
         </motion.div>
 
-        {/* Enhanced Comparison Table */}
-        <SectionHeader number="" title="Feature Comparison" />
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="overflow-x-auto mb-4"
-        >
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-[#1D1A1C]">
-                <th className="text-left py-4 pr-3 text-xs font-medium tracking-wider text-[#737373] uppercase">
-                  App
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Try-On
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Save
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Organize
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Multi-Store
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Downloads
-                </th>
-                <th className="py-4 px-3 text-xs font-medium tracking-wider text-[#737373] uppercase text-center">
-                  Rating
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {tableData.map((row) => (
-                <tr key={row.app} className="border-b border-[#E5E5E5]">
-                  <td className="py-5 pr-3 text-[15px] text-[#1D1A1C]">{row.app}</td>
-                  <td className={`py-5 px-3 text-center text-sm ${row.tryon === "—" ? "text-[#D4D4D4]" : "text-[#1D1A1C]"}`}>{row.tryon}</td>
-                  <td className={`py-5 px-3 text-center text-sm ${row.save === "—" ? "text-[#D4D4D4]" : "text-[#1D1A1C]"}`}>{row.save}</td>
-                  <td className={`py-5 px-3 text-center text-sm ${row.organize === "—" ? "text-[#D4D4D4]" : "text-[#1D1A1C]"}`}>{row.organize}</td>
-                  <td className={`py-5 px-3 text-center text-sm ${row.multiStore === "—" ? "text-[#D4D4D4]" : "text-[#737373]"}`}>{row.multiStore}</td>
-                  <td className="py-5 px-3 text-center text-sm text-[#737373]">{row.downloads}</td>
-                  <td className="py-5 px-3 text-center text-sm text-[#737373]">{row.rating}</td>
-                </tr>
-              ))}
-              {/* Atelia highlighted row */}
-              <tr className="border-t border-b border-[#1D1A1C] bg-[#FAFAFA]">
-                <td className="py-5 pr-3 font-medium text-[#1D1A1C]">Atelia</td>
-                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C]">✓</td>
-                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C]">✓</td>
-                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C]">✓</td>
-                <td className="py-5 px-3 text-center font-medium text-[#1D1A1C]">✓</td>
-                <td className="py-5 px-3 text-center text-sm text-[#737373]">—</td>
-                <td className="py-5 px-3 text-center text-sm text-[#737373]">—</td>
-              </tr>
-            </tbody>
-          </table>
-          <p className="text-center text-sm text-[#A3A3A3] mt-4 italic">
-            Atelia is the only solution combining all four core capabilities
-          </p>
-        </motion.div>
       </div>
     </section>
   );
