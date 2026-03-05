@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
+import EmojiImage from "../EmojiImage";
 import { fadeInUp } from "@/styles/animations";
 
 const chapters = [
@@ -111,7 +112,7 @@ export default function VideoAndPrototype() {
                 className="w-full aspect-video rounded-2xl bg-[#FAF9FA] border-2 border-dashed border-[#E8E5E6] flex items-center justify-center"
               >
                 <div className="text-center p-8">
-                  <span className="text-5xl mb-4 block">🎨</span>
+                  <EmojiImage name="palette" size={48} className="mb-4 mx-auto" />
                   <p className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-2">
                     Figma Prototype
                   </p>
