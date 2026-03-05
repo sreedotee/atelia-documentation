@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
 
@@ -12,6 +12,7 @@ interface Screen {
   icon: string;
   imageSrc?: string;
   scrollable?: boolean;
+  slideshow?: string[];
 }
 
 interface ModeDesignsProps {
@@ -31,6 +32,15 @@ function PhoneScreen({ screen }: { screen: Screen }) {
   const imgRef = useRef<HTMLImageElement>(null);
   const [scrollY, setScrollY] = useState(0);
   const [hovered, setHovered] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  useEffect(() => {
+    if (!screen.slideshow) return;
+    const interval = setInterval(() => {
+      setSlideIndex((i) => (i + 1) % screen.slideshow!.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [screen.slideshow]);
 
   const handleMouseEnter = () => {
     if (screen.scrollable && containerRef.current && imgRef.current) {
@@ -45,6 +55,8 @@ function PhoneScreen({ screen }: { screen: Screen }) {
     setHovered(false);
   };
 
+  const activeSrc = screen.slideshow ? screen.slideshow[slideIndex] : screen.imageSrc;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -58,15 +70,28 @@ function PhoneScreen({ screen }: { screen: Screen }) {
         <div
           ref={containerRef}
           className="w-full aspect-[393/852] overflow-hidden"
-          style={screen.imageSrc ? {} : { background: screen.bg }}
+          style={activeSrc ? {} : { background: screen.bg }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {screen.imageSrc ? (
+          {screen.slideshow ? (
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={activeSrc}
+                src={activeSrc}
+                alt={screen.title}
+                className="w-full h-full object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+          ) : activeSrc ? (
             screen.scrollable ? (
               <motion.img
                 ref={imgRef}
-                src={screen.imageSrc}
+                src={activeSrc}
                 alt={screen.title}
                 className="w-full h-auto block"
                 animate={{ y: hovered ? scrollY : 0 }}
@@ -74,7 +99,7 @@ function PhoneScreen({ screen }: { screen: Screen }) {
               />
             ) : (
               <img
-                src={screen.imageSrc}
+                src={activeSrc}
                 alt={screen.title}
                 className="w-full h-full object-cover"
               />

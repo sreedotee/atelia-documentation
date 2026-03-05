@@ -59,7 +59,13 @@ export default function Home() {
       caption: "25/75 split layout. Category picker top, items grid bottom. See avatar + items simultaneously.",
       bg: "linear-gradient(135deg, #1a1520 0%, #3D2B4C 100%)",
       icon: "✨",
-      imageSrc: "/images/TryOnCanvas.svg",
+      slideshow: [
+        "/images/TryOnCanvas.svg",
+        "/images/Bottoms Try On.svg",
+        "/images/Outerwear Try On.svg",
+        "/images/Footwear Try On.svg",
+        "/images/Accessories Try On.svg",
+      ],
     },
     {
       title: "Item Selection",
@@ -96,12 +102,14 @@ export default function Home() {
       caption: '"Items used" section like recipe ingredients. Each item tappable for purchase.',
       bg: "linear-gradient(135deg, #2a1e36 0%, #3D2B4C 100%)",
       icon: "❤️",
+      imageSrc: "/images/ExpandedOutfitDetails.svg",
     },
     {
       title: "Item Detail",
       caption: "Shows collections it's in + outfits using this item. Demonstrates relationships.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
       icon: "🔍",
+      imageSrc: "/images/ExpandedItemDetails.svg",
     },
     {
       title: "Collections Grid View",

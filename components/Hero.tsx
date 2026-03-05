@@ -170,6 +170,7 @@ export default function Hero() {
                 👗
               </div>
             </motion.div>
+            <p className="text-center mt-3 text-[10px] text-[#7D767A] tracking-wide">↗ Click to open Figma file</p>
           </motion.div>
         </div>
       </div>
