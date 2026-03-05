@@ -30,6 +30,7 @@ export default function Home() {
       caption: "Paste link always accessible at top. Visual grid shows recent saves with quick actions.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #5a3d6e 100%)",
       icon: "🏠",
+      imageSrc: "/images/Recently Added.svg",
     },
     {
       title: "Paste Link Preview",
@@ -48,6 +49,7 @@ export default function Home() {
       caption: 'Items/Outfits tabs together. Organized by occasion (e.g., "Summer Vacation").',
       bg: "linear-gradient(135deg, #3D2B4C 0%, #7b4fb5 100%)",
       icon: "🗂️",
+      imageSrc: "/images/Collection-Items.svg",
     },
   ];
 
@@ -57,6 +59,7 @@ export default function Home() {
       caption: "25/75 split layout. Category picker top, items grid bottom. See avatar + items simultaneously.",
       bg: "linear-gradient(135deg, #1a1520 0%, #3D2B4C 100%)",
       icon: "✨",
+      imageSrc: "/images/TryOnCanvas.svg",
     },
     {
       title: "Item Selection",
@@ -69,12 +72,15 @@ export default function Home() {
       caption: "Processing state with clear messaging. Loading animation builds anticipation.",
       bg: "linear-gradient(135deg, #3D2B4C 0%, #6b3fa0 100%)",
       icon: "⚡",
+      imageSrc: "/images/OutfitHistory.svg",
     },
     {
       title: "Post-Generation Result",
       caption: "Save, Share, Regenerate options immediately available. Shows items used + total price.",
       bg: "linear-gradient(135deg, #4a3560 0%, #8b5fc0 100%)",
       icon: "🎉",
+      imageSrc: "/images/Post-Generation-Result.svg",
+      scrollable: true,
     },
   ];
 
