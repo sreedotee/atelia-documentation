@@ -60,8 +60,8 @@ const findings = [
 
 function SavingLocationsChart({ data }: { data: { label: string; pct: number }[] }) {
   return (
-    <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-6 h-full">
-      <p className="text-xs font-medium tracking-wider text-[#737373] uppercase mb-5">
+    <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-6 h-full">
+      <p className="text-xs font-medium tracking-wider text-[#3D2B4C] uppercase mb-5">
         Where Users Save Items
       </p>
       <div className="space-y-3">
@@ -69,55 +69,53 @@ function SavingLocationsChart({ data }: { data: { label: string; pct: number }[]
           <div key={item.label}>
             <div className="flex justify-between items-center mb-1">
               <span className="text-sm text-[#1D1A1C]">{item.label}</span>
-              <span className="text-xs text-[#737373] font-medium">
-                {item.pct}%
-              </span>
+              <span className="text-xs text-[#7D767A] font-medium">{item.pct}%</span>
             </div>
-            <div className="h-2 bg-[#E5E5E5] rounded-full overflow-hidden">
+            <div className="h-2 bg-[#E8E5E6] rounded-full overflow-hidden">
               <div
-                className={`h-full rounded-full ${item.pct === 100 ? "bg-[#3D2B4C]" : "bg-[#D4D4D4]"}`}
+                className={`h-full rounded-full ${item.pct === 100 ? "bg-[#3D2B4C]" : "bg-[#B690CD]"}`}
                 style={{ width: `${item.pct}%` }}
               />
             </div>
           </div>
         ))}
       </div>
-      <p className="text-xs text-[#A3A3A3] mt-4">5 participants, multiple selections allowed</p>
+      <p className="text-xs text-[#7D767A] mt-4">5 participants, multiple selections allowed</p>
     </div>
   );
 }
 
 function CardSortChart() {
   return (
-    <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-6 mt-8">
-      <p className="text-xs font-medium tracking-wider text-[#737373] uppercase mb-6">
+    <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-6 mt-8">
+      <p className="text-xs font-medium tracking-wider text-[#3D2B4C] uppercase mb-6">
         Card Sorting Results
       </p>
       <div className="grid grid-cols-2 gap-6">
         {/* Type-based */}
-        <div className="border border-[#E5E5E5] p-5 opacity-50">
+        <div className="rounded-xl border border-[#E8E5E6] p-5 opacity-50">
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-5 rounded-full bg-[#E5E5E5] flex items-center justify-center text-xs text-[#737373]">✗</span>
-            <span className="text-sm font-medium text-[#737373]">Type-Based</span>
+            <span className="w-5 h-5 rounded-full bg-[#E8E5E6] flex items-center justify-center text-xs text-[#7D767A]">✗</span>
+            <span className="text-sm font-medium text-[#7D767A]">Type-Based</span>
           </div>
           <div className="space-y-2">
             {["Tops", "Bottoms", "Dresses"].map((cat) => (
-              <div key={cat} className="text-xs text-[#A3A3A3] px-3 py-2 bg-[#F5F5F5]">
+              <div key={cat} className="text-xs text-[#7D767A] px-3 py-2 rounded-lg bg-[#F5F3F4]">
                 {cat}
               </div>
             ))}
           </div>
-          <p className="text-xs text-[#A3A3A3] mt-4 font-medium">1/5 participants · 20%</p>
+          <p className="text-xs text-[#7D767A] mt-4 font-medium">1/5 participants · 20%</p>
         </div>
         {/* Occasion-based */}
-        <div className="border border-[#3D2B4C] p-5">
+        <div className="rounded-xl border border-[#3D2B4C] p-5">
           <div className="flex items-center gap-2 mb-4">
             <span className="w-5 h-5 rounded-full bg-[#3D2B4C] flex items-center justify-center text-xs text-white">✓</span>
             <span className="text-sm font-medium text-[#1D1A1C]">Occasion-Based</span>
           </div>
           <div className="space-y-2">
             {["Vacation", "Work", "Date Night"].map((cat) => (
-              <div key={cat} className="text-xs text-[#1D1A1C] px-3 py-2 bg-[#3D2B4C]/5">
+              <div key={cat} className="text-xs text-[#1D1A1C] px-3 py-2 rounded-lg bg-[#3D2B4C]/5">
                 {cat}
               </div>
             ))}
@@ -151,7 +149,7 @@ export default function UserResearch() {
             >
               {/* Badge + Title */}
               <div className="flex items-center gap-4 mb-6 flex-wrap">
-                <span className="text-xs font-medium px-3 py-1.5 bg-[#F5F5F5] text-[#737373] tracking-wider uppercase">
+                <span className="text-xs font-medium px-3 py-1.5 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C] tracking-wider uppercase">
                   {f.badge}
                 </span>
                 <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C]">
@@ -160,20 +158,20 @@ export default function UserResearch() {
               </div>
 
               <div className={`grid gap-8 ${f.chartData ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>
-                {/* Left: text + quote */}
+                {/* Left: text + quote + insight */}
                 <div>
                   <p className="text-[#5C5759] leading-relaxed mb-6">{f.text}</p>
 
-                  <div className="bg-[#FAFAFA] border-l-4 border-[#1D1A1C] p-6">
-                    <span className="text-[#E5E5E5] font-clash text-6xl leading-none block mb-1">"</span>
-                    <p className="text-[#1D1A1C] text-lg italic leading-relaxed -mt-4">
+                  {/* Quote */}
+                  <div className="border-l-4 border-[#3D2B4C]/30 pl-4 mb-4">
+                    <p className="text-[#1D1A1C] text-base italic leading-relaxed">
                       {f.quote}
                     </p>
-                    <p className="text-sm text-[#737373] mt-4">{f.attribution}</p>
+                    <p className="text-sm text-[#7D767A] mt-2">{f.attribution}</p>
                   </div>
 
                   {/* Insight box */}
-                  <div className="bg-white p-5 border border-[#E8E5E6] mt-4">
+                  <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-5">
                     <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wider mb-2">
                       {f.insightLabel}
                     </p>
