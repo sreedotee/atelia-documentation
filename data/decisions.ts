@@ -1346,11 +1346,7 @@ export const decisionsByMode = {
     "three-modes-framework",
     "items-outfits-relationship",
     "language-definition",
-    "typography-pairing",
-    "color-evolution",
     "navigation-hierarchy",
-    "non-interactive-chips",
-    "grid-system",
     "minimal-data",
   ],
 };
