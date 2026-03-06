@@ -1323,13 +1323,10 @@ export const decisionsByMode = {
   mode1: [
     "collections-structure",
     "paste-link",
-    "paste-link-microinteractions",
     "save-flow",
-    "bottom-sheets",
     "recently-added",
-    "card-sizing",
-    "item-detail-actions",
     "camera-upload-scope",
+    "bottom-sheets",
   ],
   mode2: [
     "canvas-split",
