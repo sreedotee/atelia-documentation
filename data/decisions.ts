@@ -1337,11 +1337,8 @@ export const decisionsByMode = {
   ],
   mode3: [
     "history-list-grid",
-    "timeline-layout",
-    "outfit-detail",
     "outfit-detail-recipe",
     "items-used",
-    "saved-unsaved",
     "meh-outfits-history",
     "item-detail-outfits",
   ],
