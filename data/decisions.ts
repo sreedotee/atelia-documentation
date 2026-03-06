@@ -1331,12 +1331,9 @@ export const decisionsByMode = {
   mode2: [
     "canvas-split",
     "canvas-clean-space",
-    "category-picker",
     "fashion-logic",
     "regenerate-flow",
     "model-setup",
-    "photo-capture",
-    "processing-states",
   ],
   mode3: [
     "history-list-grid",
