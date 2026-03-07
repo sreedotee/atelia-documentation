@@ -45,7 +45,7 @@ const modes = [
 
 export default function ThreeModes() {
   return (
-    <section id="framework" className="py-28 bg-[#FAF9FA]">
+    <section id="framework" className="py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6">
         <SectionHeader number="04" title="Three Behavioral Modes" />
 
