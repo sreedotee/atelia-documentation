@@ -44,7 +44,7 @@ const categories = [
           "Model creation happens on-demand when users first attempt Try-On, with clear messaging explaining how photos are processed and stored.",
       },
       {
-        title: "AI try-on results can feel uncertain.",
+        title: "Outfit visualization results can feel uncertain.",
         body: "Users may doubt whether generated outfits accurately represent how clothes will look in real life.",
         implication:
           "Set clear expectations: try-on previews show styling possibilities rather than guaranteed fit.",

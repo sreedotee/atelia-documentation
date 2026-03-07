@@ -142,7 +142,7 @@ export default function Home() {
         sectionNumber="06"
         modeTitle="Mode 1: BEFORE"
         subtitle="Collecting & Organizing"
-        intro="The BEFORE mode focuses on quick saving and flexible organization. Users can paste links from any store and organize items by occasion."
+        intro="The BEFORE mode focuses on quickly collecting items users discover while shopping. Saved items become the building blocks for generating outfits later in the Try-On canvas."
         screens={mode1Screens}
         flowSteps={["See item online", "Copy link", "Open Atelia", "Paste link", "Preview", "Save to collection"]}
       />

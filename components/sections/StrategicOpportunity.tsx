@@ -30,7 +30,7 @@ const columns = [
     points: [
       { title: "User behavior", data: "Shop across multiple retailers, not loyal to one" },
       { title: "No universal tool", data: "All existing solutions are single-brand" },
-      { title: "Technology ready", data: "AI mature enough for realistic try-on" },
+      { title: "Technology ready", data: "AI now capable of realistic outfit visualization" },
     ],
   },
 ];
@@ -42,8 +42,8 @@ export default function StrategicOpportunity() {
         <SectionHeader number="" title="Strategic Opportunity" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
-          Of the three approaches, the shopping context offered the strongest opportunity for
-          virtual try-on technology.
+          Of the three approaches, the shopping decision moment offered the strongest opportunity for
+          outfit visualization technology.
         </motion.p>
 
         {/* Desktop layout: row-aligned grid with continuous vertical lines */}

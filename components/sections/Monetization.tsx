@@ -57,7 +57,7 @@ export default function Monetization() {
             Credit-Based Freemium Model
           </h3>
           <p className="text-[#5C5759] leading-relaxed mb-4 max-w-2xl">
-            Users spend credits to generate AI try-on outfits. Each generation costs credits
+            Users spend credits to generate outfit visualizations. Each generation costs credits
             depending on outfit complexity.
           </p>
 

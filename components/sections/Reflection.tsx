@@ -9,7 +9,7 @@ const learnings = [
   {
     number: "1",
     title: "Strategic positioning matters more than features",
-    text: "Starting with the technology (AI try-on) forced me to ask where it creates value, not just how to implement it. This strategic framing shaped the entire product direction.",
+    text: "Starting with the technology (outfit visualization) forced me to ask where it creates value, not just how to implement it. This strategic framing shaped the entire product direction.",
   },
   {
     number: "2",

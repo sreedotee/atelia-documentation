@@ -158,7 +158,7 @@ export default function Iterations() {
             <div>
               <BlockLabel>The Approach</BlockLabel>
               <p className="text-[#5C5759] leading-relaxed text-sm">
-                Build a complete shopping platform with AI try-on integrated. Users would browse
+                Build a complete shopping platform with outfit visualization integrated. Users would browse
                 products, try them on, then purchase in-app. Like Amazon Fashion or Myntra, but
                 with better visualization.
               </p>
