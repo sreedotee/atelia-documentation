@@ -53,33 +53,30 @@ const improvements = [
 
 const nextSteps = [
   {
-    phase: "Phase 1: Validation",
+    phase: "Phase 1 — Validation",
     title: "Quantitative Testing",
     tasks: [
-      "Track save rates and generation frequency",
-      "Measure purchase correlation (did try-on increase conversion?)",
-      "A/B test: with try-on vs. without",
-      "Measure return reduction for users who tried on",
+      "Track try-on usage and item save rates",
+      "A/B test shopping flows with vs. without try-on",
+      "Measure return rates for purchases made after try-on",
     ],
   },
   {
-    phase: "Phase 2: Expansion",
+    phase: "Phase 2 — Expansion",
     title: "Feature Development",
     tasks: [
-      "Multiple avatars (family/friends feature)",
-      "Social validation (share outfits for feedback)",
+      "Multiple avatars (family or friends)",
       "Style recommendations based on try-on history",
-      "Outfit scheduling (power user feature)",
+      "Social sharing for outfit feedback",
     ],
   },
   {
-    phase: "Phase 3: Business",
+    phase: "Phase 3 — Business",
     title: "Monetization & Partnerships",
     tasks: [
-      "Retailer partnerships (affiliate links)",
-      "B2B tool for retailers (reduce returns, increase sales)",
-      "Premium tier (unlimited collections, advanced try-on)",
-      "API for third-party integrations",
+      "Retail affiliate partnerships",
+      "White-label try-on tools for fashion retailers",
+      "Premium tier with higher-quality AI models",
     ],
   },
 ];
