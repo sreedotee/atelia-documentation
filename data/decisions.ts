@@ -1054,7 +1054,7 @@ export const decisions: Record<string, Decision> = {
         letter: "B",
         text: "Name + email only",
         pros: "Minimal friction",
-        cons: "Not enough for AI try-on",
+        cons: "Not enough for outfit visualization",
         chosen: false,
       },
       {

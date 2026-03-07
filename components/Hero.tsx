@@ -78,7 +78,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="font-sans text-[17px] lg:text-[20px] text-[#7D767A] leading-relaxed mb-10 max-w-xl line-clamp-3"
             >
-              Atelia combines universal item saving with AI virtual try-on, helping online shoppers visualize outfits from any store on their body before buying.
+              Shoppers browse across many stores but can't visualize how clothes will look on them. Atelia lets them save items from any store and preview outfits on their body before buying.
             </motion.p>
 
             <motion.div

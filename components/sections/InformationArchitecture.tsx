@@ -27,7 +27,7 @@ function TreeNode({ label, primary }: TreeNodeProps) {
 
 export default function InformationArchitecture() {
   const principles = [
-    "Saved = superset (all items/outfits)",
+    "Saved = universal library of items and outfit visualizations used for shopping decisions",
     "Collections = subsets (organized by occasion)",
     "Both items AND outfits can exist in collections",
     "Each tab maps to a behavioral mode",

@@ -7,7 +7,7 @@ import { fadeInUp } from "@/styles/animations";
 const terms = [
   {
     term: "Item",
-    def: "Individual clothing piece from any store",
+    def: "Individual clothing piece saved from any retailer and used to generate outfits",
     details: [
       { label: "Source", value: "Paste link, upload photo, camera" },
       { label: "Lives in", value: "Collections, Saved Items" },
@@ -16,7 +16,7 @@ const terms = [
   },
   {
     term: "Outfit",
-    def: "AI-generated combination of items",
+    def: "AI-generated outfit visualization created from saved items",
     details: [
       { label: "Source", value: "Try-On canvas generation" },
       { label: "Lives in", value: "Collections, History" },
@@ -29,7 +29,7 @@ const terms = [
     details: [
       { label: "Contains", value: "Both items AND outfits" },
       { label: "Example", value: '"Summer Vacation," "Date Night," "Work"' },
-      { label: "Why", value: "Users organize by meaning, not object type" },
+      { label: "Why", value: "Users organize items by context (vacation, work, events) so they can experiment with outfits for those situations" },
     ],
   },
   {
@@ -50,8 +50,7 @@ export default function DesignLanguage() {
         <SectionHeader number="05" title="Design Language" />
 
         <motion.p {...fadeInUp} className="text-lg text-[#5C5759] leading-relaxed mb-12 max-w-2xl">
-          To create clarity throughout the app, I defined core concepts that would guide all design
-          decisions.
+          To support outfit visualization across items from many stores, I defined four core objects that structure how content moves through the app.
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
