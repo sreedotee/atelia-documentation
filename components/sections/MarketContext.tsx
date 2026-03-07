@@ -40,12 +40,12 @@ export default function MarketContext() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[#FAFAFA] border border-[#E5E5E5] p-8"
+              className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-8"
             >
               <p className="font-clash text-5xl font-semibold text-[#1D1A1C] leading-none">
                 {s.number}
               </p>
-              <p className="text-sm text-[#737373] mt-4 leading-relaxed">
+              <p className="text-sm text-[#7D767A] mt-4 leading-relaxed">
                 {s.label}
               </p>
             </motion.div>

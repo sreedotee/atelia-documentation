@@ -56,8 +56,8 @@ export default function Sidebar() {
         top: 0,
         width: 240,
         height: "100vh",
-        background: "#FAFAFA",
-        borderRight: "1px solid #E5E5E5",
+        background: "#FAF9FA",
+        borderRight: "1px solid #E8E5E6",
         padding: "60px 40px",
         zIndex: 100,
         display: "flex",
@@ -72,7 +72,7 @@ export default function Sidebar() {
           top: 0,
           width: 2,
           height: "100vh",
-          background: "#E5E5E5",
+          background: "#E8E5E6",
         }}
       >
         <div
@@ -102,7 +102,7 @@ export default function Sidebar() {
           <div
             style={{
               fontSize: 11,
-              color: "#737373",
+              color: "#7D767A",
               marginTop: 4,
               letterSpacing: "0.3px",
               fontFamily: "var(--font-dm-sans)",

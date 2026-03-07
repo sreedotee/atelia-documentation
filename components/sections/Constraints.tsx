@@ -9,34 +9,28 @@ const categories = [
     label: "Technical",
     items: [
       {
-        title: "AI quality depends on input photos.",
-        body: "If users upload blurry or poorly lit photos, generated outfits will be poor quality. Better models can't fix bad inputs.",
+        title: "AI output quality depends on input photos.",
+        body: "If users upload blurry or poorly lit photos, generated outfits will degrade significantly. Better models cannot compensate for poor inputs.",
         implication:
-          "Provide clear photo guidelines during model setup with examples of good vs bad lighting, angles, and poses.",
+          "Model setup includes clear photo guidance with examples of good vs bad lighting, angles, and poses.",
       },
       {
         title: "Generation latency (4–7 seconds).",
-        body: "AI processing takes time. Instant results aren't possible without expensive infrastructure.",
+        body: "AI processing takes time, and instant results would require significantly more expensive infrastructure.",
         implication:
-          "Loading states are designed to feel intentional, with progress indicators and anticipatory messaging (\u201cGenerating your look\u2026\u201d).",
+          "Loading states communicate progress and anticipation with descriptive messaging (\u201cGenerating your look\u2026\u201d) rather than appearing broken.",
       },
       {
-        title: "Link parsing isn't always reliable.",
-        body: "Some retailers block scraping or expose poor metadata.",
+        title: "Retailer data is unreliable.",
+        body: "Some retailers block scraping or expose inconsistent metadata, which can cause link parsing to fail.",
         implication:
           "Provide a manual upload fallback and clear error messaging when parsing fails.",
       },
       {
-        title: "Retailer inventory changes constantly.",
-        body: "Items saved today may go out of stock later.",
+        title: "Retail inventory constantly changes.",
+        body: "Items saved today may go out of stock or links may break later.",
         implication:
-          "Cache item images and details locally and show \u201cmay no longer be available\u201d when links break.",
-      },
-      {
-        title: "No direct in-app purchasing.",
-        body: "Handling payments, fulfillment, and support would create unnecessary operational complexity.",
-        implication:
-          "Deep-link to retailer sites for purchase and position Atelia as a decision tool rather than a shopping platform.",
+          "Cache item images and details locally and mark older items as \u201cmay no longer be available\u201d.",
       },
     ],
   },
@@ -45,33 +39,15 @@ const categories = [
     items: [
       {
         title: "Privacy concerns around body photos.",
-        body: "Creating a model requires multiple photos, which many users may hesitate to upload.",
+        body: "Creating a personal AI model requires multiple photos, which many users may hesitate to upload.",
         implication:
-          "Model creation happens on demand, with clear messaging about how photos are processed and stored.",
+          "Model creation happens on-demand when users first attempt Try-On, with clear messaging explaining how photos are processed and stored.",
       },
       {
-        title: "Paste-link saving is unfamiliar behavior.",
-        body: "Users must learn a new flow: copy link → open app → paste → save.",
+        title: "AI try-on results can feel uncertain.",
+        body: "Users may doubt whether generated outfits accurately represent how clothes will look in real life.",
         implication:
-          "Onboarding demonstrates the flow with tooltips and a short example video.",
-      },
-      {
-        title: "Skepticism about AI try-on accuracy.",
-        body: "Users may doubt whether generated outfits reflect reality.",
-        implication:
-          "Set expectations clearly: previews show styling possibilities, not guaranteed fit.",
-      },
-      {
-        title: "Abuse and spam risks.",
-        body: "Unlimited generation could lead to automated abuse.",
-        implication:
-          "Credit limits and rate-limiting reduce spam while keeping the free tier usable.",
-      },
-      {
-        title: "AI generation can fail.",
-        body: "Model errors or incompatible inputs occasionally occur.",
-        implication:
-          "Failed generations never charge credits and provide clear retry messaging.",
+          "Set clear expectations: try-on previews show styling possibilities rather than guaranteed fit.",
       },
     ],
   },
@@ -79,28 +55,16 @@ const categories = [
     label: "Business",
     items: [
       {
-        title: "Retailer relationships matter.",
-        body: "Some brands may view third-party tools as competition.",
+        title: "AI generation has real infrastructure costs.",
+        body: "Unlimited generations would make the product financially unsustainable.",
         implication:
-          "Position Atelia as a conversion tool that reduces returns and increases purchase confidence.",
+          "Introduce a credit-based system that balances user exploration with infrastructure cost.",
       },
       {
-        title: "Success metrics aren't obvious initially.",
-        body: "It's unclear whether success means retention, purchases, or try-on usage.",
+        title: "Atelia is a decision tool, not a retailer.",
+        body: "Handling payments, fulfillment, and customer support would introduce major operational complexity.",
         implication:
-          "Instrument key behaviors early and optimize based on real usage patterns.",
-      },
-      {
-        title: "Monetization must balance growth and cost.",
-        body: "AI generation has real infrastructure costs.",
-        implication:
-          "Start with conservative credit limits and iterate based on conversion and retention data.",
-      },
-      {
-        title: "Customer support must scale efficiently.",
-        body: "AI products often generate questions around quality, privacy, and credits.",
-        implication:
-          "Anticipate common issues through in-product guidance, FAQs, and self-service help.",
+          "Deep-link users to retailer websites for purchase instead of building in-app checkout.",
       },
     ],
   },

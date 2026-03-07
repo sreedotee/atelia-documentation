@@ -81,13 +81,13 @@ function SUSGauge({ score }: { score: number }) {
   const grade = getGrade(score);
 
   return (
-    <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-8 max-w-lg">
+    <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-8 max-w-lg">
       <div className="flex items-end gap-6 mb-6">
         <div>
           <p className="font-clash text-7xl font-bold text-[#1D1A1C] leading-none">
             {score}
           </p>
-          <p className="text-sm text-[#737373] mt-1">out of 100</p>
+          <p className="text-sm text-[#7D767A] mt-1">out of 100</p>
         </div>
         <div className="pb-2">
           <span className={`font-clash text-lg md:text-xl lg:text-2xl font-medium ${grade.color}`}>
@@ -98,7 +98,7 @@ function SUSGauge({ score }: { score: number }) {
       </div>
 
       {/* Scale bar */}
-      <div className="relative h-4 bg-[#E5E5E5] rounded-full overflow-hidden mb-3">
+      <div className="relative h-4 bg-[#E8E5E6] rounded-full overflow-hidden mb-3">
         <div className="absolute inset-0 flex">
           <div className="w-[50%] bg-[#D9A0B8]" />
           <div className="w-[20%] bg-[#D4B880]" />
@@ -110,7 +110,7 @@ function SUSGauge({ score }: { score: number }) {
           style={{ left: `${pct}%` }}
         />
       </div>
-      <div className="flex justify-between text-xs text-[#A3A3A3]">
+      <div className="flex justify-between text-xs text-[#7D767A]">
         <span>0 Poor</span>
         <span>51 OK</span>
         <span>71 Good</span>
@@ -146,7 +146,7 @@ export default function Validation() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="bg-white border border-[#E8E5E6] p-8 text-center"
+              className="rounded-xl bg-white border border-[#E8E5E6] p-8 text-center"
             >
               <span className="flex justify-center mb-4">
                 {stat.icon ? <EmojiImage name={stat.icon} size={32} /> : <span className="text-3xl">{stat.symbol}</span>}
@@ -154,8 +154,8 @@ export default function Validation() {
               <p className="font-clash text-4xl font-bold text-[#1D1A1C] leading-none mb-3">
                 {stat.value}
               </p>
-              <p className="text-sm text-[#737373]">{stat.label}</p>
-              <p className="text-xs text-[#A3A3A3] mt-2">{stat.detail}</p>
+              <p className="text-sm text-[#7D767A]">{stat.label}</p>
+              <p className="text-xs text-[#7D767A] mt-2">{stat.detail}</p>
             </div>
           ))}
         </motion.div>
@@ -173,7 +173,7 @@ export default function Validation() {
           </h3>
 
           {/* Funnel chart (inline) */}
-          <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-8 mb-8">
+          <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-8 mb-8">
             <div className="space-y-6">
               {tasks.map((task) => (
                 <div key={task.name}>
@@ -183,7 +183,7 @@ export default function Validation() {
                       {task.success}
                     </span>
                   </div>
-                  <div className="h-8 bg-[#E5E5E5] rounded-sm overflow-hidden">
+                  <div className="h-8 bg-[#E8E5E6] rounded-sm overflow-hidden">
                     <div
                       className={`h-full rounded-sm flex items-center px-3 ${task.warning ? "bg-[#C8984A]" : "bg-[#3D2B4C]"}`}
                       style={{ width: `${task.pct}%` }}
@@ -191,7 +191,7 @@ export default function Validation() {
                       <span className="text-xs font-medium text-white">{task.pct}%</span>
                     </div>
                   </div>
-                  <p className="text-xs text-[#737373] mt-1.5">
+                  <p className="text-xs text-[#7D767A] mt-1.5">
                     Avg time: {task.time} · Difficulty: {task.difficulty}
                     {task.note && ` · ⚠ ${task.note}`}
                   </p>
@@ -201,7 +201,7 @@ export default function Validation() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E5E5E5] mb-16" />
+        <div className="h-px bg-[#E8E5E6] mb-16" />
 
         {/* SUS Score */}
         <motion.div
@@ -220,7 +220,7 @@ export default function Validation() {
           <SUSGauge score={82} />
         </motion.div>
 
-        <div className="h-px bg-[#E5E5E5] mb-16" />
+        <div className="h-px bg-[#E8E5E6] mb-16" />
 
         {/* Validated */}
         <motion.div
@@ -233,7 +233,7 @@ export default function Validation() {
           <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#1D1A1C] mb-6">
             What Was Validated
           </h3>
-          <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-6">
+          <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-6">
             <div className="space-y-4">
               {validated.map((v) => (
                 <div key={v.title} className="flex items-start gap-3">
@@ -248,7 +248,7 @@ export default function Validation() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E5E5E5] mb-16" />
+        <div className="h-px bg-[#E8E5E6] mb-16" />
 
         {/* Issues Found & Resolved */}
         <motion.div
@@ -266,7 +266,7 @@ export default function Validation() {
             {issues.map((issue) => (
               <div key={issue.title}>
                 <div className="mb-5">
-                  <span className="text-xs font-medium px-3 py-1.5 bg-[#F5F5F5] text-[#1D1A1C] tracking-wider uppercase">
+                  <span className="text-xs font-medium px-3 py-1.5 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C] tracking-wider uppercase">
                     {issue.priority}
                   </span>
                   <h4 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mt-4">
@@ -278,8 +278,8 @@ export default function Validation() {
                   {issue.description}
                 </p>
 
-                <div className="bg-[#FAFAFA] border border-[#E5E5E5] p-5 max-w-2xl">
-                  <p className="text-xs font-medium text-[#A3A3A3] uppercase tracking-wider mb-2">
+                <div className="rounded-xl bg-[#FAF9FA] border border-[#E8E5E6] p-5 max-w-2xl">
+                  <p className="text-xs font-medium text-[#3D2B4C] uppercase tracking-wider mb-2">
                     Fix Implemented
                   </p>
                   <p className="text-[#1D1A1C] leading-relaxed text-sm">
@@ -291,7 +291,7 @@ export default function Validation() {
           </div>
         </motion.div>
 
-        <div className="h-px bg-[#E5E5E5] mb-16" />
+        <div className="h-px bg-[#E8E5E6] mb-16" />
 
         {/* Participant Quotes */}
         <motion.div

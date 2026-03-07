@@ -31,7 +31,7 @@ const metricColumns = [
 
 export default function ImpactMetrics() {
   return (
-    <section id="impact" style={{ padding: "160px 80px", background: "#FAFAFA" }}>
+    <section id="impact" style={{ padding: "160px 80px", background: "#FAF9FA" }}>
       {/* Section label */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function ImpactMetrics() {
         style={{
           fontSize: 11,
           letterSpacing: "1.5px",
-          color: "#A3A3A3",
+          color: "#7D767A",
           fontWeight: 500,
           textTransform: "uppercase",
           marginBottom: 24,
@@ -103,7 +103,7 @@ export default function ImpactMetrics() {
             <p
               style={{
                 fontSize: 11,
-                color: "#A3A3A3",
+                color: "#7D767A",
                 letterSpacing: "1px",
                 textTransform: "uppercase",
                 fontWeight: 500,
@@ -118,7 +118,7 @@ export default function ImpactMetrics() {
                   <p style={{ fontSize: 15, fontWeight: 500, color: "#000", marginBottom: 6 }}>
                     {metric.name}
                   </p>
-                  <p style={{ fontSize: 14, color: "#737373" }}>{metric.target}</p>
+                  <p style={{ fontSize: 14, color: "#7D767A" }}>{metric.target}</p>
                 </div>
               ))}
             </div>
