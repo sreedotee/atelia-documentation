@@ -137,6 +137,7 @@ export default function Home() {
       <ThreeModes />
       <DesignLanguage />
 
+      <div id="designs" />
       <ModeDesigns
         id="mode1-designs"
         sectionNumber="06"
@@ -146,13 +147,14 @@ export default function Home() {
         screens={mode1Screens}
         flowSteps={["See item online", "Copy link", "Open Atelia", "Paste link", "Preview", "Save to collection"]}
       />
+      <div id="decisions" />
       <DesignWhiteboard
         mode="mode1"
         sectionNumber=""
         title="Design Decisions"
         subtitle="Mode 1: BEFORE"
         description="9 key choices that shaped the collecting and organizing experience. Click any sticky note to explore the rationale, options considered, and impact of each decision."
-        bg="bg-white"
+        bg="bg-[#FAF9FA]"
       />
 
       <ModeDesigns

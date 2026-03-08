@@ -14,6 +14,9 @@ const approaches = [
     userNeed: "Access to inaccessible fashion",
     gap: "Not solving purchase problems",
     apps: ["Drest", "DressX"],
+    // Drop your illustration at /public/images/competitive/01.png
+    illustrationSrc: "/images/competitive/01.png",
+    emoji: "dress",
   },
   {
     number: "02",
@@ -23,6 +26,8 @@ const approaches = [
     userNeed: "Plan outfits in advance",
     gap: "Niche audience, power users only",
     apps: ["Stylebook", "Smart Closet"],
+    illustrationSrc: "/images/competitive/02.png",
+    emoji: "high-heel",
   },
   {
     number: "03",
@@ -32,9 +37,17 @@ const approaches = [
     userNeed: "Reduce purchase uncertainty",
     gap: "Single-store only, not universal",
     apps: ["ASOS See My Fit", "Zara AR"],
+    illustrationSrc: "/images/competitive/03.png",
+    emoji: "handbag",
   },
 ];
 
+const rows = [
+  { key: "useCase", label: "Use Case" },
+  { key: "example", label: "Example" },
+  { key: "userNeed", label: "User Need" },
+  { key: "gap", label: "Gap" },
+] as const;
 
 export default function CompetitiveLandscape() {
   return (
@@ -46,55 +59,79 @@ export default function CompetitiveLandscape() {
           I analyzed 5 existing virtual try-on and fashion organization apps to identify market
           gaps and opportunities.
         </motion.p>
+      </div>
 
-        {/* Approaches */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {approaches.map((a, i) => (
-            <motion.div
-              key={a.number}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-[#FAF9FA] border border-[#E8E5E6] rounded-2xl p-7 hover:shadow-lg transition-shadow"
-            >
-              <p className="font-clash text-6xl font-bold text-[#3D2B4C]/10 mb-2">
-                {a.number}
-              </p>
-              <h3 className="font-clash text-base md:text-lg lg:text-xl font-medium text-[#1D1A1C] mb-5">
-                {a.title}
-              </h3>
+      {/* Cards — slightly wider than the 1200px content container */}
+      <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+        {approaches.map((a, i) => (
+          <motion.div
+            key={a.number}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1, duration: 0.5 }}
+            viewport={{ once: true }}
+            className="bg-white border border-[#E8E5E6] rounded-2xl p-7 flex overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            {/* Left: content */}
+            <div className="flex-1 min-w-0 flex flex-col">
+              {/* Number + title */}
+              <div className="flex items-start gap-3 mb-6">
+                <span className="font-clash text-[64px] font-bold text-[#3D2B4C]/10 leading-none flex-shrink-0">
+                  {a.number}
+                </span>
+                <h3 className="font-clash text-[17px] font-semibold text-[#1D1A1C] leading-tight mt-2.5">
+                  {a.title}
+                </h3>
+              </div>
 
-              <div className="space-y-3 mb-5">
-                {[
-                  { label: "Use case", value: a.useCase },
-                  { label: "Example", value: a.example },
-                  { label: "User need", value: a.userNeed },
-                  { label: "Gap", value: a.gap },
-                ].map((row) => (
-                  <div key={row.label}>
-                    <p className="text-xs text-[#7D767A] uppercase tracking-wide mb-0.5">
+              {/* Label/value rows */}
+              <div className="space-y-3 mb-5 flex-1">
+                {rows.map((row) => (
+                  <div key={row.key}>
+                    <p className="text-[10px] text-[#9C9599] uppercase tracking-widest mb-0.5 font-medium">
                       {row.label}
                     </p>
-                    <p className="text-sm text-[#1D1A1C]">{row.value}</p>
+                    <p className="text-[13px] text-[#1D1A1C] leading-snug">{a[row.key]}</p>
                   </div>
                 ))}
               </div>
 
-              <div className="flex flex-wrap gap-2">
+              {/* App tags */}
+              <div className="flex flex-wrap gap-2 mt-auto">
                 {a.apps.map((app) => (
                   <span
                     key={app}
-                    className="text-xs px-2.5 py-1 rounded-full bg-[#3D2B4C]/10 text-[#3D2B4C]"
+                    className="text-[11px] px-3 py-1 rounded-full bg-[#F0ECF4] text-[#5C4A6E] font-medium"
                   >
                     {app}
                   </span>
                 ))}
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
 
+            {/* Right: custom illustration (falls back to emoji until uploaded) */}
+            <div className="flex-shrink-0 w-36 flex items-center justify-center pl-2">
+              <img
+                src={a.illustrationSrc}
+                alt={a.title}
+                className="w-full h-auto object-contain max-h-52"
+                onError={(e) => {
+                  // Swap to emoji fallback if illustration isn't uploaded yet
+                  const target = e.currentTarget;
+                  target.style.display = "none";
+                  const fallback = target.nextElementSibling as HTMLElement | null;
+                  if (fallback) fallback.style.display = "block";
+                }}
+              />
+              <span style={{ display: "none" }}>
+                <EmojiImage name={a.emoji} size={100} alt={a.title} />
+              </span>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-6">
         {/* Gap insight */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -114,7 +151,6 @@ export default function CompetitiveLandscape() {
             </p>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

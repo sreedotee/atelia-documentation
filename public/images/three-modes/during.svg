@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="176" viewBox="0 0 480 176">
+  <rect width="480" height="176" fill="#EAF0EB"/>
+  <rect x="40" y="44" width="72" height="88" rx="8" fill="#8AB490" opacity="0.45"/>
+  <rect x="128" y="52" width="88" height="72" rx="8" fill="#7AA880" opacity="0.35"/>
+  <!-- canvas grid lines -->
+  <line x1="240" y1="20" x2="240" y2="156" stroke="#6A9870" stroke-width="1" opacity="0.2"/>
+  <line x1="160" y1="20" x2="160" y2="156" stroke="#6A9870" stroke-width="1" opacity="0.2"/>
+  <line x1="320" y1="20" x2="320" y2="156" stroke="#6A9870" stroke-width="1" opacity="0.2"/>
+  <line x1="40" y1="88" x2="440" y2="88" stroke="#6A9870" stroke-width="1" opacity="0.2"/>
+  <!-- items on canvas -->
+  <rect x="260" y="36" width="56" height="68" rx="6" fill="#8AB490" opacity="0.5"/>
+  <rect x="328" y="56" width="56" height="68" rx="6" fill="#6A9870" opacity="0.35"/>
+  <circle cx="400" cy="130" r="28" fill="#8AB490" opacity="0.3"/>
+  <!-- sparkle -->
+  <path d="M220 50 L224 62 L236 66 L224 70 L220 82 L216 70 L204 66 L216 62 Z" fill="#5A8060" opacity="0.5"/>
+</svg>
