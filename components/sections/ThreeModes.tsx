@@ -78,14 +78,14 @@ export default function ThreeModes() {
                     (e.currentTarget as HTMLImageElement).style.display = "none";
                   }}
                 />
-                <span className="absolute top-4 left-4 font-clash text-4xl font-black text-[#1D1A1C] leading-none select-none">
+                <span className="absolute top-4 left-4 font-clash text-4xl font-normal text-[#1D1A1C] leading-none select-none">
                   {mode.title}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] mb-5 leading-tight">
+                <h3 className="font-clash text-2xl font-normal text-[#1D1A1C] mb-5 leading-tight">
                   {mode.subtitle.includes(" and ") ? (
                     <>
                       {mode.subtitle.split(" and ")[0]} and<br />
@@ -99,7 +99,7 @@ export default function ThreeModes() {
                 <div className="space-y-3.5 mb-6 flex-1">
                   {mode.details.map((d) => (
                     <div key={d.label}>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-[#B07D4A] mb-0.5">
+                      <p className="text-[10px] uppercase tracking-widest font-medium text-[#9C9599] mb-0.5">
                         {d.label}
                       </p>
                       <p className="text-sm text-[#1D1A1C]">{d.value}</p>
