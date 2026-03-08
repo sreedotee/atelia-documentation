@@ -15,7 +15,7 @@ const terms = [
       { label: "Example", value: '"Black boots from store.com"' },
     ],
     // Drop your illustration at /public/images/design-language/item.png
-    illustrationSrc: "/images/design-language/item.png",
+    illustrationSrc: "/images/design-language/item.svg",
     emoji: "dress",
   },
   {
@@ -26,7 +26,7 @@ const terms = [
       { label: "Lives in", value: "Collections, History" },
       { label: "Example", value: "Dress + shoes + accessories" },
     ],
-    illustrationSrc: "/images/design-language/outfit.png",
+    illustrationSrc: "/images/design-language/outfit.svg",
     emoji: "sparkles",
   },
   {
@@ -37,7 +37,7 @@ const terms = [
       { label: "Example", value: '"Summer Vacation," "Date Night," "Work"' },
       { label: "Why", value: "Organize by context, not just category" },
     ],
-    illustrationSrc: "/images/design-language/collection.png",
+    illustrationSrc: "/images/design-language/collection.svg",
     emoji: "card-index-dividers",
   },
   {
@@ -48,7 +48,7 @@ const terms = [
       { label: "Structure", value: "All items/outfits exist here first" },
       { label: "Relationship", value: "Collections are subsets of Saved" },
     ],
-    illustrationSrc: "/images/design-language/saved.png",
+    illustrationSrc: "/images/design-language/saved.svg",
     emoji: "heart",
   },
 ];

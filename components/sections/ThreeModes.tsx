@@ -15,7 +15,7 @@ const modes = [
     ],
     implication: "Low-friction saving, visual browsing, flexible organization",
     // Drop illustration at /public/images/three-modes/before.png
-    illustrationSrc: "/images/three-modes/before.png",
+    illustrationSrc: "/images/three-modes/before.svg",
     imageBg: "#F5EDE3",
   },
   {
@@ -27,7 +27,7 @@ const modes = [
       { label: "Reference", value: "Dress-up games" },
     ],
     implication: "Interactive canvas, immediate feedback, easy regeneration",
-    illustrationSrc: "/images/three-modes/during.png",
+    illustrationSrc: "/images/three-modes/during.svg",
     imageBg: "#EAF0EB",
   },
   {
@@ -39,7 +39,7 @@ const modes = [
       { label: "Reference", value: "Recipe apps, cookbooks" },
     ],
     implication: 'Show "items used," clear save/share actions, purchase paths',
-    illustrationSrc: "/images/three-modes/after.png",
+    illustrationSrc: "/images/three-modes/after.svg",
     imageBg: "#E8EBF5",
   },
 ];
