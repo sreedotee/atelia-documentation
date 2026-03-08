@@ -3,25 +3,31 @@
 import { motion } from "framer-motion";
 import SectionHeader from "../SectionHeader";
 import { fadeInUp } from "@/styles/animations";
+import EmojiImage from "../EmojiImage";
 
 const terms = [
   {
     term: "Item",
-    def: "Individual clothing piece saved from any retailer and used to generate outfits",
+    def: "Individual clothing piece from any store",
     details: [
       { label: "Source", value: "Paste link, upload photo, camera" },
       { label: "Lives in", value: "Collections, Saved Items" },
       { label: "Example", value: '"Black boots from store.com"' },
     ],
+    // Drop your illustration at /public/images/design-language/item.png
+    illustrationSrc: "/images/design-language/item.png",
+    emoji: "dress",
   },
   {
     term: "Outfit",
-    def: "AI-generated outfit visualization created from saved items",
+    def: "AI-generated look created from your saved items",
     details: [
       { label: "Source", value: "Try-On canvas generation" },
       { label: "Lives in", value: "Collections, History" },
       { label: "Example", value: "Dress + shoes + accessories" },
     ],
+    illustrationSrc: "/images/design-language/outfit.png",
+    emoji: "sparkles",
   },
   {
     term: "Collection",
@@ -29,17 +35,21 @@ const terms = [
     details: [
       { label: "Contains", value: "Both items AND outfits" },
       { label: "Example", value: '"Summer Vacation," "Date Night," "Work"' },
-      { label: "Why", value: "Users organize items by context (vacation, work, events) so they can experiment with outfits for those situations" },
+      { label: "Why", value: "Organize by context, not just category" },
     ],
+    illustrationSrc: "/images/design-language/collection.png",
+    emoji: "card-index-dividers",
   },
   {
     term: "Saved",
     def: "Universal superset of all items and outfits",
     details: [
       { label: "Purpose", value: "Recently Added + unified library" },
-      { label: "Structure", value: "All items/outfits exist here before organizing" },
+      { label: "Structure", value: "All items/outfits exist here first" },
       { label: "Relationship", value: "Collections are subsets of Saved" },
     ],
+    illustrationSrc: "/images/design-language/saved.png",
+    emoji: "heart",
   },
 ];
 
@@ -53,7 +63,7 @@ export default function DesignLanguage() {
           To support outfit visualization across items from many stores, I defined four core objects that structure how content moves through the app.
         </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-12">
           {terms.map((t, i) => (
             <motion.div
               key={t.term}
@@ -61,22 +71,43 @@ export default function DesignLanguage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 border border-[#E8E5E6] hover:shadow-md transition-shadow"
+              className="bg-white rounded-2xl border border-[#E8E5E6] hover:shadow-md transition-shadow flex overflow-hidden"
             >
-              <h3 className="font-clash text-lg md:text-xl lg:text-2xl font-medium text-[#3D2B4C] mb-2">
-                {t.term}
-              </h3>
-              <p className="text-[#1D1A1C] mb-5 font-medium">{t.def}</p>
+              {/* Left: illustration */}
+              <div className="w-36 shrink-0 flex items-center justify-center bg-[#FAF9FA] p-4">
+                <img
+                  src={t.illustrationSrc}
+                  alt={t.term}
+                  className="w-full h-auto object-contain max-h-32"
+                  onError={(e) => {
+                    const target = e.currentTarget;
+                    target.style.display = "none";
+                    const fallback = target.nextElementSibling as HTMLElement | null;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <span style={{ display: "none" }} className="items-center justify-center w-full h-full">
+                  <EmojiImage name={t.emoji} size={72} alt={t.term} />
+                </span>
+              </div>
 
-              <div className="space-y-2.5">
-                {t.details.map((d) => (
-                  <div key={d.label} className="flex gap-2">
-                    <span className="text-xs text-[#7D767A] uppercase tracking-wide font-medium w-24 shrink-0 pt-0.5">
-                      {d.label}
-                    </span>
-                    <span className="text-sm text-[#5C5759]">{d.value}</span>
-                  </div>
-                ))}
+              {/* Right: content */}
+              <div className="flex-1 min-w-0 p-6 flex flex-col justify-center">
+                <h3 className="font-clash text-xl font-semibold text-[#3D2B4C] mb-1">
+                  {t.term}
+                </h3>
+                <p className="text-[#1D1A1C] font-medium text-sm mb-4 leading-snug">{t.def}</p>
+
+                <div className="space-y-2">
+                  {t.details.map((d) => (
+                    <div key={d.label} className="flex gap-3">
+                      <span className="text-[10px] text-[#9C9599] uppercase tracking-widest font-medium w-20 shrink-0 pt-0.5">
+                        {d.label}
+                      </span>
+                      <span className="text-[13px] text-[#5C5759] leading-snug">{d.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
