@@ -86,7 +86,14 @@ export default function ThreeModes() {
               {/* Content */}
               <div className="p-6 flex flex-col flex-1">
                 <h3 className="font-clash text-2xl font-semibold text-[#1D1A1C] mb-5 leading-tight">
-                  {mode.subtitle}
+                  {mode.subtitle.includes(" and ") ? (
+                    <>
+                      {mode.subtitle.split(" and ")[0]} and<br />
+                      {mode.subtitle.split(" and ")[1]}
+                    </>
+                  ) : (
+                    mode.subtitle
+                  )}
                 </h3>
 
                 <div className="space-y-3.5 mb-6 flex-1">
