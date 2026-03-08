@@ -14,6 +14,8 @@ const approaches = [
     userNeed: "Access to inaccessible fashion",
     gap: "Not solving purchase problems",
     apps: ["Drest", "DressX"],
+    // Drop your illustration at /public/images/competitive/01.png
+    illustrationSrc: "/images/competitive/01.png",
     emoji: "dress",
   },
   {
@@ -24,6 +26,7 @@ const approaches = [
     userNeed: "Plan outfits in advance",
     gap: "Niche audience, power users only",
     apps: ["Stylebook", "Smart Closet"],
+    illustrationSrc: "/images/competitive/02.png",
     emoji: "high-heel",
   },
   {
@@ -34,6 +37,7 @@ const approaches = [
     userNeed: "Reduce purchase uncertainty",
     gap: "Single-store only, not universal",
     apps: ["ASOS See My Fit", "Zara AR"],
+    illustrationSrc: "/images/competitive/03.png",
     emoji: "handbag",
   },
 ];
@@ -57,8 +61,8 @@ export default function CompetitiveLandscape() {
         </motion.p>
       </div>
 
-      {/* Cards — intentionally break out of max-width */}
-      <div className="px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+      {/* Cards — slightly wider than the 1200px content container */}
+      <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
         {approaches.map((a, i) => (
           <motion.div
             key={a.number}
@@ -70,7 +74,7 @@ export default function CompetitiveLandscape() {
           >
             {/* Left: content */}
             <div className="flex-1 min-w-0 flex flex-col">
-              {/* Number + title row */}
+              {/* Number + title */}
               <div className="flex items-start gap-3 mb-6">
                 <span className="font-clash text-[64px] font-bold text-[#3D2B4C]/10 leading-none flex-shrink-0">
                   {a.number}
@@ -105,9 +109,23 @@ export default function CompetitiveLandscape() {
               </div>
             </div>
 
-            {/* Right: illustration */}
-            <div className="flex-shrink-0 w-32 flex items-center justify-end pl-4">
-              <EmojiImage name={a.emoji} size={110} alt={a.title} />
+            {/* Right: custom illustration (falls back to emoji until uploaded) */}
+            <div className="flex-shrink-0 w-36 flex items-center justify-center pl-2">
+              <img
+                src={a.illustrationSrc}
+                alt={a.title}
+                className="w-full h-auto object-contain max-h-52"
+                onError={(e) => {
+                  // Swap to emoji fallback if illustration isn't uploaded yet
+                  const target = e.currentTarget;
+                  target.style.display = "none";
+                  const fallback = target.nextElementSibling as HTMLElement | null;
+                  if (fallback) fallback.style.display = "block";
+                }}
+              />
+              <span style={{ display: "none" }}>
+                <EmojiImage name={a.emoji} size={100} alt={a.title} />
+              </span>
             </div>
           </motion.div>
         ))}
