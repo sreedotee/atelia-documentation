@@ -99,7 +99,7 @@ export default function ThreeModes() {
                 <div className="space-y-3.5 mb-6 flex-1">
                   {mode.details.map((d) => (
                     <div key={d.label}>
-                      <p className="text-[10px] uppercase tracking-widest font-semibold text-[#B07D4A] mb-0.5">
+                      <p className="text-[10px] uppercase tracking-widest font-medium text-[#9C9599] mb-0.5">
                         {d.label}
                       </p>
                       <p className="text-sm text-[#1D1A1C]">{d.value}</p>
