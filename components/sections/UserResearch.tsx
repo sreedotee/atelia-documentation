@@ -7,25 +7,25 @@ import { fadeInUp } from "@/styles/animations";
 const findings = [
   {
     title: "Scattered Saving",
-    text: "All participants save items across multiple locations. Average locations used: 4.2 per person. Time spent finding saved items: 3–5 minutes average.",
+    text: "60% of respondents save clothing items across multiple platforms such as screenshots, wishlists, and social media saves. This fragmentation makes it difficult to retrieve items later.",
     quote: "I have screenshots everywhere in my camera roll. When I want to find something, I have no idea where it is.",
     avatarSide: "left" as const,
   },
   {
     title: "Seeking Social Validation",
-    text: "Before buying, participants send links to friends asking 'does this look good?' Average friends asked: 2–3 people. Response time: 2–6 hours (often too slow).",
+    text: "75% of respondents ask friends or family for opinions before purchasing clothing online, most commonly by sending screenshots or links in chats.",
     quote: "I always screenshot and send to my group chat like 'thoughts?' I can't tell if it will look good on me.",
     avatarSide: "right" as const,
   },
   {
     title: "Organize by Occasion",
-    text: "When asked to sort 20 clothing items, 4/5 participants (80%) naturally organized by occasion, not item type. Common categories: vacation, work, date night, events.",
+    text: "30% of respondents do not organize saved clothing items at all. Among those who do, the most common organization methods are by occasion (vacation, work, events) or by item type.",
     quote: "I have different Pinterest boards for different things I'm shopping for—right now vacation and work stuff.",
     avatarSide: "left" as const,
   },
   {
     title: "Purchase Uncertainty",
-    text: "All participants mentioned uncertainty about fit and appearance before buying online. 3/5 (60%) order multiple sizes. Average return rate: 2–3 items per 10 purchases.",
+    text: "The most common concerns when buying clothing online are how the item will look on the body, fit accuracy, and fabric quality.",
     quote: "I order two sizes and return what doesn't fit. It's annoying but I have no other way to know.",
     avatarSide: "right" as const,
   },
@@ -116,15 +116,15 @@ export default function UserResearch() {
             className="row-span-2 min-h-[480px]"
           />
 
-          {/* Right column */}
-          <div className="flex flex-col gap-4">
+          {/* Right column — row-span-2 so it matches the left card's height */}
+          <div className="row-span-2 flex flex-col gap-2 h-full">
             {/* Top-right: wide card */}
-            <BentoCard {...social} />
+            <BentoCard {...social} className="flex-1" />
 
             {/* Bottom-right: two equal cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <BentoCard {...occasion} />
-              <BentoCard {...purchase} />
+            <div className="flex-1 grid grid-cols-2 gap-2">
+              <BentoCard {...occasion} className="h-full" />
+              <BentoCard {...purchase} className="h-full" />
             </div>
           </div>
         </motion.div>
