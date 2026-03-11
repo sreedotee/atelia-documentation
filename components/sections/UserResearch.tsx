@@ -92,7 +92,7 @@ export default function UserResearch() {
 
   return (
     <section id="user-research" className="py-28 bg-[#F0EEEF]">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1440px] mx-auto px-6">
         <SectionHeader number="" title="User Research Findings" />
 
         <motion.p
@@ -113,14 +113,19 @@ export default function UserResearch() {
           {/* Left: tall card, spans both rows */}
           <BentoCard
             {...scattered}
-            className="row-span-2 min-h-[480px]"
+            className="row-span-2 min-h-[576px]"
           />
 
-          {/* Right column — 3 equal-height cards */}
-          <div className="row-span-2 grid grid-rows-3 gap-2">
-            <BentoCard {...social} />
-            <BentoCard {...occasion} />
-            <BentoCard {...purchase} />
+          {/* Right column — row-span-2 so it matches the left card's height */}
+          <div className="row-span-2 flex flex-col gap-2 h-full">
+            {/* Top-right: wide card */}
+            <BentoCard {...social} className="flex-1" />
+
+            {/* Bottom-right: two equal cards */}
+            <div className="flex-1 grid grid-cols-2 gap-2">
+              <BentoCard {...occasion} className="h-full" />
+              <BentoCard {...purchase} className="h-full" />
+            </div>
           </div>
         </motion.div>
       </div>
