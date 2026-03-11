@@ -117,7 +117,7 @@ export default function UserResearch() {
           />
 
           {/* Right column — row-span-2 so it matches the left card's height */}
-          <div className="row-span-2 flex flex-col gap-2 h-full">
+          <div className="row-span-2 flex flex-col gap-2 min-h-[576px]">
             {/* Top-right: wide card */}
             <BentoCard {...social} className="flex-1" />
 
