@@ -7,26 +7,26 @@ import { fadeInUp } from "@/styles/animations";
 const findings = [
   {
     title: "Scattered Saving",
-    text: "60% of respondents save clothing items across multiple platforms such as screenshots, wishlists, and social media saves. This fragmentation makes it difficult to retrieve items later.",
-    quote: "I have screenshots everywhere in my camera roll. When I want to find something, I have no idea where it is.",
+    text: "60% save clothing items across multiple platforms (screenshots, wishlists, social saves), making them harder to retrieve later.",
+    quote: "I have screenshots everywhere in my camera roll. When I need something, I can't find it.",
     avatarSide: "left" as const,
   },
   {
     title: "Seeking Social Validation",
-    text: "75% of respondents ask friends or family for opinions before purchasing clothing online, most commonly by sending screenshots or links in chats.",
-    quote: "I always screenshot and send to my group chat like 'thoughts?' I can't tell if it will look good on me.",
+    text: "75% ask friends or family for opinions before buying clothing online, usually by sending screenshots or links.",
+    quote: "I usually screenshot and send it to my group chat like 'thoughts?' I can't tell if it'll look good on me.",
     avatarSide: "right" as const,
   },
   {
     title: "Organize by Occasion",
-    text: "30% of respondents do not organize saved clothing items at all. Among those who do, the most common organization methods are by occasion (vacation, work, events) or by item type.",
-    quote: "I have different Pinterest boards for different things I'm shopping for—right now vacation and work stuff.",
+    text: "30% don't organize saved items at all. Those who do mostly sort by occasion or item type.",
+    quote: "I have Pinterest boards for different things I'm shopping for like vacation or work.",
     avatarSide: "left" as const,
   },
   {
     title: "Purchase Uncertainty",
-    text: "The most common concerns when buying clothing online are how the item will look on the body, fit accuracy, and fabric quality.",
-    quote: "I order two sizes and return what doesn't fit. It's annoying but I have no other way to know.",
+    text: "Top concerns when buying clothes online are appearance, fit, and fabric quality.",
+    quote: "I order two sizes and return the one that doesn't fit. It's annoying but I have no other way.",
     avatarSide: "right" as const,
   },
 ];
