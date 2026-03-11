@@ -14,8 +14,7 @@ const approaches = [
     userNeed: "Access to inaccessible fashion",
     gap: "Not solving purchase problems",
     apps: ["Drest", "DressX"],
-    // Drop your illustration at /public/images/competitive/01.png
-    illustrationSrc: "/images/competitive/01.png",
+    illustrationSrc: "/images/competitive/designer-fashion.svg",
     emoji: "dress",
   },
   {
@@ -26,7 +25,7 @@ const approaches = [
     userNeed: "Plan outfits in advance",
     gap: "Niche audience, power users only",
     apps: ["Stylebook", "Smart Closet"],
-    illustrationSrc: "/images/competitive/02.png",
+    illustrationSrc: "/images/competitive/organising.svg",
     emoji: "high-heel",
   },
   {
@@ -37,7 +36,7 @@ const approaches = [
     userNeed: "Reduce purchase uncertainty",
     gap: "Single-store only, not universal",
     apps: ["ASOS See My Fit", "Zara AR"],
-    illustrationSrc: "/images/competitive/03.png",
+    illustrationSrc: "/images/competitive/shopping.svg",
     emoji: "handbag",
   },
 ];
