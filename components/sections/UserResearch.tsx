@@ -92,7 +92,7 @@ export default function UserResearch() {
 
   return (
     <section id="user-research" className="py-28 bg-[#F0EEEF]">
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1440px] mx-auto px-6">
         <SectionHeader number="" title="User Research Findings" />
 
         <motion.p
@@ -113,7 +113,7 @@ export default function UserResearch() {
           {/* Left: tall card, spans both rows */}
           <BentoCard
             {...scattered}
-            className="row-span-2 min-h-[480px]"
+            className="row-span-2 min-h-[576px]"
           />
 
           {/* Right column — row-span-2 so it matches the left card's height */}
