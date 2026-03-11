@@ -117,12 +117,12 @@ export default function UserResearch() {
           />
 
           {/* Right column — row-span-2 so it matches the left card's height */}
-          <div className="row-span-2 flex flex-col gap-2 min-h-[576px]">
+          <div className="row-span-2 grid grid-rows-2 gap-2">
             {/* Top-right: wide card */}
-            <BentoCard {...social} className="flex-1" />
+            <BentoCard {...social} className="h-full" />
 
             {/* Bottom-right: two equal cards */}
-            <div className="flex-1 grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2">
               <BentoCard {...occasion} className="h-full" />
               <BentoCard {...purchase} className="h-full" />
             </div>
